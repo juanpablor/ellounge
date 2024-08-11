@@ -1,0 +1,13 @@
+[
+    {
+        "companyName" : "Code Crafter Studios Inc.",
+        "companyDetails": {
+            "address": "108 Rue St Hubert",
+            "city": "Chateauguay",
+            "country": "Canada",
+            "phone": "438 877 6270",
+            "email": "juanpablo@riano.ca"
+        },
+        "menu": ["about", "contact", "portfolio"]
+    }
+]

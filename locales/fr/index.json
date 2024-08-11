@@ -1,0 +1,12 @@
+{
+  "welcome": "Bienvenue",
+  "about": "À propos de nous",
+  "contact": "Contact FR",
+  "portfolio": "Portfolio FR",
+  "404 Page": "Page non trouvé",
+  "menu": {
+    "about": "about FR",
+    "contact": "contact FR",
+    "portfolio": "portfolio FR"
+  }
+}
