@@ -1,13 +1,13 @@
 [
     {
-        "companyName" : "Code Crafter Studios Inc.",
+        "companyName" : "El Lounge",
         "companyDetails": {
-            "address": "108 Rue St Hubert",
-            "city": "Chateauguay",
+            "address": "1735 Rue Saint Denis, Montréal, QC H2X 3K4",
+            "city": "Montreal",
             "country": "Canada",
             "phone": "438 877 6270",
             "email": "juanpablo@riano.ca"
         },
-        "menu": ["about", "contact", "portfolio"]
+        "menu": ["El_Lounge", "menu", "Latin_Club"]
     }
 ]
