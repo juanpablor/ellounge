@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 import Navigation from "./nav";
-import logo from "../images/logo.png";
+import LanguageSelector from "./languageSelector";
+
+import logo from "../images/logo.svg";
 
 interface HeaderProps {
   data?: any;
@@ -14,6 +16,7 @@ const Header: React.FC<HeaderProps> = ({data}) => {
         <img src={logo} />
       </Link>
       <Navigation data={data} />
+      <LanguageSelector data={data} />
     </header>
   );
 };

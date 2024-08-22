@@ -6,7 +6,7 @@
   "404 Page": "Page no found",
   "menu": {
     "El_Lounge": "The Lounge",
-    "menu": "Menu",
-    "Latin_Club": "Latin Club"
+    "foodMenu": "Menu",
+    "latinClub": "Latin Club"
   }
 }

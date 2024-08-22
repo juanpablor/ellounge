@@ -6,8 +6,10 @@
             "city": "Montreal",
             "country": "Canada",
             "phone": "438 877 6270",
-            "email": "juanpablo@riano.ca"
+            "email": "juanpablo@ellounge.ca",
+            "instagram": "https://instagram.com/pointbarlounge",
+            "facebook": "http://facebook.com/pointbarloungemtl"
         },
-        "menu": ["El_Lounge", "menu", "Latin_Club"]
+        "menu": ["El_Lounge", "foodMenu", "latinClub"]
     }
 ]

@@ -6,9 +6,9 @@ import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import Head from "../components/head";
 
 const info = data[0];
-const pageTitle: string = "portfolio";
+const pageTitle: string = "Food Menu";
 
-const PortfolioPage: React.FC = () => {
+const FoodMenu: React.FC = () => {
   const { t } = useTranslation();
   return (
     <Layout data={info}>
@@ -18,7 +18,7 @@ const PortfolioPage: React.FC = () => {
   );
 };
 
-export default PortfolioPage;
+export default FoodMenu;
 
 export const query = graphql`
   query ($language: String!) {

@@ -3,10 +3,10 @@
   "about": "Acerca de nosotros",
   "contact": "Contacto",
   "portfolio": "Portafolio",
-  "404 Page": "Pagina no encotrada",
+  "404 Page": "Pagina no encontrada",
   "menu": {
     "El_Lounge": "El Lounge",
-    "menu": "Menu",
-    "Latin_Club": "Latin Club"
+    "foodMenu": "Menu",
+    "latinClub": "Latin Club"
   }
 }
