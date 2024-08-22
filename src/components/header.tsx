@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import Navigation from "./nav";
+// import Navigation from "./nav";
 import LanguageSelector from "./languageSelector";
 
 import logo from "../images/logo.svg";
@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({data}) => {
       <Link to="/" className="max-w-36">
         <img src={logo} />
       </Link>
-      <Navigation data={data} />
+      {/* <Navigation data={data} /> */}
       <LanguageSelector data={data} />
     </header>
   );

@@ -48,7 +48,7 @@ const Navigation: React.FC<NavProps> = ({ data }) => {
               <Link
                 to={linkTo}
                 className={styles.buttons}
-                activeClassName="bg-secondary" placeholder={undefined}              >
+                activeClassName="text-secondary" placeholder={undefined}              >
                 <Trans i18nKey={`menu.${item}`}>
                   {t(`menu.${item}`)}
                 </Trans>
@@ -69,10 +69,10 @@ const Navigation: React.FC<NavProps> = ({ data }) => {
 export default Navigation;
 
 const styles = {
-  container: "flex flex-row justify-between items-center bg-primary px-8 py-4 rounded relative",
+  container: "flex flex-row justify-between items-center bg-primary px-4 py-2 rounded-full relative",
   burgerButton: "md:hidden block text-white focus:outline-none", // Visible solo en móvil
   buttonsWrapper: "flex flex-col md:flex-row justify-evenly items-center w-full md:w-auto", // Responsive
-  buttons: "text-white px-8 py-2 hover:bg-hover hover:text-white",
+  buttons: "text-white px-8 py-2 hover:underline hover:text-secondary",
   menuOpen: "block md:flex", // Abierto en móviles o siempre en desktop
   menuClosed: "hidden md:flex", // Cerrado en móviles pero visible en desktop
 };

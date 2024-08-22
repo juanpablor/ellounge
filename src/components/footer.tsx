@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import logo from "../images/logo.svg";
+import MainLogo from "../components/mainLogo"
 
 interface FooterProps {
   data?: any;
@@ -10,7 +11,8 @@ const Footer: React.FC<FooterProps> = ({data}) => {
   return (
     <footer className={styes.container}>
       <Link to="/" className="max-w-32">
-        <img src={logo} />
+
+        <MainLogo fillColour="#fff"/>
       </Link>
       <ul>
         <li>{data.companyName}</li>
@@ -27,5 +29,5 @@ const Footer: React.FC<FooterProps> = ({data}) => {
 export default Footer;
 
 const styes = {
-  container: 'flex flex-row p-4 justify-around items-end items-baseline'
+  container: 'flex flex-row p-4 justify-around items-end items-baseline bg-primary'
 }
