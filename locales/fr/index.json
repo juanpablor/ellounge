@@ -8,5 +8,12 @@
     "El_Lounge": "Le Lounge",
     "foodMenu": "Menu",
     "latinClub": "Latin Club"
+  },
+  "hours": {
+    "title": "Heures d'overture",
+    "sunday_to_tuesday": "Dimanche et mardi: fermé",
+    "monday": "Lundi: 18h00 à 23h30",
+    "wednesday_and_thursday": "Mercredi et jeudi: 16h00 à 23h59",
+    "Friday_and_saturday": "Vendredi et samedi: 16h00 à 3h00"
   }
 }

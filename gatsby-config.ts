@@ -34,7 +34,7 @@ const config: GatsbyConfig = {
       options: {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
         languages: [`en`, `es`, `fr`],
-        defaultLanguage: `en`,
+        defaultLanguage: `fr`,
         siteUrl: `https://example.com`,
         // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
         trailingSlash: 'always',

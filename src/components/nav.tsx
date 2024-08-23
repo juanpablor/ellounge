@@ -12,7 +12,6 @@ interface NavProps {
 }
 
 const Navigation: React.FC<NavProps> = ({ data }) => {
-  const { languages, changeLanguage } = useI18next();
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar la apertura del menú
 
