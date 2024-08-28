@@ -1,32 +1,26 @@
 import * as React from "react";
-import Layout from "./layout";
+import Indexlayout from "./indexLayout";
 import { graphql } from "gatsby";
 import data from "../data/data.json";
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import Head from "../components/head";
-// import Navigation from "../components/nav";
 
 const info = data[0];
 const pageTitle: string = "welcome";
 
-// interface NavProps {
-//   data?: {
-//     menu: string[];
-//     companyDetails: { instagram: string; facebook: string };
-//   };
-// }
+interface dataLayout {
+  data?: any;
+}
 
 
-const IndexPage: React.FC = () => {
+const IndexPage: React.FC<dataLayout> = ({data}) => {
   const { t } = useTranslation();
+  console.log(data)
   return (
-    <>
-    <Layout data={info}>
+    <Indexlayout data={info}>
       <Head title={pageTitle} />
       <Trans>{pageTitle}</Trans>
-    </Layout>
-      <p>hola</p>
-    </>
+    </Indexlayout>
   );
 };
 

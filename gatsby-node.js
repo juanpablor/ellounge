@@ -10,9 +10,10 @@ exports.createPages = async ({ actions }) => {
 
   urls.forEach(url => {
     createPage({
-      path: `/${url}`,
-      component: require.resolve(`./src/pages/${url}.tsx`),
+      path: `/${url === 'El_Lounge' ? 'index' : url}`,
+      component: require.resolve(`./src/pages/${url === 'El_Lounge' ? 'index' : url}.tsx`),
     });
+    
   });
 
   createPage({

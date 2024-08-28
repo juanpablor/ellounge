@@ -6,3 +6,8 @@ to fix the issue on Double language in url after changing language and click on 
 
 visit:
 https://github.com/microapps/gatsby-plugin-react-i18next/pull/173/files
+
+
+To avoid errors during Build run:
+
+`npm audit fix`

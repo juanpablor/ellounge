@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcode_crafted_studios=self.webpackChunkcode_crafted_studios||[]).push([[321],{2478:function(e,t,a){a.r(t);var n=a(6540),s=a(1616),c=a(8526),u=a(4755),r=a(992);const l=c[0],d="Food Menu";t.default=()=>{const{t:e}=(0,u.useTranslation)();return n.createElement(s.default,{data:l},n.createElement(r.A,{title:d}),n.createElement(u.Trans,null,d))}}}]);
+//# sourceMappingURL=component---src-pages-food-menu-tsx-6050ace08ee92e4b64cc.js.map

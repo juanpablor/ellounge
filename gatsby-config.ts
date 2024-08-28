@@ -33,7 +33,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
-        languages: [`en`, `es`, `fr`],
+        languages: [`fr`, `es`, `en`],
         defaultLanguage: `fr`,
         siteUrl: `https://example.com`,
         // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
@@ -54,7 +54,7 @@ const config: GatsbyConfig = {
           },
           {
             matchPath: '/preview',
-            languages: ['en']
+            languages: ['fr']
           }
         ]
       }
@@ -71,7 +71,7 @@ const config: GatsbyConfig = {
         includeInDevelopment: true,
         klaroVersion: "v0.7.11",
         config: {
-          lang: "fr",
+          lang: "en",
           privacyPolicy: "../src/images",
           services: [
             {
