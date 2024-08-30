@@ -29,6 +29,7 @@ const Footer: React.FC<FooterProps> = ({data}) => {
           <li>{t("hours.wednesday_and_thursday")}</li>
           <li>{t("hours.Friday_and_saturday")}</li>
         </ul>
+        {t("content.")}
       </div>
     </footer>
   );

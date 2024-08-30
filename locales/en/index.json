@@ -15,5 +15,8 @@
     "monday": "Monday: 6pm to 11:30pm",
     "wednesday_and_thursday": "Wednesday and Thursday: 4pm to 12am",
     "Friday_and_saturday": "Friday and Saturday: 4pm to 3am"
+  },
+  "content": {
+    "intro_paragraph": "ENGLISH Somos un bar de cócteles y restaurante de primer nivel ubicados en Montreal. Nos enorgullece ofrecer un ambiente vibrante, un servicio impecable y un menú que celebra la herencia culinaria de dos culturas extraordinarias"
   }
 }

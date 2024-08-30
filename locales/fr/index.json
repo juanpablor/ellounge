@@ -15,5 +15,8 @@
     "monday": "Lundi: 18h00 à 23h30",
     "wednesday_and_thursday": "Mercredi et jeudi: 16h00 à 23h59",
     "Friday_and_saturday": "Vendredi et samedi: 16h00 à 3h00"
+  },
+  "content": {
+    "intro_paragraph": "FRENCH Somos un bar de cócteles y restaurante de primer nivel ubicados en Montreal. Nos enorgullece ofrecer un ambiente vibrante, un servicio impecable y un menú que celebra la herencia culinaria de dos culturas extraordinarias"
   }
 }
