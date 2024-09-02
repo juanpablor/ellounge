@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link, useI18next, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Link } from "gatsby"
 import { RiInstagramLine } from "react-icons/ri";
 import { BsFacebook } from "react-icons/bs";
 import { FiMenu, FiX } from "react-icons/fi"; // Iconos para el menú de burger
@@ -47,7 +48,7 @@ const Navigation: React.FC<NavProps> = ({ data }) => {
               <Link
                 to={linkTo}
                 className={styles.buttons}
-                activeClassName="text-secondary" placeholder={undefined}>
+                activeClassName="text-secondary">
                 <Trans i18nKey={`menu.${item}`}>
                   {t(`menu.${item}`)}
                 </Trans>

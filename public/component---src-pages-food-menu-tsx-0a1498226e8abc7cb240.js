@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkEl_Lounge_Latin_Club=self.webpackChunkEl_Lounge_Latin_Club||[]).push([[321],{2478:function(e,t,n){n.r(t);var l=n(6540),a=n(3610),u=n(4755),c=n(992);const r=n(8526)[0],s="Food Menu";t.default=()=>l.createElement(a.default,{data:r},l.createElement(c.A,{title:s}),l.createElement(u.Trans,null,s))}}]);
+//# sourceMappingURL=component---src-pages-food-menu-tsx-0a1498226e8abc7cb240.js.map

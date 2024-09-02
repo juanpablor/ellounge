@@ -1,15 +1,15 @@
-import * as React from "react";
-import Layout from "./indexLayout";
+import React from "react";
+import Layout from "./Indexlayout";
 import { graphql } from "gatsby";
-import data from "../data/data.json";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { CompanyData } from "../interfaces/interfaces";
+import { Trans } from "gatsby-plugin-react-i18next";
 import Head from "../components/head";
+import data from "../data/data.json";
 
-const info = data[0];
-const pageTitle: string = "404 Page";
+const info: CompanyData = data[0];
+const pageTitle: string = "Food Menu";
 
-const NotFoundPage: React.FC = () => {
-  const { t } = useTranslation();
+const NoFoundPage: React.FC = () => {
   return (
     <Layout data={info}>
       <Head title={pageTitle} />
@@ -18,7 +18,7 @@ const NotFoundPage: React.FC = () => {
   );
 };
 
-export default NotFoundPage;
+export default NoFoundPage;
 
 export const query = graphql`
   query ($language: String!) {
@@ -33,4 +33,3 @@ export const query = graphql`
     }
   }
 `;
-

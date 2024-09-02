@@ -1,8 +1,8 @@
 {
-  "name": "code-crafted-studios",
+  "name": "El Lounge Latin Club",
   "version": "1.0.0",
   "private": true,
-  "description": "code-crafted-studios",
+  "description": "El Lounge Latin Club",
   "author": "Juan Pablo Riano",
   "keywords": [
     "gatsby"
@@ -13,7 +13,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
@@ -29,7 +30,6 @@
     "gatsby-transformer-sharp": "^5.13.1",
     "i18next": "^22.5.1",
     "postcss": "^8.4.35",
-    "punycode": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
@@ -39,11 +39,18 @@
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.9.1",
     "@types/file-saver": "^2.0.7",
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@types/react-helmet": "^6.1.11",
-    "typescript": "^5.3.3"
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "globals": "^15.9.0",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^8.3.0"
   }
 }

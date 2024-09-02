@@ -1,0 +1,10 @@
+{
+    "env": {
+      "node": true
+    },
+    "extends": ["eslint:recommended"],
+    "rules": {
+      "no-undef": "off" // O ajusta la regla según sea necesario
+    }
+  }
+  

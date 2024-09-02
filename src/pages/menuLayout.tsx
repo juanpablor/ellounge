@@ -1,14 +1,14 @@
 import React, {ReactNode} from "react";
 import Header from "../components/header";
-import Footer from "../components/footer";
 import Navigation from "../components/nav";
+import { CompanyData } from "../interfaces/interfaces";
 
-interface menuLayoutProps {
-    children: ReactNode,
-    data?: any;
+interface MenuLayoutProps {
+  children: ReactNode;
+  data?: CompanyData;
 }
 
-const menuLayout: React.FC<menuLayoutProps> = ({children, data}) => {
+const MenuLayout: React.FC<MenuLayoutProps> = ({ children, data }) => {
   return (
     <>
     <div className="flex flex-col w-full h-screen bg-secondary">
@@ -23,4 +23,4 @@ const menuLayout: React.FC<menuLayoutProps> = ({children, data}) => {
   );
 };
 
-export default menuLayout;
+export default MenuLayout;

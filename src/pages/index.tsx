@@ -1,20 +1,16 @@
 import * as React from "react";
-import Indexlayout from "./indexLayout";
+import Indexlayout from "./Indexlayout";
 import { graphql } from "gatsby";
 import data from "../data/data.json";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans } from "gatsby-plugin-react-i18next";
 import Head from "../components/head";
+import { CompanyData, DataLayout } from "../interfaces/interfaces";
 
-const info = data[0];
+
+const info: CompanyData = data[0];
 const pageTitle: string = "welcome";
 
-interface dataLayout {
-  data?: any;
-}
-
-
-const IndexPage: React.FC<dataLayout> = ({data}) => {
-  const { t } = useTranslation();
+const IndexPage: React.FC<DataLayout> = ({ data }) => {
   console.log(data)
   return (
     <Indexlayout data={info}>

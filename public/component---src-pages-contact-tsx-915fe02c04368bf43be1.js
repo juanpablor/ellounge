@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcode_crafted_studios=self.webpackChunkcode_crafted_studios||[]).push([[313],{2511:function(e,t,a){a.r(t);var c=a(6540),n=a(1616),s=a(8526),r=a(4755),u=a(992);const l=s[0],d="contact";t.default=()=>{const{t:e}=(0,r.useTranslation)();return c.createElement(n.default,{data:l},c.createElement(u.A,{title:d}),c.createElement(r.Trans,null,d))}}}]);
-//# sourceMappingURL=component---src-pages-contact-tsx-915fe02c04368bf43be1.js.map
