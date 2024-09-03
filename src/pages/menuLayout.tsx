@@ -1,7 +1,8 @@
-import React, {ReactNode} from "react";
+import React, { ReactNode } from "react";
 import Header from "../components/header";
 import Navigation from "../components/nav";
 import { CompanyData } from "../interfaces/interfaces";
+import images from "../images/index";
 
 interface MenuLayoutProps {
   children: ReactNode;
@@ -11,16 +12,29 @@ interface MenuLayoutProps {
 const MenuLayout: React.FC<MenuLayoutProps> = ({ children, data }) => {
   return (
     <>
-    <div className="flex flex-col w-full h-screen bg-secondary">
-      <Header data={data} />
-      <main>{children}</main>
-      <div className="flex justify-center">
+      <div className={styles.containerWrapper}>
+        <div
+          className="relative bg-contain bg-center overflow-hidden"
+          style={{
+            backgroundImage: `url(${images.BackgroundImage})`,
+          }}
+        >
+          <Header logoPosition={styles.logoPosition} data={data} />
 
-        <Navigation data={data} />
+          <div className="flex justify-center mb-20">
+            <Navigation data={data} />
+          </div>
+
+          <main>{children}</main>
+        </div>
       </div>
-    </div>
     </>
   );
 };
 
 export default MenuLayout;
+
+const styles = {
+  containerWrapper: "flex flex-col w-full bg-secondary",
+  logoPosition: "mx-auto",
+};

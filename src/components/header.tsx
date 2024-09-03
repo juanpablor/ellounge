@@ -1,19 +1,20 @@
 import React from "react";
 import { Link } from "gatsby";
-// import Navigation from "./nav";
 import LanguageSelector from "./languageSelector";
+import { CompanyData } from "../interfaces/interfaces";
 
-import logo from "../images/logo.svg";
+import MainLogo from "../components/mainLogo";
 
 interface HeaderProps {
-  data?: any;
+  data?: CompanyData;
+  logoPosition?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({data}) => {
+const Header: React.FC<HeaderProps> = ({ data, logoPosition }) => {
   return (
-    <header className={styes.container}>
-      <Link to="/" className="max-w-36">
-        <img src={logo} />
+    <header className={styles.container}>
+      <Link to="/" className={`max-w-36 ${logoPosition || ""}`}>
+      <MainLogo fillColour="#fff" />
       </Link>
       <LanguageSelector data={data} />
     </header>
@@ -22,6 +23,6 @@ const Header: React.FC<HeaderProps> = ({data}) => {
 
 export default Header;
 
-const styes = {
-  container: 'flex flex-row p-4 justify-between'
-}
+const styles = {
+  container: "flex flex-row p-4 justify-between",
+};

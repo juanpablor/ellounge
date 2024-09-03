@@ -1,20 +1,17 @@
 import React from "react";
-import {
-  Link,
-  useI18next,
-  Trans,
-  useTranslation,
-} from "gatsby-plugin-react-i18next";
+import { useI18next } from "gatsby-plugin-react-i18next";
+
+// Importa la interfaz definida anteriormente
+import { CompanyData } from "../interfaces/interfaces"; 
 
 interface NavProps {
-  data?: { menu: string[] };
+  data?: CompanyData;
 }
 
 const LanguageSelector: React.FC<NavProps> = ({ data }) => {
   const { languages, changeLanguage } = useI18next();
-  const { t } = useTranslation();
 
-  if (!data || !data.menu) {
+  if (!data?.menu) {
     return null;
   }
 

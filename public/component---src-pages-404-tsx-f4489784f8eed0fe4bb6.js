@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkEl_Lounge_Latin_Club=self.webpackChunkEl_Lounge_Latin_Club||[]).push([[453],{731:function(e,t,n){n.r(t);var l=n(6540),a=n(9739),u=n(4755),c=n(992);const r=n(8526)[0],s="Food Menu";t.default=()=>l.createElement(a.default,{data:r},l.createElement(c.A,{title:s}),l.createElement(u.Trans,null,s))}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-f4489784f8eed0fe4bb6.js.map

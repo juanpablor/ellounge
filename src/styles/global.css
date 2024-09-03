@@ -12,3 +12,7 @@ body {
 footer {
     margin-top: auto;
 }
+
+.box-shadow {
+    box-shadow: 1px 1px 4px 2px #4A4A4A;
+}

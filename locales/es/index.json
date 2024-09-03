@@ -17,6 +17,12 @@
     "Friday_and_saturday": "Viernes y sabado: 4pm to 3am"
   },
   "content": {
-    "intro_paragraph": "Somos un bar de cócteles y restaurante de primer nivel ubicados en Montreal. Nos enorgullece ofrecer un ambiente vibrante, un servicio impecable y un menú que celebra la herencia culinaria de dos culturas extraordinarias"
+    "intro_paragraph": "Somos un bar de cócteles y restaurante de primer nivel ubicados en Montreal. Nos enorgullece ofrecer un ambiente vibrante, un servicio impecable y un menú que celebra la herencia culinaria de dos culturas extraordinarias",
+    "index_title_second_block": "La esencia de los sabores latinos en cada cóctel",
+    "content_title_second_block": "Ofrecemos una extraordinaria selección de cócteles, meticulosamente preparados para deleitar tu paladar. Nuestro talentoso equipo combina ingredientes frescos y técnicas innovadoras para crear bebidas únicas y deliciosas.",
+    "copyright_footer": " - Point bar lounge / Todos los derechos reservado"
+  },
+  "general": {
+    "see_more": "Ver mas..."
   }
 }

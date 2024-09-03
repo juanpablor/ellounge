@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkEl_Lounge_Latin_Club=self.webpackChunkEl_Lounge_Latin_Club||[]).push([[956],{8493:function(e,t,l){l.r(t);var n=l(6540),a=l(3610),u=l(4755),c=l(992);const r=l(8526)[0],s="Latin Club";t.default=()=>n.createElement(a.default,{data:r},n.createElement(c.A,{title:s}),n.createElement(u.Trans,null,s))}}]);
-//# sourceMappingURL=component---src-pages-latin-club-tsx-0d1ff44b84a5067e71ea.js.map

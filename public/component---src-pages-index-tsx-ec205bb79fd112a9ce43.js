@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkEl_Lounge_Latin_Club=self.webpackChunkEl_Lounge_Latin_Club||[]).push([[245],{2783:function(e,t,l){l.r(t);var n=l(6540),a=l(9739),u=l(8526),c=l(4755),r=l(992);const o=u[0],s="welcome";t.default=e=>{let{data:t}=e;return console.log(t),n.createElement(a.default,{data:o},n.createElement(r.A,{title:s}),n.createElement(c.Trans,null,s))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-ec205bb79fd112a9ce43.js.map

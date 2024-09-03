@@ -1,11 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
 import LanguageSelector from "./languageSelector";
-
-import logo from "../images/logo.svg";
+import { CompanyData } from "../interfaces/interfaces";
 
 interface HeaderProps {
-  data?: any;
+  data?: CompanyData;
 }
 
 const Header: React.FC<HeaderProps> = ({data}) => {
