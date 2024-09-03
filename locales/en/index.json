@@ -23,6 +23,14 @@
     "copyright_footer": "- Point bar lounge / Todos los derechos reservado"
   },
   "general": {
-    "see_more": "See more..."
+    "see_more": "See more...",
+    "see_less": "See less"
+  },
+  "productMenu": {
+    "entrees": "Appetizers",
+    "mainDishes": "Main Dishes",
+    "sideDishes": "Side Dishes",
+    "extras": "Extras",
+    "desserts": "Desserts"
   }
 }

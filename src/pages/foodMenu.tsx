@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { graphql } from "gatsby";
 import MenuLayout from "./menuLayout";
 import { CompanyData, FoodMenu } from "../interfaces/interfaces";
-import { Trans } from "gatsby-plugin-react-i18next";
 import foodData from "../data/food.json"; 
 import companyData from "../data/data.json"; 
 import { useLocation } from "@reach/router";
@@ -13,8 +12,10 @@ const FoodMenuPage: React.FC = () => {
   const { t } = useTranslation();
   const [selectedFood, setSelectedFood] = useState<null | { name: string; en_desc: string; image: string }>(null);
   const [activeTab, setActiveTab] = useState<string>("entrees");
-  const pageTitle: string = "Food Menu";
-
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [shouldShowCollapseButton, setShouldShowCollapseButton] = useState(false);
+  const foodMenuRef = useRef<HTMLDivElement>(null); // Ref para el contenedor
+  
   const companyInfo: CompanyData = companyData[0];
   const foodMenu: FoodMenu = foodData as FoodMenu;
   const location = useLocation();
@@ -45,6 +46,16 @@ const FoodMenuPage: React.FC = () => {
     }
   }, [location.search]);
 
+  useEffect(() => {
+    // Verifica la altura del contenedor al cargar o cambiar el tab
+    const checkHeight = () => {
+      if (foodMenuRef.current) {
+        setShouldShowCollapseButton(foodMenuRef.current.clientHeight > 500);
+      }
+    };
+    checkHeight();
+  }, [activeTab]);
+
   const getImageSrc = (imageName: string): string => {
     const imageKey = imageName as keyof typeof foodImages;
     const imageSrc = foodImages[imageKey];
@@ -68,21 +79,62 @@ const FoodMenuPage: React.FC = () => {
 
   return (
     <MenuLayout data={companyInfo}>
-      <Trans>{pageTitle}</Trans>
-
-      <div className="tabs">
-        <button onClick={() => setActiveTab("entrees")}>Entrees</button>
-        <button onClick={() => setActiveTab("mainDishes")}>Main Dishes</button>
-        <button onClick={() => setActiveTab("sideDishes")}>Side Dishes</button>
-        <button onClick={() => setActiveTab("desserts")}>Desserts</button>
+      <div className="tabs text-white flex justify-around max-w-[750px] mx-auto my-8">
+        <button
+          className={`hover:text-terciary hover:underline ${activeTab === "entrees" ? "text-terciary" : ""}`}
+          onClick={() => setActiveTab("entrees")}
+        >
+          {t("productMenu.entrees")}
+        </button>
+        <button
+          className={`hover:text-terciary hover:underline ${activeTab === "mainDishes" ? "text-terciary" : ""}`}
+          onClick={() => setActiveTab("mainDishes")}
+        >
+          {t("productMenu.mainDishes")}
+        </button>
+        <button
+          className={`hover:text-terciary hover:underline ${activeTab === "sideDishes" ? "text-terciary" : ""}`}
+          onClick={() => setActiveTab("sideDishes")}
+        >
+          {t("productMenu.sideDishes")}
+        </button>
+        <button
+          className={`hover:text-terciary hover:underline ${activeTab === "extras" ? "text-terciary" : ""}`}
+          onClick={() => setActiveTab("extras")}
+        >
+          {t("productMenu.extras")}
+        </button>
+        <button
+          className={`hover:text-terciary hover:underline ${activeTab === "desserts" ? "text-terciary" : ""}`}
+          onClick={() => setActiveTab("desserts")}
+        >
+          {t("productMenu.desserts")}
+        </button>
       </div>
 
-      <div className="food-menu flex flex-wrap gap-5 max-w-[950px] mx-auto justify-center">
+      <div
+        ref={foodMenuRef}
+        className={`food-menu flex flex-wrap gap-5 max-w-[950px] mx-auto justify-center ${
+          isCollapsed && shouldShowCollapseButton ? "max-h-[550px] overflow-hidden" : "min-h-[545px]"
+        }`}
+      >
         {activeTab === "entrees" && renderFoodItems(foodMenu.entrees)}
         {activeTab === "mainDishes" && renderFoodItems(foodMenu.mainDishes)}
         {activeTab === "sideDishes" && renderFoodItems(foodMenu.sideDishes)}
+        {activeTab === "extras" && renderFoodItems(foodMenu.extras)}
         {activeTab === "desserts" && renderFoodItems(foodMenu.desserts)}
       </div>
+
+      {shouldShowCollapseButton && (
+        <div className="text-center my-4">
+          <button
+            className="text-terciary underline"
+            onClick={() => setIsCollapsed(!isCollapsed)}
+          >
+            {isCollapsed ? t("general.see_more") : t("general.see_less")}
+          </button>
+        </div>
+      )}
 
       {selectedFood && (
         <div className="modal">
