@@ -27,6 +27,13 @@
     "see_less": "Voir moins"
   },
   "productMenu": {
+    "dishes_title":"Plats spéciaux",
+    "special_dishes_title_1":"FR Arepas Moderna",
+    "special_dishes_title_2":"FR Pabellón Criollo",
+    "special_dishes_title_3":"FR Ceviche de la Casa",
+    "special_dishes_1":"FR Eleva tu experiencia de sabor con nuestro innovador giro en las clásicas arepas colombianas, con una variedad de rellenos sabrosos y coberturas creativas.",
+    "special_dishes_2":"FR Disfruta de los auténticos sabores de Venezuela con nuestra versión de este querido plato nacional, que incluye carne desmechada, frijoles negros, arroz y plátanos maduro",
+    "special_dishes_3":"FR Saborea el refrescante sabor del mar con el ceviche especial de nuestro chef, preparado con una mezcla de influencias colombianas y venezolanas para una experiencia gastronómica verdaderamente inolvidable.",
     "entrees": "Entrées",
     "mainDishes": "Plats principaux",
     "sideDishes": "Plats d'accompagnement",

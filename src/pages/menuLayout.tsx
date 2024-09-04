@@ -21,7 +21,7 @@ const MenuLayout: React.FC<MenuLayoutProps> = ({ children, data }) => {
         >
           <Header logoPosition={styles.logoPosition} data={data} />
 
-          <div className="flex justify-center mb-20">
+          <div className="flex justify-center my-10">
             <Navigation data={data} />
           </div>
 
