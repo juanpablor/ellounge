@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import LanguageSelector from "./languageSelector";
 import { CompanyData } from "../interfaces/interfaces";
-
 import MainLogo from "../components/mainLogo";
 
 interface HeaderProps {
@@ -16,7 +15,9 @@ const Header: React.FC<HeaderProps> = ({ data, logoPosition }) => {
       <Link to="/" className={`max-w-36 ${logoPosition || ""}`}>
       <MainLogo fillColour="#fff" />
       </Link>
-      <LanguageSelector data={data} />
+      <div className="absolute top-16 right-32">
+        <LanguageSelector data={data} />
+      </div>
     </header>
   );
 };

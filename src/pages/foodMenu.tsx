@@ -179,8 +179,8 @@ const FoodMenuPage: React.FC = () => {
       </section>
 
       {selectedFood && (
-        <div className="modal">
-          <div className="modal-content">
+        <div className="modal w-full h-full fixed z-50 top-0 bg-[rgba(0,0,0,0.4)]" onClick={handleCloseModal}>
+          <div className="modal-content w-[80%] mx-auto bg-secondary/75 mt-40 p-12">
             <span className="close" onClick={handleCloseModal}>
               &times;
             </span>

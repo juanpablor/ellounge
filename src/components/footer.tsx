@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({ data }) => {
   return (
     <footer className={styles.container}>
 
-      <div className="flex flex-row w-full ">
+      <div className="flex flex-row w-full justify-around">
         <Link to="/" className="max-w-32">
           <MainLogo fillColour="#fff" />
         </Link>
@@ -38,7 +38,6 @@ const Footer: React.FC<FooterProps> = ({ data }) => {
             <li>{t("hours.wednesday_and_thursday")}</li>
             <li>{t("hours.friday_and_saturday")}</li>
           </ul>
-          <p>{t("content.additional_info")}</p> {/* Reemplace `content.additional_info` con la clave correcta */}
         </div>        
       </div>
 

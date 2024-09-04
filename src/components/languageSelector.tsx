@@ -1,7 +1,5 @@
 import React from "react";
 import { useI18next } from "gatsby-plugin-react-i18next";
-
-// Importa la interfaz definida anteriormente
 import { CompanyData } from "../interfaces/interfaces"; 
 
 interface NavProps {
@@ -40,7 +38,6 @@ export default LanguageSelector;
 const styles = {
   container: "flex flex-row justify-center self-center",
   buttonsWrapper: "flex flex-row justify-evenly",
-  buttons:
-    "flex w-10 h-10 shrink-0 grow-0 rounded-full justify-center bg-primary text-white hover:bg-secondary hover:border-primary hover:border-2 hover:text-white cursor-pointer mx-1",
+  buttons: "flex w-10 h-10 shrink-0 grow-0 rounded-full justify-center bg-primary text-white hover:bg-secondary hover:border-primary hover:border-2 hover:text-white cursor-pointer mx-1",
   text: "self-center capitalize",
 };
