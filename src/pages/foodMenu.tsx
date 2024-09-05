@@ -7,6 +7,8 @@ import companyData from "../data/data.json";
 import { useLocation } from "@reach/router";
 import foodImages from "../images/food/index";
 import { useTranslation } from "gatsby-plugin-react-i18next";
+import MainLogo from "../components/mainLogo";
+import { FaWindowClose } from "react-icons/fa";
 
 const FoodMenuPage: React.FC = () => {
   const { t } = useTranslation();
@@ -14,6 +16,7 @@ const FoodMenuPage: React.FC = () => {
     name: string;
     en_desc: string;
     image: string;
+    price: string;
   }>(null);
   const [activeTab, setActiveTab] = useState<string>("entrees");
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -29,6 +32,7 @@ const FoodMenuPage: React.FC = () => {
     name: string;
     en_desc: string;
     image: string;
+    price: string;
   }) => {
     setSelectedFood(foodItem);
     navigate(`?food=${foodItem.image}`);
@@ -102,17 +106,23 @@ const FoodMenuPage: React.FC = () => {
       <section className={styles.starringAreaWrapper}>
         <div className={`${styles.starringItem} ${styles.after}`}>
           <img className="p-4" src={foodImages.smoked_meat_arepa} alt="" />
-          <span className={styles.srattingTitle}>{t("productMenu.special_dishes_title_1")}</span>
+          <span className={styles.srattingTitle}>
+            {t("productMenu.special_dishes_title_1")}
+          </span>
           <p className="p-4">{t("productMenu.special_dishes_1")}</p>
         </div>
         <div className={`${styles.starringItem} ${styles.after}`}>
           <img className="p-4" src={foodImages.chili} alt="" />
-          <span className={styles.srattingTitle}>{t("productMenu.special_dishes_title_2")}</span>
+          <span className={styles.srattingTitle}>
+            {t("productMenu.special_dishes_title_2")}
+          </span>
           <p className="p-4">{t("productMenu.special_dishes_2")}</p>
         </div>
         <div className={styles.starringItem}>
           <img className="p-4" src={foodImages.ceviche_de_camaron} alt="" />
-          <span className={styles.srattingTitle}>{t("productMenu.special_dishes_title_3")}</span>
+          <span className={styles.srattingTitle}>
+            {t("productMenu.special_dishes_title_3")}
+          </span>
           <p className="p-4">{t("productMenu.special_dishes_3")}</p>
         </div>
       </section>
@@ -179,17 +189,41 @@ const FoodMenuPage: React.FC = () => {
       </section>
 
       {selectedFood && (
-        <div className="modal w-full h-full fixed z-50 top-0 bg-[rgba(0,0,0,0.4)]" onClick={handleCloseModal}>
-          <div className="modal-content w-[80%] mx-auto bg-secondary/75 mt-40 p-12">
-            <span className="close" onClick={handleCloseModal}>
-              &times;
-            </span>
-            <h2>{selectedFood.name}</h2>
-            <p>{selectedFood.en_desc}</p>
-            <img
-              src={getImageSrc(selectedFood.image)}
-              alt={selectedFood.name}
-            />
+        <div
+          className="modal w-full h-full fixed z-50 top-0 bg-black/80 text-white"
+          onClick={handleCloseModal}
+        >
+          <div className="modal-content w-[80%] max-w-[75rem] mx-auto bg-secondary/75 mt-40 p-12">
+            <article className="flex justify-between">
+              <div className="flex items-start">
+                <div
+                  className="flex text-terciary w-8 cursor-pointer"
+                  onClick={handleCloseModal}
+                >
+                  <FaWindowClose className="w-full h-full " />
+                </div>
+                <div className="ml-16 w-36">
+                  <MainLogo fillColour={"#fff"} />
+                </div>
+              </div>
+              <div className="section">
+                <div className="text-2xl font-thin">
+                  {t(`productMenu.${activeTab}`)}
+                </div>
+                <div className="text-terciary text-6xl text-center">
+                  {selectedFood.price}
+                </div>
+              </div>
+            </article>
+
+            <article className="flex flex-row">
+              <img className="w-[28rem]" src={getImageSrc(selectedFood.image)} alt={selectedFood.name} />
+              <div className="flex flex-col self-center p-8">
+                <div className="w-full text-4xl font-bold uppercase">{selectedFood.name}</div>
+                <p className="py-4">{t(`food.${selectedFood.image}`)}</p>
+                {}
+              </div>
+            </article>
           </div>
         </div>
       )}
@@ -216,14 +250,16 @@ export const query = graphql`
 const styles = {
   starringAreaWrapper: "flex mt-8 flex-row gap-6 justify-center text-white",
   starringItem: "relative w-96 border-dashed border-white border text-center",
-  srattingTitle: "bg-primary text-secondary flex justify-center p-4",
+  srattingTitle: "bg-primary text-secondary text-lg flex justify-center p-3 font-bold",
   tabButton: "hover:text-terciary hover:underline",
   productTile: "flex flex-col w-[160px] h-[260px] bg-primary/35 box-shadow p-4",
   productTileInfoWrapper: "flex flex-row grow pt-4",
-  productTileTitle: "text-white uppercase font-extrabold text-md leading-[1rem]",
+  productTileTitle:
+    "text-white uppercase font-extrabold text-md leading-[1rem]",
   productTilePrice: "text-terciary self-end text-2xl font-extrabold",
   productTileShowMore: "text-white text-xs text-center font-extralight",
   mainTitle: "text-primary text-6xl text-center tracking-wide m-0 p-0",
   tabsWrapper: "tabs text-white flex justify-around max-w-[750px] mx-auto my-8",
-  after: "after:'' after:w-[2rem] after:h-[3.5rem] after:bg-primary after:block after:absolute after:right-[-1.8rem] after:top-[23.85rem] after:z-50"
+  after:
+    "after:'' after:w-[2rem] after:h-[3.25rem] after:bg-primary after:block after:absolute after:right-[-1.8rem] after:top-[23.85rem] after:z-50",
 };

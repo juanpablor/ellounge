@@ -15,6 +15,11 @@ module.exports = {
         hover: '#503D42',
 
       },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'],
+        redHat: ['Red Hat Display', 'sans-serif'],
+      },
     },
   },
   plugins: [],

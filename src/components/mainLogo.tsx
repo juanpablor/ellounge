@@ -6,7 +6,6 @@ interface MainLogoProps {
 
 const MainLogo: React.FC<MainLogoProps> = ({ fillColour }) => (
   <>
-      {/* fill={fillColour} */}
     <svg
       version="1.1"
       x="0px"
@@ -15,6 +14,7 @@ const MainLogo: React.FC<MainLogoProps> = ({ fillColour }) => (
       width="245.00293"
       height="139.44043"
       xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-full"
     >
   <g
      id="g6"
