@@ -1,6 +1,7 @@
 [
     {
         "companyName" : "El Lounge",
+        "name": "El Lounge Latin Club",
         "companyDetails": {
             "address": "1735 Rue Saint Denis, Montréal, QC H2X 3K4",
             "city": "Montreal",

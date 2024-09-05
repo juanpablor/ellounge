@@ -9,6 +9,7 @@ export interface CompanyDetails {
 }
 
 export interface CompanyData {
+  name: React.ReactNode;
   companyName: string;
   companyDetails: CompanyDetails;
   menu: string[];

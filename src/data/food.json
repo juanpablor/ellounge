@@ -198,17 +198,17 @@
   ],
   "sideDishes": [
     {
-      "name": "Patacón/Toston Fritos",
+      "name": "Patacón / Toston Fritos",
       "price": "6",
       "image": "patacon"
     },
     {
-      "name": "Frites/Fries",
+      "name": "Frites / Fries",
       "price": "6",
       "image": "extra_fries"
     },
     {
-      "name": "Yuca/Manioc",
+      "name": "Yuca / Manioc",
       "price": "9",
       "image": "yuca"
     },

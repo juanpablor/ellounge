@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 import { graphql, navigate } from "gatsby";
 import MenuLayout from "./menuLayout";
 import { CompanyData, FoodMenu } from "../interfaces/interfaces";
@@ -99,6 +100,10 @@ const FoodMenuPage: React.FC = () => {
 
   return (
     <MenuLayout data={companyInfo}>
+      <Helmet>
+        <title>{t("productMenu.dishes_title")} - {companyInfo.name}</title>
+        <link rel="icon" href="/path/to/favicon.ico" />
+      </Helmet>
       <section>
         <h2 className={styles.mainTitle}>{t("productMenu.dishes_title")}</h2>
       </section>
@@ -163,7 +168,7 @@ const FoodMenuPage: React.FC = () => {
 
         <div
           ref={foodMenuRef}
-          className={`food-menu flex flex-wrap gap-5 max-w-[950px] mx-auto justify-center ${
+          className={`food-menu flex flex-wrap gap-5 max-w-[1200px] mx-auto justify-center ${
             isCollapsed && shouldShowCollapseButton
               ? "max-h-[550px] overflow-hidden"
               : "min-h-[545px]"
@@ -217,9 +222,15 @@ const FoodMenuPage: React.FC = () => {
             </article>
 
             <article className="flex flex-row">
-              <img className="w-[28rem]" src={getImageSrc(selectedFood.image)} alt={selectedFood.name} />
+              <img
+                className="w-[28rem]"
+                src={getImageSrc(selectedFood.image)}
+                alt={selectedFood.name}
+              />
               <div className="flex flex-col self-center p-8">
-                <div className="w-full text-4xl font-bold uppercase">{selectedFood.name}</div>
+                <div className="w-full text-4xl font-bold uppercase">
+                  {selectedFood.name}
+                </div>
                 <p className="py-4">{t(`food.${selectedFood.image}`)}</p>
                 {}
               </div>
@@ -250,7 +261,8 @@ export const query = graphql`
 const styles = {
   starringAreaWrapper: "flex mt-8 flex-row gap-6 justify-center text-white",
   starringItem: "relative w-96 border-dashed border-white border text-center",
-  srattingTitle: "bg-primary text-secondary text-lg flex justify-center p-3 font-bold",
+  srattingTitle:
+    "bg-primary text-secondary text-lg flex justify-center p-3 font-bold",
   tabButton: "hover:text-terciary hover:underline",
   productTile: "flex flex-col w-[160px] h-[260px] bg-primary/35 box-shadow p-4",
   productTileInfoWrapper: "flex flex-row grow pt-4",
