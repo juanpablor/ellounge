@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { graphql, navigate } from "gatsby";
-import MenuLayout from "./menuLayout";
+import MenuLayout from "./foodLayout";
 import { CompanyData, FoodMenu } from "../interfaces/interfaces";
 import foodData from "../data/food.json";
 import companyData from "../data/data.json";
@@ -10,6 +10,7 @@ import foodImages from "../images/food/index";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import MainLogo from "../components/mainLogo";
 import { FaWindowClose } from "react-icons/fa";
+import favicon from "../images/icon.png";
 
 const FoodMenuPage: React.FC = () => {
   const { t } = useTranslation();
@@ -102,7 +103,7 @@ const FoodMenuPage: React.FC = () => {
     <MenuLayout data={companyInfo}>
       <Helmet>
         <title>{t("productMenu.dishes_title")} - {companyInfo.name}</title>
-        <link rel="icon" href="/path/to/favicon.ico" />
+        <link rel="icon" href={favicon} />
       </Helmet>
       <section>
         <h2 className={styles.mainTitle}>{t("productMenu.dishes_title")}</h2>

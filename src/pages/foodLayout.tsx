@@ -4,12 +4,12 @@ import Navigation from "../components/nav";
 import { CompanyData } from "../interfaces/interfaces";
 import images from "../images/index";
 
-interface MenuLayoutProps {
+interface FoodLayoutProps {
   children: ReactNode;
   data?: CompanyData;
 }
 
-const MenuLayout: React.FC<MenuLayoutProps> = ({ children, data }) => {
+const FoodLayout: React.FC<FoodLayoutProps> = ({ children, data }) => {
   return (
     <>
       <div className={styles.containerWrapper}>
@@ -23,7 +23,10 @@ const MenuLayout: React.FC<MenuLayoutProps> = ({ children, data }) => {
             <img src={images.planta_3} className="w-56" alt="" />
             <img src={images.planta_4} className="absolute w-32 right-[3rem] top-[12rem] z-30 rotate-[10deg]" alt="" />
           </div>
-          <Header logoPosition={styles.logoPosition} data={data} />
+          <div className="w-[20rem] mx-auto">
+
+            <Header logoPosition={styles.logoPosition} data={data} />
+          </div>
 
           <div className="flex justify-center my-10">
             <Navigation data={data} />
@@ -44,7 +47,7 @@ const MenuLayout: React.FC<MenuLayoutProps> = ({ children, data }) => {
   );
 };
 
-export default MenuLayout;
+export default FoodLayout;
 
 const styles = {
   containerWrapper: "flex flex-col w-full bg-secondary",

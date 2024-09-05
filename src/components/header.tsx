@@ -12,7 +12,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ data, logoPosition }) => {
   return (
     <header className={styles.container}>
-      <Link to="/" className={`max-w-36 ${logoPosition || ""}`}>
+      <Link to="/" className={`w-full ${logoPosition || ""}`}>
       <MainLogo fillColour="#fff" />
       </Link>
       <div className="absolute top-16 right-32">

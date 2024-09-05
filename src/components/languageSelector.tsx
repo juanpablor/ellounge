@@ -4,9 +4,10 @@ import { CompanyData } from "../interfaces/interfaces";
 
 interface NavProps {
   data?: CompanyData;
+  clubLayout?: boolean;
 }
 
-const LanguageSelector: React.FC<NavProps> = ({ data }) => {
+const LanguageSelector: React.FC<NavProps> = ({ data, clubLayout }) => {
   const { languages, changeLanguage } = useI18next();
 
   if (!data?.menu) {
@@ -19,7 +20,7 @@ const LanguageSelector: React.FC<NavProps> = ({ data }) => {
         {languages.map((lng) => (
           <li
             key={lng}
-            className={styles.buttons}
+            className={`${styles.buttons} ${clubLayout ? "hover:text-[pink]" : "bg-primary hover:bg-secondary hover:border-primary hover:border-2 hover:text-white"}`}
             onClick={(e) => {
               e.preventDefault();
               changeLanguage(lng);
@@ -38,6 +39,6 @@ export default LanguageSelector;
 const styles = {
   container: "flex flex-row justify-center self-center",
   buttonsWrapper: "flex flex-row justify-evenly",
-  buttons: "flex w-10 h-10 shrink-0 grow-0 rounded-full justify-center bg-primary text-white hover:bg-secondary hover:border-primary hover:border-2 hover:text-white cursor-pointer mx-1",
+  buttons: "flex w-10 h-10 shrink-0 grow-0 rounded-full justify-center text-white cursor-pointer mx-1",
   text: "self-center capitalize",
 };

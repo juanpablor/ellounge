@@ -13,7 +13,7 @@ module.exports = {
         primary: '#a3af3d',
         terciary: '#eca827',
         hover: '#503D42',
-
+        latinClub: "#1c1c1c"
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
