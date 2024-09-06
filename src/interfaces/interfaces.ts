@@ -10,6 +10,7 @@ export interface CompanyDetails {
 
 export interface CompanyData {
   name: React.ReactNode;
+  clubMenu: string[];
   companyName: string;
   companyDetails: CompanyDetails;
   menu: string[];

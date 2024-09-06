@@ -9,6 +9,12 @@
     "foodMenu": "Menu",
     "latinClub": "Latin Club"
   },
+  "menuDrink": {
+    "latinClub": "Club Latin",
+    "drinksMenu": "Menu Boissons",
+    "events": "Événemets",
+    "visitUs": "Visitez-nous"
+  },
   "hours": {
     "title": "Heures d'overture",
     "sunday_to_tuesday": "Dimanche et mardi: fermé",

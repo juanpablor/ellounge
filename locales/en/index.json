@@ -9,6 +9,12 @@
     "foodMenu": "Menu",
     "latinClub": "Latin Club"
   },
+  "menuDrink": {
+    "latinClub": "Latin Club",
+    "drinksMenu": "Menu Drinks",
+    "events": "Events",
+    "visitUs": "Visit Us"
+  },
   "hours": {
     "title": "Opening hours",
     "sunday_to_tuesday": "Sunday and Tuesday: closed",

@@ -1,5 +1,6 @@
 import BackgroundImage from "./leaves_background.png";
 import BackgroundClubImage from "./club_background.png";
+import club_background_gray from "./club_background_gray.png";
 import cocktail from "./cocktail_red.png";
 import plate from "./plate.png";
 import bellpepper from "./pimenton.png";
@@ -20,14 +21,20 @@ import mango from "./mango.png";
 import cocktail_2 from "./cocktail_2.png";
 import cocktail_3 from "./cocktail_3.png";
 import cocktail_4 from "./cocktail_4.png";
+import cocktail_5 from "./cocktail_5.png";
 import cocktail_wireframe from "./cocktail_wireframe.png";
+import cocktail_wireframe_2 from "./cocktail_wireframe_2.png";
 import home_1 from "./home_1.jpg";
 import home_2 from "./home_2.jpg";
 import home_3 from "./home_3.jpg";
+import latin_club_1 from "./latin_club_1.jpg";
+import latin_club_2 from "./latin_club_2.jpg";
+import latin_club_3 from "./latin_club_3.jpg";
 
 const images = {
   BackgroundImage,
   BackgroundClubImage,
+  club_background_gray,
   cocktail,
   plate,
   bellpepper,
@@ -48,10 +55,15 @@ const images = {
   cocktail_2,
   cocktail_3,
   cocktail_4,
+  cocktail_5,
   cocktail_wireframe,
+  cocktail_wireframe_2,
   home_1,
   home_2,
-  home_3
+  home_3,
+  latin_club_1,
+  latin_club_2,
+  latin_club_3
 };
 
 export default images;

@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import { CompanyData } from "../interfaces/interfaces";
-import images from "../images/index";
 import LanguageSelector from "../components/languageSelector";
 import MainLogo from "../components/mainLogo";
 import { RiInstagramLine } from "react-icons/ri";
@@ -17,13 +16,8 @@ const LatinClubLayout: React.FC<LatinClubLayoutProps> = ({
 }) => {
   return (
     <>
-      <div className={styles.containerWrapper} style={{
-            backgroundImage: `url(${images.BackgroundClubImage})`,
-          }}>
-        <div
-          className="bg-no-repeat bg-center"
-          
-        >
+      <div className={styles.containerWrapper}>
+        <div className="bg-no-repeat bg-center">
           <div className="flex justify-between">
             <div>
               <a href={""} target="_blank" rel="noopener noreferrer">
@@ -37,7 +31,7 @@ const LatinClubLayout: React.FC<LatinClubLayoutProps> = ({
             <div className="w-[10rem]">
               <MainLogo fillColour={"#fff"} />
             </div>
-            <div className="flex justify-end">
+            <div className="flex justify-end]">
               <LanguageSelector clubLayout={true} data={data} />
             </div>
           </div>
@@ -52,6 +46,6 @@ const LatinClubLayout: React.FC<LatinClubLayoutProps> = ({
 export default LatinClubLayout;
 
 const styles = {
-  containerWrapper: "flex flex-col w-full bg-latinClub",
+  containerWrapper: "flex flex-col w-full bg-[black]/85",
   logoPosition: "mx-auto",
 };

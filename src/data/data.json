@@ -11,6 +11,7 @@
             "instagram": "https://instagram.com/pointbarlounge",
             "facebook": "http://facebook.com/pointbarloungemtl"
         },
-        "menu": ["El_Lounge", "foodMenu", "latinClub"]
+        "menu": ["El_Lounge", "foodMenu", "latinClub"],
+        "clubMenu": ["latinClub", "drinksMenu", "events", "visitUs"]
     }
 ]
