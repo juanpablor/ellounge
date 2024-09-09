@@ -1,0 +1,978 @@
+{
+    "cocktailsSignature": [
+      {
+        "name": "Mexicana",
+        "subtitle": "(Fruité+épicé / Fruty+spicy)",
+        "price": "19",
+        "image": "mexicana"
+      },
+      {
+        "name": "El Ritual",
+        "subtitle": "(Fort+tropical / Strong+tropical)",
+        "price": "25",
+        "image": "el_ritual"
+      },
+      {
+        "name": "Patron Margarita",
+        "subtitle": "",
+        "price": "21",
+        "image": "patron_margarita"
+      },
+      {
+        "name": "Passion Duck ",
+        "subtitle": "(Citrique+Sucré / Citric+Sweet)",
+        "price": "21",
+        "image": "passion_duck"
+      },
+      {
+        "name": "La Rosa Letal ",
+        "subtitle": "(Forte+Amère / Strong+Bitter)",
+        "price": "22",
+        "image": "la_rosa_letal"
+      },
+      {
+        "name": "Pasion de Mezcal ",
+        "subtitle": "(Fort+Fruté / Strong+Fruty)",
+        "price": "20",
+        "image": "pasion_de_mezcal"
+      },
+      {
+        "name": "Amazona ",
+        "subtitle": "(Fort+Citrique / Strong+Citric)",
+        "price": "20",
+        "image": "amazona"
+      },
+      {
+        "name": "PepiGin ",
+        "subtitle": "(Rafraîchissante / Refreshing)",
+        "price": "19",
+        "image": "pepigin"
+      },
+      {
+        "name": "Limoncello Spritz ",
+        "subtitle": "(Rafraîchissante+citroné / Refreshing+lemon)",
+        "price": "18",
+        "image": "limoncello_spritz"
+      },
+      {
+        "name": "Medellin Mule ",
+        "subtitle": "(Fusion colombienne et russe / Colombian and Russian fusion)",
+        "price": "19",
+        "image": "medellin_mule"
+      },
+      {
+        "name": "Yuzu Melon",
+        "subtitle": "",
+        "price": "18",
+        "image": "yuzu_melon"
+      }
+    ],
+    "houseCocktails": [
+      {
+        "name": "Grand Marnier margarita clásica",
+        "price": "17",
+        "image": "grand_marnier"
+      },
+      {
+        "name": "Patron espresso Martini",
+        "price": "18",
+        "image": "patron_espresso_martini"
+      },
+      {
+        "name": "Mezcalita",
+        "price": "18",
+        "image": "mezcalita"
+      },
+      {
+        "name": "Mojitos",
+        "price": "15",
+        "image": "mojitos"
+      },
+      {
+        "name": "Margaritas",
+        "price": "15",
+        "image": "margaritas"
+      },
+      {
+        "name": "Daiquiri",
+        "price": "15",
+        "image": "daiquiri"
+      },
+      {
+        "name": "Aperol Spritz",
+        "price": "15",
+        "image": "aperol_spritz"
+      },
+      {
+        "name": "Bloody Caesar",
+        "price": "14",
+        "image": "bloody_caesar"
+      },
+      {
+        "name": "Michelada Cubana",
+        "price": "14",
+        "image": "michelada_cubana"
+      },
+      {
+        "name": "Whiskey sour",
+        "price": "17",
+        "image": "whiskey_sour"
+      },
+      {
+        "name": "Pisco Sour",
+        "price": "17",
+        "image": "pisco_sour"
+      },
+      {
+        "name": "Piña Colada",
+        "price": "15",
+        "image": "pina_colada"
+      },
+      {
+        "name": "Moscou mule",
+        "price": "15",
+        "image": "moscou_mule"
+      },
+      {
+        "name": "Bull",
+        "price": "14",
+        "image": "bull"
+      },
+      {
+        "name": "Sex on the Beach",
+        "price": "15",
+        "image": "sex_on_the_beach"
+      },
+      {
+        "name": "Caipirinha",
+        "price": "17",
+        "image": "caipirinha"
+      },
+      {
+        "name": "Jagger lemonade",
+        "price": "17",
+        "image": "jagger_lemonade"
+      },
+      {
+        "name": "Amaretto Sour",
+        "price": "17",
+        "image": "amaretto_sour"
+      },
+      {
+        "name": "Paloma",
+        "price": "15",
+        "image": "paloma"
+      },
+      {
+        "name": "Tequila sunrise",
+        "price": "15",
+        "image": "tequila_sunrise"
+      },
+      {
+        "name": "Cocktail d'olives",
+        "price": "7",
+        "image": "cocktail_d_olives"
+      }
+    ],
+    "classicCocktails": [
+      {
+        "name": "Martini",
+        "price": "16",
+        "image": "martini"
+      },
+      {
+        "name": "Old Fashion",
+        "price": "16",
+        "image": "old_fashion"
+      },
+      {
+        "name": "Negroni",
+        "price": "16",
+        "image": "negroni"
+      },
+      {
+        "name": "Cosmopolitan",
+        "price": "15",
+        "image": "cosmopolitan"
+      },
+      {
+        "name": "Expresso Martini",
+        "price": "17",
+        "image": "expresso_martini"
+      },
+      {
+        "name": "Gin tonic",
+        "price": "15",
+        "image": "gin_tonic"
+      },
+      {
+        "name": "Cuba Libre",
+        "price": "15",
+        "image": "cuba_libre"
+      },
+      {
+        "name": "Vodka Tonic",
+        "price": "14",
+        "image": "vodka_tonic"
+      },
+      {
+        "name": "Tequila Soda",
+        "price": "14",
+        "image": "tequila_soda"
+      },
+      {
+        "name": "Litchi Martini",
+        "price": "17",
+        "image": "litchi_martini"
+      },
+      {
+        "name": "Long Island Ice tea",
+        "price": "17",
+        "image": "long_island_ice_tea"
+      },
+      {
+        "name": "Mai Tai",
+        "price": "17",
+        "image": "mai_tai"
+      }
+    ],
+    "shots": [
+      {
+        "name": "Ron Diplomatico Reserva",
+        "price": "11",
+        "image": "ron_diplomatico_reserva_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Ron Diplomatico Mantuano",
+        "price": "9",
+        "image": "ron_diplomatico_mantuano_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Flor de Caña 12 años",
+        "price": "12",
+        "image": "flor_de_cana_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Ron Zacapa",
+        "price": "14",
+        "image": "ron_zacapa_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Ron Plantation",
+        "price": "14",
+        "image": "ron_plantation_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Vodka Gray Goose",
+        "price": "10",
+        "image": "vodka_gray_goose_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Vodka Ciroc",
+        "price": "10",
+        "image": "vodka_ciroc_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Tequila 1800 Silver",
+        "price": "9",
+        "image": "tequila_1800_silver_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Tequila 1800 Reposado",
+        "price": "11",
+        "image": "tequila_1800_reposado_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Tequila Patron Silver",
+        "price": "12",
+        "image": "tequila_patron_silver_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Tequila Don Julio Blanco",
+        "price": "14",
+        "image": "tequila_don_julio_blanco_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Tequila Don Julio Reposado",
+        "price": "16",
+        "image": "tequila_don_julio_reposado_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Mezcal",
+        "price": "11",
+        "image": "mezcal_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Whisky Proper twelve",
+        "price": "9",
+        "image": "whisky_proper_twelve_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Whisky Jack Daniel's",
+        "price": "9",
+        "image": "whisky_jack_daniels_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Whisky Johnnie Walker Black Label",
+        "price": "11",
+        "image": "whisky_johnnie_walker_black_label_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Whisky Chivas Regal 12",
+        "price": "11",
+        "image": "whisky_chivas_regal_12_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Whisky Glenfiddich 12",
+        "price": "12",
+        "image": "whisky_glenfiddich_12_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Absente",
+        "price": "12",
+        "image": "absente_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Aguardiente",
+        "price": "9",
+        "image": "aguardiente_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Baileys / Disaronno",
+        "price": "7",
+        "image": "baileys_disaronno_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Jaggermeister",
+        "price": "8",
+        "image": "jaggermeister_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Pisco",
+        "price": "9",
+        "image": "pisco_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Sambuca",
+        "price": "10",
+        "image": "sambuca_shot",
+        "type": "SHOT"
+      },
+      {
+        "name": "Ron Diplomatico Reserva",
+        "price": "15",
+        "image": "ron_diplomatico_reserva_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Ron Diplomatico Mantuano",
+        "price": "12",
+        "image": "ron_diplomatico_mantuano_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Ron Plantation",
+        "price": "16",
+        "image": "ron_plantation_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Ron Zacapa 23",
+        "price": "16",
+        "image": "ron_zacapa_23_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Whisky Proper twelve",
+        "price": "12",
+        "image": "whisky_proper_twelve_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Whisky Jack Daniel's",
+        "price": "12",
+        "image": "whisky_jack_daniels_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Whisky Johnnie Walker Black Label",
+        "price": "14",
+        "image": "whisky_johnnie_walker_black_label_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Whisky Glenfiddich 12",
+        "price": "16",
+        "image": "whisky_glenfiddich_12_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Whisky Chivas Regal 12 years",
+        "price": "14",
+        "image": "whisky_chivas_regal_12_years_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Vodka Gray Goose",
+        "price": "14",
+        "image": "vodka_gray_goose_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Vodka Ciroc",
+        "price": "14",
+        "image": "vodka_ciroc_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Gin Bombay",
+        "price": "11",
+        "image": "gin_bombay_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Gin Tanqueray",
+        "price": "13",
+        "image": "gin_tanqueray_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Gin Hendrick's",
+        "price": "14",
+        "image": "gin_hendrick's_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Gin Ungava Ginger",
+        "price": "11",
+        "image": "gin_ungava_ginger_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Mezcal",
+        "price": "12",
+        "image": "mezcal_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Absente",
+        "price": "15",
+        "image": "absente_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Baileys",
+        "price": "9",
+        "image": "baileys_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Brandy XO",
+        "price": "14",
+        "image": "brandy_xo_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Cognac",
+        "price": "18",
+        "image": "cognac_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Fernet",
+        "price": "11",
+        "image": "fernet_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Grand Marnier",
+        "price": "13",
+        "image": "grand_marnier_glass",
+        "type": "GLASS"
+      },
+      {
+        "name": "Pisco",
+        "price": "10",
+        "image": "pisco_glass",
+        "type": "GLASS"
+      }
+    ],
+    "houseShots": [
+      {
+        "name": "Pandita",
+        "price": "10",
+        "image": "pandita"
+      },
+      {
+        "name": "Pitufo",
+        "price": "10",
+        "image": "pitufo"
+      },
+      {
+        "name": "Uppercut",
+        "price": "11",
+        "image": "uppercut"
+      },
+      {
+        "name": "Redbull Bomb",
+        "price": "11",
+        "image": "redbull_bomb"
+      },
+      {
+        "name": "Pornstar",
+        "price": "9",
+        "image": "pornstar"
+      },
+      {
+        "name": "Russian Rulette",
+        "price": "10",
+        "image": "russian_rulette"
+      },
+      {
+        "name": "B52",
+        "price": "11",
+        "image": "b52"
+      },
+      {
+        "name": "Baby Mango",
+        "price": "9",
+        "image": "baby_mango"
+      },
+      {
+        "name": "Litchi Bomb",
+        "price": "9",
+        "image": "litchi_bomb"
+      },
+      {
+        "name": "Fireball",
+        "price": "9",
+        "image": "fireball"
+      }
+    ],
+    "bottles": [
+      {
+        "name": "Ron Diplomático Reserva Exclusiva",
+        "price": "250",
+        "image": "ron_diplomático_reserva_exclusiva"
+      },
+      {
+        "name": "Ron Diplomatico Mantuano",
+        "price": "200",
+        "image": "ron_diplomatico_mantuano"
+      },
+      {
+        "name": "Vodka Gray Goose",
+        "price": "210",
+        "image": "vodka_gray_goose"
+      },
+      {
+        "name": "Vodka Ciroc",
+        "price": "200",
+        "image": "vodka_ciroc"
+      },
+      {
+        "name": "Tequila 1800 Silver",
+        "price": "190",
+        "image": "tequila_1800_silver"
+      },
+      {
+        "name": "Ron Plantation XO",
+        "price": "280",
+        "image": "ron_plantation_xo"
+      },
+      {
+        "name": "Ron Bacardi Reserva 8",
+        "price": "200",
+        "image": "ron_bacardi_reserva_8"
+      },
+      {
+        "name": "Ron Zacapa 23",
+        "price": "320",
+        "image": "ron_zacapa_23"
+      },
+      {
+        "name": "Flor de Caña 12 años",
+        "price": "250",
+        "image": "flor_de_cana"
+      },
+      {
+        "name": "Tequila Patron Silver",
+        "price": "260",
+        "image": "tequila_patron_silver"
+      },
+      {
+        "name": "Tequila Patron Reposado",
+        "price": "300",
+        "image": "tequila_patron_reposado"
+      },
+      {
+        "name": "Tequila 1800 Reposado",
+        "price": "210",
+        "image": "tequila_1800_reposado"
+      },
+      {
+        "name": "Tequila 1800 Añejo",
+        "price": "250",
+        "image": "tequila_1800_añejo"
+      },
+      {
+        "name": "Tequila Don Julio Reposado",
+        "price": "330",
+        "image": "tequila_don_julio_reposado"
+      },
+      {
+        "name": "Tequila don Julio Blanco",
+        "price": "270",
+        "image": "tequila_don_julio_blanco"
+      },
+      {
+        "name": "Mezcal",
+        "price": "250",
+        "image": "mezcal"
+      },
+      {
+        "name": "Whisky Jack Daniel's",
+        "price": "170",
+        "image": "whisky_jack_daniels"
+      },
+      {
+        "name": "Whisky Johnnie Walker Black Label",
+        "price": "250",
+        "image": "whisky_johnnie_walker_black_label"
+      },
+      {
+        "name": "Whisky Glenfiddich 12",
+        "price": "280",
+        "image": "whisky_glenfiddich_12"
+      },
+      {
+        "name": "Whisky Chivas Regal 12 years",
+        "price": "250",
+        "image": "whisky_chivas_regal_12_years"
+      },
+      {
+        "name": "Whisky Proper twelve",
+        "price": "190",
+        "image": "whisky_proper_twelve"
+      },
+      {
+        "name": "Gin Bombay",
+        "price": "200",
+        "image": "gin_bombay"
+      },
+      {
+        "name": "Gin Hendrick's",
+        "price": "250",
+        "image": "gin_hendricks"
+      },
+      {
+        "name": "Pisco",
+        "price": "200",
+        "image": "pisco"
+      },
+      {
+        "name": "Aguardiente",
+        "price": "180",
+        "image": "aguardiente"
+      },
+      {
+        "name": "Brandy XO",
+        "price": "180",
+        "image": "brandy_xo"
+      },
+      {
+        "name": "Champagne Nicolas Feuillatte Réserve Exclusive",
+        "price": "190",
+        "image": "bottle_champagne_nicolas_feuillatte_reserve_exclusive"
+      },
+      {
+        "name": "Champagne Veuve De Clicquot",
+        "price": "270",
+        "image": "champagne_veuve_de_clicquot"
+      }
+    ],
+    "wineBeer": [
+      {
+        "name": "Sapporo",
+        "price": "10",
+        "image": "sapporo"
+      },
+      {
+        "name": "Sleeman Clear 2.0",
+        "price": "8",
+        "image": "sleeman_clear"
+      },
+      {
+        "name": "Kronenbourg Blanc 1664",
+        "price": "10",
+        "image": "kronenbourg_blanc_1664"
+      },
+      {
+        "name": "Unibroue Red/Rousse",
+        "price": "10",
+        "image": "unibroue_red"
+      },
+      {
+        "name": "Unibroue HIPL",
+        "price": "10",
+        "image": "unibroue_hipl"
+      },
+      {
+        "name": "Blanche de Chambly - saisonnière/seasonal",
+        "price": "10",
+        "image": "blanche_de_chambly_saisonniere"
+      },
+      {
+        "name": "Corona",
+        "price": "10",
+        "image": "corona"
+      },
+      {
+        "name": "Corona",
+        "price": "10",
+        "image": "corona_0"
+      },
+      {
+        "name": "Stella Artois",
+        "price": "10",
+        "image": "stella_artois"
+      },
+      {
+        "name": "Guinness",
+        "price": "10",
+        "image": "guinness"
+      },
+      {
+        "name": "Guinness",
+        "price": "10",
+        "image": "guinness_0"
+      },
+      {
+        "name": "Tinto de verano ",
+        "price": "38 / 15",
+        "image": "tinto_de_verano "
+      },
+      {
+        "name": "La rosada",
+        "price": "38 / 15",
+        "image": "la_rosada"
+      },
+      {
+        "name": "Blame the Aperol",
+        "price": "38 / 15",
+        "image": "blame_the_aperol"
+      },
+      {
+        "name": "Free the Litchi",
+        "price": "38 / 15",
+        "image": "free_the_litchi"
+      },
+      {
+        "name": "Pino Noir Bicicleta",
+        "price": "65 / 12",
+        "image": "pino_noir_bicicleta"
+      },
+      {
+        "name": "Zonin Valpolicella Ripasso",
+        "price": "80 / 15",
+        "image": "zonin_valpolicella_ripasso"
+      },
+      {
+        "name": "Le Focaie : Rocca di Montemassi",
+        "price": "75 / 15",
+        "image": "le_focaie_rocca_di_montemassi"
+      },
+      {
+        "name": "Le Naturel",
+        "price": "75 / 15",
+        "image": "le_naturel"
+      },
+      {
+        "name": "Cabolani Pinot Grigio",
+        "price": "80 / 16",
+        "image": "cabolani_pinot_grigio"
+      },
+      {
+        "name": "La Hitaire Les Tours",
+        "price": "75 / 15",
+        "image": "la_hitaire_les_tours"
+      },
+      {
+        "name": "La Hitaire Chardonnay",
+        "price": "75 / 15",
+        "image": "la_hitaire_chardonnay"
+      },
+      {
+        "name": "Bourgogne Aligote",
+        "price": "80 / 15",
+        "image": "bourgogne_aligote"
+      },
+      {
+        "name": "Cote des Roses Syrah",
+        "price": "75 / 15",
+        "image": "cote_des_roses_syrah"
+      },
+      {
+        "name": "Pinot noir rose Bicicleta",
+        "price": "65 / 12",
+        "image": "pinot_noir_rose_bicicleta"
+      },
+      {
+        "name": "Zonin Prosecco",
+        "price": "90",
+        "image": "zonin_prosecco"
+      },
+      {
+        "name": "Zonin Prosecco Rose",
+        "price": "90",
+        "image": "zonin_prosecco_rose"
+      },
+      {
+        "name": "Champagne Nicolas Feuillatte Réserve Exclusive",
+        "price": "190",
+        "image": "champagne_nicolas_feuillatte_reserve_exclusive"
+      },
+      {
+        "name": "Champagne Veuve Clicquot",
+        "price": "270",
+        "image": "champagne_veuve_clicquot"
+      }
+    ],
+    "mocktails": [
+      {
+        "name": "Limonada",
+        "price": "10",
+        "image": "limonada"
+      },
+      {
+        "name": "Sherly Temple",
+        "price": "8",
+        "image": "sherly_temple"
+      },
+      {
+        "name": "Conga",
+        "price": "9",
+        "image": "conga"
+      },
+      {
+        "name": "Virgin cocktails",
+        "price": "10",
+        "image": "virgin_cocktails"
+      },
+      {
+        "name": "La michi",
+        "price": "13",
+        "image": "la_michi"
+      },
+      {
+        "name": "Corona 0%",
+        "price": "10",
+        "image": "corona_0_"
+      },
+      {
+        "name": "Guiness 0%",
+        "price": "10",
+        "image": "guiness_0_"
+      },
+      {
+        "name": "Fin Soda Mule",
+        "price": "9",
+        "image": "fin_soda_mule"
+      },
+      {
+        "name": "Le Limon Fin Soda Lime and Lemon",
+        "price": "9",
+        "image": "le_limon_fin_soda_lime_and_lemon"
+      }
+    ],
+    "non_alcoholic": [
+      {
+        "name": "Cafe",
+        "price": "1.75",
+        "image": "cafe"
+      },
+      {
+        "name": "Espressso",
+        "price": "4",
+        "image": "espressso"
+      },
+      {
+        "name": "Hot Chocolate",
+        "price": "4.50",
+        "image": "hot_chocolate"
+      },
+      {
+        "name": "Coca cola",
+        "price": "4",
+        "image": "coca_cola"
+      },
+      {
+        "name": "Coke Zero",
+        "price": "4",
+        "image": "coke_zero"
+      },
+      {
+        "name": "Ginger ale",
+        "price": "4",
+        "image": "ginger_ale"
+      },
+      {
+        "name": "7up",
+        "price": "4",
+        "image": "7up"
+      },
+      {
+        "name": "Water",
+        "price": "4",
+        "image": "water"
+      },
+      {
+        "name": "Perrier",
+        "price": "4",
+        "image": "perrier"
+      },
+      {
+        "name": "Tonic water",
+        "price": "4",
+        "image": "tonic_water"
+      },
+      {
+        "name": "Club soda",
+        "price": "4",
+        "image": "club_soda"
+      },
+      {
+        "name": "Redbull",
+        "price": "6",
+        "image": "redbull"
+      },
+      {
+        "name": "Naranjada",
+        "price": "10",
+        "image": "naranjada"
+      }
+    ]
+}

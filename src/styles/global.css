@@ -16,5 +16,14 @@ footer {
 }
 
 .box-shadow {
-    box-shadow: 1px 1px 4px 2px #4A4A4A;
+    box-shadow: 1px 1px 4px 2px rgba(var(--color-latinClub-rgb), 0.4);
+}
+
+.box-shadow-latinClub {
+    box-shadow: -3px 3px 4px 0 rgba(var(--color-latinBlue-rgb), 0.2);
+}
+
+.text-shadow-club,
+.tab-button:hover {
+    text-shadow: 1px 1px 8px var(--color-latinBlue);
 }

@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ data, logoPosition }) => {
       <MainLogo fillColour="#fff" />
       </Link>
       <div className="absolute top-16 right-32">
-        <LanguageSelector data={data} />
+        <LanguageSelector  clubLayout={false} data={data} />
       </div>
     </header>
   );

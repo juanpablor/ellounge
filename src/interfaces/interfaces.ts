@@ -25,19 +25,30 @@ export interface IndexLayoutProps {
   data?: CompanyData;
 }
 
-export interface Dish {
+export interface Product {
   name: string;
-  fr_desc: string;
-  en_desc: string;
   price: string;
   image: string;
   note1?: string;
+  subtitle?: string;
 }
 
 export interface FoodMenu {
-  entrees: Dish[];
-  mainDishes: Dish[];
-  extras: Dish[];
-  sideDishes: Dish[];
-  desserts: Dish[];
+  entrees: Product[];
+  mainDishes: Product[];
+  extras: Product[];
+  sideDishes: Product[];
+  desserts: Product[];
+}
+
+export interface DrinksMenu {
+  cocktailsSignature: Product[];
+  houseCocktails: Product[];
+  classicCocktails: Product[];
+  shots: Product[];
+  houseShots: Product[];
+  bottles: Product[];
+  wineBeer: Product[];
+  mocktails: Product[];
+  non_alcoholic: Product[];
 }

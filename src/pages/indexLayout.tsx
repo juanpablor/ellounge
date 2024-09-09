@@ -47,13 +47,13 @@ const indexLayout: React.FC<IndexLayoutProps> = ({ data }) => {
             <div className="">
               <img src={images.cocktail} alt="" className="h-80" />
             </div>
-            <div>
+            <div className="h-36">
               <MainLogo fillColour="#fff" />
               <img src={images.plate} alt="" className="h-56 -mt-10 -ml-10" />
             </div>
           </div>
 
-          <div className="flex justify-center mb-20">
+          <div className="flex justify-center my-20">
             <Navigation data={data} />
           </div>
 

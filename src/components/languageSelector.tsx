@@ -8,7 +8,7 @@ interface NavProps {
 }
 
 const LanguageSelector: React.FC<NavProps> = ({ data, clubLayout }) => {
-  const { languages, changeLanguage } = useI18next();
+  const { languages, changeLanguage, language: currentLanguage } = useI18next();
 
   if (!data?.menu) {
     return null;
@@ -20,7 +20,10 @@ const LanguageSelector: React.FC<NavProps> = ({ data, clubLayout }) => {
         {languages.map((lng) => (
           <li
             key={lng}
-            className={`${styles.buttons} ${clubLayout ? "hover:text-[pink]" : "bg-primary hover:bg-secondary hover:border-primary hover:border-2 hover:text-white"}`}
+            className={`${styles.buttons} ${
+              clubLayout ? "tab-button hover:underline" : styles.hover
+            }
+            ${lng === currentLanguage ? clubLayout ? "text-shadow-club" : "bg-none border-none" : clubLayout ? "bg-none border-none" : "bg-secondary"}`}
             onClick={(e) => {
               e.preventDefault();
               changeLanguage(lng);
@@ -41,4 +44,5 @@ const styles = {
   buttonsWrapper: "flex flex-row justify-evenly",
   buttons: "flex w-10 h-10 shrink-0 grow-0 rounded-full justify-center text-white cursor-pointer mx-1",
   text: "self-center capitalize",
+  hover: "bg-primary hover:bg-secondary hover:border-primary hover:border-2 hover:text-white",
 };

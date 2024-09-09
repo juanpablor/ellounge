@@ -16,7 +16,7 @@ interface LatinClubProps {
 
 const LatinClub: React.FC<LatinClubProps> = () => {
   return (
-    <div className="flex flex-col w-full bg-[pink] h-screen"  style={{
+    <div className="flex flex-col w-full h-screen"  style={{
       backgroundImage: `url(${images.BackgroundClubImage})`,
     }}>
 

@@ -9,7 +9,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({data}) => {
   return (
     <header className={styes.container}>
-      <LanguageSelector data={data} />
+      <LanguageSelector  clubLayout={false} data={data} />
     </header>
   );
 };

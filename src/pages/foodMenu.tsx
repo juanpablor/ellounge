@@ -16,7 +16,7 @@ const FoodMenuPage: React.FC = () => {
   const { t } = useTranslation();
   const [selectedFood, setSelectedFood] = useState<null | {
     name: string;
-    en_desc: string;
+    // en_desc: string;
     image: string;
     price: string;
   }>(null);
@@ -32,7 +32,7 @@ const FoodMenuPage: React.FC = () => {
 
   const handleOpenModal = (foodItem: {
     name: string;
-    en_desc: string;
+    // en_desc: string;
     image: string;
     price: string;
   }) => {
