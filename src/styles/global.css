@@ -27,3 +27,7 @@ footer {
 .tab-button:hover {
     text-shadow: 1px 1px 8px var(--color-latinBlue);
 }
+
+.mirror {
+    transform: scale(-1, 1);
+}

@@ -12,6 +12,10 @@ import MainLogo from "../components/mainLogo";
 import { FaWindowClose } from "react-icons/fa";
 import favicon from "../images/icon.png";
 import images from "../images";
+import ClubNavigation from "../components/clubNav";
+import data from "../data/data.json";
+
+const info: CompanyData = data[0];
 
 const DrinkMenuPage: React.FC = () => {
   const { t } = useTranslation();
@@ -71,7 +75,7 @@ const DrinkMenuPage: React.FC = () => {
   useEffect(() => {
     const checkHeight = () => {
       if (drinkMenuRef.current) {
-        setShouldShowCollapseButton(drinkMenuRef.current.clientHeight > 500);
+        setShouldShowCollapseButton(drinkMenuRef.current.clientHeight > 550);
       }
     };
     checkHeight();
@@ -112,11 +116,34 @@ const DrinkMenuPage: React.FC = () => {
       </div>
     ));
   };
+  const renderDrinkList = (drinkItems: (typeof drinksMenu)["shots"]) => {
+    return drinkItems.map((item, index) => (
+      <div className="w-full" key={index}>
+        <div className="flex flex-row w-2/5 text-white mx-auto mt-1">
+          <div className="flex flex-col justify-between w-full">
+            <div className="flex font-bold">{item.name}</div>
+            <p
+              className="flex"
+              dangerouslySetInnerHTML={{
+                __html: t(`drinks.${item.image}`) || "",
+              }}
+            />
+          </div>
+          <p className="flex self-center w-16 justify-end text-latinBlue font-bold">
+            {item.price}
+          </p>
+        </div>
+        <div className="mx-auto w-2/5 h-[1px] bg-latinBlue opacity-25"></div>
+      </div>
+    ));
+  };
   return (
     <div
-      className="flex flex-col w-full h-screen"
+      className="flex flex-col w-full"
       style={{
         backgroundImage: `url(${images.BackgroundClubImage})`,
+        minHeight: "100vh",
+        backgroundSize: "cover"
       }}
     >
       <LatinClubLayout data={companyInfo}>
@@ -187,7 +214,7 @@ const DrinkMenuPage: React.FC = () => {
 
           <div
             ref={drinkMenuRef}
-            className={`drinks-menu flex flex-wrap gap-5 max-w-[1200px] mx-auto justify-center ${
+            className={`drinks-menu flex flex-wrap gap-10 max-w-[1200px] mx-auto justify-center ${
               isCollapsed && shouldShowCollapseButton
                 ? "max-h-[550px] overflow-hidden"
                 : "min-h-[545px]"
@@ -199,15 +226,154 @@ const DrinkMenuPage: React.FC = () => {
               renderDrinkItems(drinksMenu.houseCocktails)}
             {activeTab === "classicCocktails" &&
               renderDrinkItems(drinksMenu.classicCocktails)}
-            {activeTab === "shots" && renderDrinkItems(drinksMenu.shots)}
-            {activeTab === "houseShots" &&
-              renderDrinkItems(drinksMenu.houseShots)}
-            {activeTab === "bottles" && renderDrinkItems(drinksMenu.bottles)}
-            {activeTab === "wineBeer" && renderDrinkItems(drinksMenu.wineBeer)}
-            {activeTab === "mocktails" &&
-              renderDrinkItems(drinksMenu.mocktails)}
-            {activeTab === "non_alcoholic" &&
-              renderDrinkItems(drinksMenu.non_alcoholic)}
+            {activeTab === "shots" && (
+              <div className="bg-latinFucsia/[0.15] w-full flex flex-col overflow-hidden">
+                <div className="relative w-full h-1 bg-latinBlue opacity-25">
+                  <img
+                    className="absolute w-48 rotate-[30deg] -left-12"
+                    src={images.cocktail_5}
+                    alt=""
+                  />
+                  <img
+                    className="absolute w-48 rotate-[-10deg] -right-12"
+                    src={images.planta_3}
+                    alt=""
+                  />
+                  <img
+                    className="absolute opacity-75 w-36 -right-12"
+                    src={images.limon_2}
+                    alt=""
+                  />
+                </div>
+                {renderDrinkList(drinksMenu.shots)}
+              </div>
+            )}
+
+            {activeTab === "houseShots" && (
+              <div className="bg-latinBlue/[0.25] w-full flex flex-col overflow-hidden">
+                <div className="relative w-full h-1 bg-latinFucsia opacity-25">
+                  <img
+                    className="absolute w-48 rotate-[30deg] -left-12"
+                    src={images.cocktail_4}
+                    alt=""
+                  />
+                  <img
+                    className="absolute w-48 rotate-[-10deg] -right-12"
+                    src={images.planta_2}
+                    alt=""
+                  />
+                  <img
+                    className="absolute w-36 top-8 -right-12"
+                    src={images.mango}
+                    alt=""
+                  />
+                </div>
+                {renderDrinkList(drinksMenu.houseShots)}
+              </div>
+            )}
+
+            {activeTab === "bottles" && (
+              <div className="bg-latinBrown/[0.45] w-full flex flex-col overflow-hidden">
+                <div className="relative w-full h-1 bg-latinGreen opacity-25">
+                  <img
+                    className="absolute w-48 rotate-[30deg] -left-12"
+                    src={images.bottles}
+                    alt=""
+                  />
+                  <img
+                    className="absolute w-32 rotate-[-10deg] -right-12"
+                    src={images.planta_4}
+                    alt=""
+                  />
+                  <img
+                    className="absolute w-64 -top-6 -right-12"
+                    src={images.maracuya_2}
+                    alt=""
+                  />
+                </div>
+                {renderDrinkList(drinksMenu.bottles)}
+              </div>
+            )}
+
+            {activeTab === "wineBeer" && (
+              <div className="bg-latinGreen/[0.15] w-full flex flex-col overflow-hidden">
+                <div className="relative w-full h-1 bg-latinBlue opacity-25">
+                  <img
+                    className="absolute w-48 -left-12"
+                    src={images.wine}
+                    alt=""
+                  />
+                  <img
+                    className="absolute w-64 -right-12"
+                    src={images.beer}
+                    alt=""
+                  />
+                </div>
+                {renderDrinkList(drinksMenu.wineBeer)}
+              </div>
+            )}
+
+            {activeTab === "mocktails" && (
+              <div className="bg-latinClub/[0.45] w-full flex flex-col overflow-hidden">
+                <div className="relative w-full h-1 bg-latinFucsia opacity-25">
+                  <img
+                    className="absolute w-48 rotate-[30deg] -left-12"
+                    src={images.flower_1}
+                    alt=""
+                  />
+                  <img
+                    className="absolute w-48 right-4"
+                    src={images.lemonade}
+                    alt=""
+                  />
+                </div>
+                <ul className="lex flex-row w-2/5 text-white mx-auto mt-1 list-disc my-4">
+                  <h2 className="font-bold text-lg">Lemonade Selection</h2>
+                  <li>
+                    <b>Classic Lemonade:</b> Timeless and zesty.
+                  </li>
+                  <li>
+                    <b>Cucumber Lemonade:</b> Crisp with a cool cucumber twist.
+                  </li>
+                  <li>
+                    <b>Coco Lemonade:</b> Tropical fusion of coconut and lemon.
+                  </li>
+                  <li>
+                    <b>Berry Lemonade:</b> Bursting with mixed berry flavors.
+                  </li>
+                  <li>
+                    <b>Mango Lemonade:</b> Sweet, ripe mango in every sip.
+                  </li>
+                  <li>
+                    <b>Passion Fruit Lemonade:</b> An exotic and tangy delight.
+                  </li>
+                  <li>
+                    <b>Strawberry Lemonade:</b> Sweet strawberries meet zesty
+                    lemon.
+                  </li>
+                </ul>
+
+                {renderDrinkList(drinksMenu.mocktails)}
+              </div>
+            )}
+
+            {activeTab === "non_alcoholic" && (
+              <div className="bg-latinFucsia/[0.15] w-full flex flex-col overflow-hidden">
+                <div className="relative w-full h-1 bg-latinGreen opacity-25">
+                  <img
+                    className="absolute w-48 -left-12"
+                    src={images.coffee}
+                    alt=""
+                  />
+                  <img
+                    className="absolute w-64 -right-12"
+                    src={images.juice}
+                    alt=""
+                  />
+                </div>
+                {renderDrinkList(drinksMenu.non_alcoholic)}
+              </div>
+            )}
           </div>
 
           {shouldShowCollapseButton && (
@@ -220,6 +386,10 @@ const DrinkMenuPage: React.FC = () => {
               </button>
             </div>
           )}
+
+          <div className="flex justify-center my-12">
+            <ClubNavigation data={info} />
+          </div>
         </section>
 
         {selectedDrink && (
@@ -261,9 +431,11 @@ const DrinkMenuPage: React.FC = () => {
                     {selectedDrink.name}
                   </div>
                   <p
-                        className="py-4"
-                        dangerouslySetInnerHTML={{ __html: t(`drinks.${selectedDrink.image}`) || "" }}
-                    />
+                    className="py-4"
+                    dangerouslySetInnerHTML={{
+                      __html: t(`drinks.${selectedDrink.image}`) || "",
+                    }}
+                  />
                   {}
                 </div>
               </article>
@@ -295,12 +467,15 @@ const styles = {
   tabButton: "tab-button hover:underline",
   productTile: "flex flex-col w-[160px] h-[260px] bg-latinFucsia/[.15] p-4",
   productTileInfoWrapper: "flex flex-col grow pt-4",
-  productTileTitle:
-    "text-white font-extrabold text-md leading-[1rem]",
-  productTilePrice: "text-latinBlue self-end text-2xl font-extrabold absolute bottom-6",
-  productTileShowMore: "text-latinFucsia text-xs text-center font-extralight w-full absolute bottom-2 left-0",
+  productTileTitle: "text-white font-extrabold text-md leading-[1rem]",
+  productTilePrice:
+    "text-latinBlue self-end text-2xl font-extrabold absolute bottom-6",
+  productTileShowMore:
+    "text-latinFucsia text-xs text-center font-extralight w-full absolute bottom-2 left-0",
   mainTitle: "text-primary text-6xl text-center tracking-wide m-0 p-0",
-  tabsWrapper: "tabs text-white flex justify-around max-w-[1200px] mx-auto my-8",
+  tabsWrapper:
+    "tabs text-white flex justify-around max-w-[1200px] mx-auto my-8 flex-col sm:flex-row",
   after:
     "after:'' after:w-[2rem] after:h-[3.25rem] after:bg-primary after:block after:absolute after:right-[-1.8rem] after:top-[23.85rem] after:z-50",
 };
+

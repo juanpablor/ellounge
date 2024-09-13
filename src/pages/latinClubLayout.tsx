@@ -46,6 +46,6 @@ const LatinClubLayout: React.FC<LatinClubLayoutProps> = ({
 export default LatinClubLayout;
 
 const styles = {
-  containerWrapper: "flex flex-col w-full h-full bg-latinClub/[0.9]",
+  containerWrapper: "flex flex-col w-full bg-latinClub/[0.9] min-h-screen",
   logoPosition: "mx-auto",
 };

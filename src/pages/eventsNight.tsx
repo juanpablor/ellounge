@@ -1,9 +1,19 @@
 import React from "react";
 import { graphql } from "gatsby";
+import ClubNavigation from "../components/clubNav";
+import data from "../data/data.json";
+import { CompanyData } from "../interfaces/interfaces";
+
+const info: CompanyData = data[0];
 
 const EventsNight: React.FC = () => {
   return (
-    <div>Events Night Page</div>
+    <div>
+      
+    <div className="flex justify-center my-12 bg-latinClub">
+    <ClubNavigation data={info} />
+  </div>
+    </div>
   );
 };
 
