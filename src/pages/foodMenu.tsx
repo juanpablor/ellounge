@@ -72,6 +72,8 @@ const FoodMenuPage: React.FC = () => {
     checkHeight();
   }, [activeTab]);
 
+
+
   const getImageSrc = (imageName: string): string => {
     const imageKey = imageName as keyof typeof foodImages;
     const imageSrc = foodImages[imageKey];
@@ -101,6 +103,7 @@ const FoodMenuPage: React.FC = () => {
 
   return (
     <MenuLayout data={companyInfo}>
+
       <Helmet>
         <title>{t("productMenu.dishes_title")} - {companyInfo.name}</title>
         <link rel="icon" href={favicon} />

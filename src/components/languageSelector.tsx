@@ -23,7 +23,7 @@ const LanguageSelector: React.FC<NavProps> = ({ data, clubLayout }) => {
             className={`${styles.buttons} ${
               clubLayout ? "tab-button hover:underline" : styles.hover
             }
-            ${lng === currentLanguage ? clubLayout ? "text-shadow-club" : "bg-none border-none" : clubLayout ? "bg-none border-none" : "bg-secondary"}`}
+            ${lng === currentLanguage ? clubLayout ? "text-shadow-fucsia !text-latinFucsia" : "bg-none border-none" : clubLayout ? "bg-none border-none" : "bg-secondary"}`}
             onClick={(e) => {
               e.preventDefault();
               changeLanguage(lng);
@@ -41,7 +41,7 @@ export default LanguageSelector;
 
 const styles = {
   container: "flex flex-row justify-center self-center",
-  buttonsWrapper: "flex flex-row justify-evenly",
+  buttonsWrapper: "flex justify-evenly flex-col sm:flex-row",
   buttons: "flex w-10 h-10 shrink-0 grow-0 rounded-full justify-center text-white cursor-pointer mx-1",
   text: "self-center capitalize",
   hover: "bg-primary hover:bg-secondary hover:border-primary hover:border-2 hover:text-white",

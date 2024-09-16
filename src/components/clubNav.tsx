@@ -33,7 +33,7 @@ const ClubNavigation: React.FC<ClubNavProps> = ({ data }) => {
 
           return (
             <li key={index}>
-              <Link to={itemPath} className={`${styles.buttons} ${isActive ? "bg-[green]" : ""}`} activeClassName="text-secondary">
+              <Link to={itemPath} className={`${styles.buttons} ${isActive ? "text-shadow-fucsia !text-latinFucsia" : ""}`}>
                 <Trans i18nKey={`menuDrink.${item}`}>
                   {t(`menuDrink.${item}`)}
                 </Trans>
@@ -52,7 +52,7 @@ const styles = {
   container: "inline-block justify-between items-center px-4 py-2 rounded-full relative",
   burgerButton: "md:hidden block text-white focus:outline-none",
   buttonsWrapper: "flex flex-col md:flex-row justify-evenly items-center w-full md:w-auto",
-  buttons: "text-white px-8 py-2 hover:underline hover:text-secondary",
+  buttons: "text-white px-8 py-2 hover:underline",
   menuOpen: "block md:flex",
   menuClosed: "hidden md:flex",
 };

@@ -31,7 +31,14 @@
   },
   "general": {
     "see_more": "See more...",
-    "see_less": "See less"
+    "see_less": "See less",
+    "latinClubPage" : {
+      "title": "Latin Club",
+      "intro": "Join us every Friday and Saturday after 11:00pm when El Lounge transforms into Montreal's hottest Latin club ",
+      "content_1": "Dance all night to the electrifying beats of our live DJ, playing the best of Latin party music.",
+      "content_2": "Dive into the energy of Latin night!",
+      "content_3": "Experience the energy and excitement of a true Latin party here at El Lounge."
+    }
   },
   "productMenu": {
     "dishes_title":"Special Dishes",
@@ -54,7 +61,8 @@
     "bottles": "Bottles",
     "wineBeer": "Wine & Beer",
     "mocktails": "Mocktails",
-    "non_alcoholic": "Non alcoholic"
+    "non_alcoholic": "Non alcoholic",
+    "glass": "Glass"
   },
   "food": {
     "menu_degustation": "1 tequeno, 1 tequechapa, 1 beef empanada, 1 pulled pork arepita, 1 ceviche, 1 pulled pork patacon. Served with chimichurri and aioli",

@@ -14,10 +14,13 @@ import favicon from "../images/icon.png";
 import images from "../images";
 import ClubNavigation from "../components/clubNav";
 import data from "../data/data.json";
+// import { useMediaQuery } from "react-responsive";
+// import { breakpoints } from "../constants";
 
 const info: CompanyData = data[0];
 
 const DrinkMenuPage: React.FC = () => {
+  // const isMobile = useMediaQuery({ query: breakpoints.mobile });
   const { t } = useTranslation();
   const [selectedDrink, setSelectedDrink] = useState<null | {
     name: string;
@@ -53,24 +56,31 @@ const DrinkMenuPage: React.FC = () => {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const drinkName = params.get("drinks");
+
     if (drinkName) {
-      const allDishes = [
-        ...drinksMenu.cocktailsSignature,
-        ...drinksMenu.houseCocktails,
-        ...drinksMenu.classicCocktails,
-        ...drinksMenu.shots,
-        ...drinksMenu.houseShots,
-        ...drinksMenu.bottles,
-        ...drinksMenu.wineBeer,
-        ...drinksMenu.mocktails,
-        ...drinksMenu.non_alcoholic,
+      const drinkCategories: Array<keyof DrinksMenu> = [
+        "cocktailsSignature",
+        "houseCocktails",
+        "classicCocktails",
+        "shots",
+        "glass",
+        "houseShots",
+        "bottles",
+        "wineBeer",
+        "mocktails",
+        "non_alcoholic",
       ];
-      const drinkItem = allDishes.find((item) => item.image === drinkName);
+
+      const allDrinks = drinkCategories.flatMap(
+        (category) => drinksMenu[category]
+      );
+      const drinkItem = allDrinks.find((item) => item.image === drinkName);
+
       if (drinkItem) {
         handleOpenModal(drinkItem);
       }
     }
-  }, [location.search]);
+  }, [location.search, drinksMenu]);
 
   useEffect(() => {
     const checkHeight = () => {
@@ -116,10 +126,15 @@ const DrinkMenuPage: React.FC = () => {
       </div>
     ));
   };
-  const renderDrinkList = (drinkItems: (typeof drinksMenu)["shots"]) => {
+  const renderDrinkList = (
+    drinkItems: (typeof drinksMenu)["shots"],
+    classWidth?: string
+  ) => {
     return drinkItems.map((item, index) => (
       <div className="w-full" key={index}>
-        <div className="flex flex-row w-2/5 text-white mx-auto mt-1">
+        <div
+          className={`${classWidth ? classWidth : "w-2/5"} flex flex-row text-white mx-auto mt-1`}
+        >
           <div className="flex flex-col justify-between w-full">
             <div className="flex font-bold">{item.name}</div>
             <p
@@ -133,17 +148,31 @@ const DrinkMenuPage: React.FC = () => {
             {item.price}
           </p>
         </div>
-        <div className="mx-auto w-2/5 h-[1px] bg-latinBlue opacity-25"></div>
+        <div
+          className={`${classWidth ? classWidth : "w-2/5"} " mx-auto h-[1px] bg-latinBlue opacity-25"`}
+        ></div>
       </div>
     ));
   };
+
+  const tabs = [
+    { key: "cocktailsSignature", label: t("productMenu.cocktailsSignature") },
+    { key: "houseCocktails", label: t("productMenu.houseCocktails") },
+    { key: "classicCocktails", label: t("productMenu.classicCocktails") },
+    { key: "shots", label: t("productMenu.shots") },
+    { key: "houseShots", label: t("productMenu.houseShots") },
+    { key: "bottles", label: t("productMenu.bottles") },
+    { key: "wineBeer", label: t("productMenu.wineBeer") },
+    { key: "mocktails", label: t("productMenu.mocktails") },
+    { key: "non_alcoholic", label: t("productMenu.non_alcoholic") },
+  ];
   return (
     <div
       className="flex flex-col w-full"
       style={{
         backgroundImage: `url(${images.BackgroundClubImage})`,
         minHeight: "100vh",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
       }}
     >
       <LatinClubLayout data={companyInfo}>
@@ -156,60 +185,15 @@ const DrinkMenuPage: React.FC = () => {
 
         <section>
           <div className={styles.tabsWrapper}>
-            <button
-              className={`${styles.tabButton} ${activeTab === "cocktailsSignature" ? "font-bold underline text-shadow-club" : ""}`}
-              onClick={() => setActiveTab("cocktailsSignature")}
-            >
-              {t("productMenu.cocktailsSignature")}
-            </button>
-            <button
-              className={`${styles.tabButton} ${activeTab === "houseCocktails" ? "font-bold underline text-shadow-club" : ""}`}
-              onClick={() => setActiveTab("houseCocktails")}
-            >
-              {t("productMenu.houseCocktails")}
-            </button>
-            <button
-              className={`${styles.tabButton} ${activeTab === "classicCocktails" ? "font-bold underline text-shadow-club" : ""}`}
-              onClick={() => setActiveTab("classicCocktails")}
-            >
-              {t("productMenu.classicCocktails")}
-            </button>
-            <button
-              className={`${styles.tabButton} ${activeTab === "shots" ? "font-bold underline text-shadow-club" : ""}`}
-              onClick={() => setActiveTab("shots")}
-            >
-              {t("productMenu.shots")}
-            </button>
-            <button
-              className={`${styles.tabButton} ${activeTab === "houseShots" ? "font-bold underline text-shadow-club" : ""}`}
-              onClick={() => setActiveTab("houseShots")}
-            >
-              {t("productMenu.houseShots")}
-            </button>
-            <button
-              className={`${styles.tabButton} ${activeTab === "bottles" ? "font-bold underline text-shadow-club" : ""}`}
-              onClick={() => setActiveTab("bottles")}
-            >
-              {t("productMenu.bottles")}
-            </button>
-            <button
-              className={`${styles.tabButton} ${activeTab === "wineBeer" ? "font-bold underline text-shadow-club" : ""}`}
-              onClick={() => setActiveTab("wineBeer")}
-            >
-              {t("productMenu.wineBeer")}
-            </button>
-            <button
-              className={`${styles.tabButton} ${activeTab === "mocktails" ? "font-bold underline text-shadow-club" : ""}`}
-              onClick={() => setActiveTab("mocktails")}
-            >
-              {t("productMenu.mocktails")}
-            </button>
-            <button
-              className={`${styles.tabButton} ${activeTab === "non_alcoholic" ? "font-bold underline text-shadow-club" : ""}`}
-              onClick={() => setActiveTab("non_alcoholic")}
-            >
-              {t("productMenu.non_alcoholic")}
-            </button>
+            {tabs.map((tab) => (
+              <button
+                key={tab.key}
+                className={`${styles.tabButton} ${activeTab === tab.key ? "font-bold underline text-shadow-blue" : ""}`}
+                onClick={() => setActiveTab(tab.key)}
+              >
+                {tab.label}
+              </button>
+            ))}
           </div>
 
           <div
@@ -245,7 +229,16 @@ const DrinkMenuPage: React.FC = () => {
                     alt=""
                   />
                 </div>
-                {renderDrinkList(drinksMenu.shots)}
+                <div className="flex justify-center">
+                  <div className="block mx-12">
+                    <h2 className="text-white text-2xl text-center my-8">{t("productMenu.shots")}</h2>
+                    {renderDrinkList(drinksMenu.shots, "w-full")}
+                  </div>
+                  <div className="block mx-12">
+                    <h2 className="text-white text-2xl text-center my-8">{t("productMenu.glass")}</h2>
+                    {renderDrinkList(drinksMenu.glass, "w-full")}
+                  </div>
+                </div>
               </div>
             )}
 
@@ -387,9 +380,9 @@ const DrinkMenuPage: React.FC = () => {
             </div>
           )}
 
-          <div className="flex justify-center my-12">
+          {<div className="flex justify-center my-12">
             <ClubNavigation data={info} />
-          </div>
+          </div>}
         </section>
 
         {selectedDrink && (
@@ -478,4 +471,3 @@ const styles = {
   after:
     "after:'' after:w-[2rem] after:h-[3.25rem] after:bg-primary after:block after:absolute after:right-[-1.8rem] after:top-[23.85rem] after:z-50",
 };
-

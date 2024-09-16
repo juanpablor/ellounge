@@ -23,9 +23,13 @@ footer {
     box-shadow: -3px 3px 4px 0 rgba(var(--color-latinBlue-rgb), 0.2);
 }
 
-.text-shadow-club,
+.text-shadow-blue,
 .tab-button:hover {
     text-shadow: 1px 1px 8px var(--color-latinBlue);
+}
+
+.text-shadow-fucsia {
+    text-shadow: 5px 5px 8px var(--color-latinFucsia);
 }
 
 .mirror {

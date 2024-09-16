@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Indexheader from "../components/indexHeader";
 import Footer from "../components/footer";
 import Navigation from "../components/nav";
@@ -6,13 +6,46 @@ import images from "../images/index";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import MainLogo from "../components/mainLogo";
 import { IndexLayoutProps } from "../interfaces/interfaces";
+import { HiArrowLongRight } from "react-icons/hi2";
 
 const indexLayout: React.FC<IndexLayoutProps> = ({ data }) => {
   const { t } = useTranslation();
-
+  const [href, setHref] = useState("/drinksMenu/");
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    const lang = currentPath.split("/")[1];
+    if (lang === "fr" || lang === "es" || lang === "en") {
+      setHref(`/${lang}/drinksMenu/`);
+    }
+  }, []);
   return (
     <>
       <div className={styles.containerWrapper}>
+      <a href={href}>
+          <div className="fixed top-[50%] z-50 right-0 w-24 h-16 bg-latinFucsia rounded-l-full flex justify-start">
+            <div className="w-16 h-16 text-white rounded-full text-center relative flex items-center justify-center">
+              <svg className="absolute w-full h-full" viewBox="0 0 100 100">
+                <defs>
+                  <path
+                    id="circlePath"
+                    d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
+                  />
+                </defs>
+                <text fontSize="8" fill="white">
+                  <textPath xlinkHref="#circlePath" startOffset="0">
+                    El Lounge &bull; El Lounge &bull; El Lounge &bull; El Lounge
+                    &bull; El Lounge &bull;
+                  </textPath>
+                </text>
+              </svg>
+
+              <div className="absolute flex flex-col items-center justify-center">
+                <HiArrowLongRight className="mx-auto" />
+                <span className="text-xs">Drinks</span>
+              </div>
+            </div>
+          </div>
+        </a>  
         <div
           className="relative bg-cover bg-center overflow-hidden"
           style={{

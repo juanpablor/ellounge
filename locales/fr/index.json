@@ -31,7 +31,14 @@
   },
   "general": {
     "see_more": "Voir plus...",
-    "see_less": "Voir moins"
+    "see_less": "Voir moins",
+    "latinClubPage" : {
+      "title": "Club latin",
+      "intro": "Rejoignez-nous tous les vendredis et samedis après 23h00 lorsque El Lounge se transforme en club latino le plus branché de Montréal.",
+      "content_1": "Danse toute la nuit au rythme électrisant de notre DJ en direct, qui joue le meilleur de la musique de fête latine.",
+      "content_2": "Plonge dans l'énergie de la nuit latine!",
+      "content_3": "Vis l'énergie et l'excitation d'une véritable fête latine ici à El Lounge."
+    }
   },
   "productMenu": {
     "dishes_title":"Plats spéciaux",
@@ -46,15 +53,16 @@
     "sideDishes": "Plats d'accompagnement",
     "extras": "Extras",
     "desserts": "Desserts",
-    "cocktailsSignature": "FR Cocktails Signature",
-    "houseCocktails": "FR House Cocktails",
-    "classicCocktails": "FR Classic Cocktails",
-    "shots": "FR Shots",
-    "houseShots": "FR House Shots",
-    "bottles": "FR Bottles",
-    "wineBeer": "FR Wine & Beer",
-    "mocktails": "FR Mocktails",
-    "non_alcoholic": "FR Non alcoholic"
+    "cocktailsSignature": "Cocktails Signature",
+    "houseCocktails": "Cocktails de la maison",
+    "classicCocktails": "Cocktails classiques",
+    "shots": "Shooters",
+    "houseShots": "Shooters de la maison",
+    "bottles": "Bouteilles",
+    "wineBeer": "Vin & bière",
+    "mocktails": "Mocktails",
+    "non_alcoholic": "Sans alcool",
+    "glass": "Verre"
   },
   "food": {
     "menu_degustation": "1 tequeno, 1 tequechapa, 1 empanada de boeuf, 1 arepita avec couenne de porc frit, 1 ceviche, 1 patacon avec porc effiloche. Servi avec chimichurri et aïoli",

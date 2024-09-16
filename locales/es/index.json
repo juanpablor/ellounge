@@ -31,7 +31,14 @@
   },
   "general": {
     "see_more": "Ver mas...",
-    "see_less": "Ver menos"
+    "see_less": "Ver menos",
+    "latinClubPage" : {
+      "title": "Latín club",
+      "intro": "Únete a nosotros todos los viernes y sábados después de las 11:00pm cuando El Lounge se transforma en el club latino más caliente de Montreal.",
+      "content_1": "Baila toda la noche al ritmo electrizante de nuestro DJ en vivo, que toca lo mejor de la música de fiesta latina.",
+      "content_2": "¡Sumérgete en la energía de la noche latina!",
+      "content_3": "Experimenta la energía y emoción de una verdadera fiesta latina aquí en El Lounge."
+    }
   },
   "productMenu": {
     "dishes_title":"Platos especiales",
@@ -46,15 +53,16 @@
     "sideDishes": "Acompañamientos",
     "extras": "Adicionales",
     "desserts": "Postres",
-    "cocktailsSignature": "ES Cocktails Signature",
-    "houseCocktails": "ES House Cocktails",
-    "classicCocktails": "ES Classic Cocktails",
-    "shots": "ES Shots",
-    "houseShots": "ES House Shots",
-    "bottles": "ES Bottles",
-    "wineBeer": "ES Wine & Beer",
-    "mocktails": "ES Mocktails",
-    "non_alcoholic": "ES Non alcoholic"
+    "cocktailsSignature": "Cocteles Signature",
+    "houseCocktails": "Cocteles de la casa",
+    "classicCocktails": "Cocteles Clásicos",
+    "shots": "Shots",
+    "houseShots": "Shots de la Casa",
+    "bottles": "Botellas",
+    "wineBeer": "Vino y Cerveza",
+    "mocktails": "Mocktails",
+    "non_alcoholic": "Bebidas sin Alcohol",
+    "glass": "Vaso"
   },
   "food": {
     "menu_degustation": "ES 1 tequeno, 1 tequechapa, 1 empanada de boeuf, 1 arepita avec couenne de porc frit, 1 ceviche, 1 patacon avec porc effiloche. Servi avec chimichurri et aïoli",

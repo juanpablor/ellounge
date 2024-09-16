@@ -1,19 +1,22 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { graphql } from "gatsby";
-import ClubNavigation from "../components/clubNav";
-import data from "../data/data.json";
 import { CompanyData } from "../interfaces/interfaces";
+import LatinClubLayout from "./latinClubLayout";
 
-const info: CompanyData = data[0];
+interface EventsNightProps  {
+  children: ReactNode;
+  data?: CompanyData;
+  eventPage?: boolean
+}
 
-const EventsNight: React.FC = () => {
+
+const EventsNight: React.FC<EventsNightProps> = ({children, data}) => {
+  const companyInfo: CompanyData | undefined = data || undefined;
+
   return (
-    <div>
-      
-    <div className="flex justify-center my-12 bg-latinClub">
-    <ClubNavigation data={info} />
-  </div>
-    </div>
+    <LatinClubLayout data={companyInfo} eventPage>
+      <main>{children}</main>
+    </LatinClubLayout>
   );
 };
 

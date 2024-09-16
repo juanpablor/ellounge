@@ -380,7 +380,9 @@
         "price": "10",
         "image": "sambuca_shot",
         "type": "SHOT"
-      },
+      }
+    ],
+    "glass": [
       {
         "name": "Ron Diplomatico Reserva",
         "price": "15",

@@ -48,8 +48,10 @@ module.exports = {
           '--color-primary': colors.primary,
           '--color-latinBlue': colors.latinBlue,
           '--color-latinClub': colors.latinClub,
+          '--color-latinFucsia': colors.latinFucsia,
           '--color-latinBlue-rgb': hexToRgb(colors.latinBlue),
           '--color-latinClub-rgb': hexToRgb(colors.latinClub),
+          '--color-latinFucsia-rgb': hexToRgb(colors.latinFucsia),
         },
       });
     },    

@@ -4,6 +4,7 @@ export interface CompanyDetails {
   country: string;
   phone: string;
   email: string;
+  whatsApp: string;
   instagram: string;
   facebook: string;
 }
@@ -46,6 +47,7 @@ export interface DrinksMenu {
   houseCocktails: Product[];
   classicCocktails: Product[];
   shots: Product[];
+  glass: Product[];
   houseShots: Product[];
   bottles: Product[];
   wineBeer: Product[];
