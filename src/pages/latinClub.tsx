@@ -22,7 +22,7 @@ const LatinClub: React.FC<LatinClubProps> = () => {
       className="flex flex-col w-full"
       style={{
         backgroundImage: `url(${images.BackgroundClubImage})`,
-        backgroundSize: "content"
+        backgroundSize: "content",
       }}
     >
       <LatinClubLayout data={info}>
@@ -45,17 +45,17 @@ const LatinClub: React.FC<LatinClubProps> = () => {
           </div>
         </div>
 
+        <div className="absolute bottom-0 h-[24rem] w-[36rem] right-0 overflow-hidden">
+          <img
+            className="absolute -right-32"
+            src={images.cocktail_wireframe}
+            alt=""
+          />
+        </div>
+
         <div className="flex w-full relative">
           <div className="flex mx-auto my-12">
             <ClubNavigation data={info} />
-          </div>
-
-          <div className="absolute bottom-12 -right-20">
-            <img
-              className=" w-[30rem]"
-              src={images.cocktail_wireframe}
-              alt=""
-            />
           </div>
         </div>
 
@@ -74,14 +74,20 @@ const LatinClub: React.FC<LatinClubProps> = () => {
 
             <div className="text-white flex px-20 items-center">
               <img className="w-20 " src={images.cocktail_5} alt="" />
-              <p className="px-6 text-xl">{t("general.latinClubPage.content_1")}</p>
+              <p className="px-6 text-xl">
+                {t("general.latinClubPage.content_1")}
+              </p>
             </div>
           </div>
         </div>
 
         <div className="flex w-full relative flex-col my-24">
-          <div className="mx-auto text-latinBlue mb-8 text-2xl">{t("general.latinClubPage.content_2")}</div>
-          <p className="text-white text-xl w-1/2 text-center px-16 mx-auto">{t("general.latinClubPage.content_3")}</p>
+          <div className="mx-auto text-latinBlue mb-8 text-2xl">
+            {t("general.latinClubPage.content_2")}
+          </div>
+          <p className="text-white text-xl w-1/2 text-center px-16 mx-auto">
+            {t("general.latinClubPage.content_3")}
+          </p>
         </div>
 
         <div className="flex w-[70rem] gap-8 mx-auto mb-24">
@@ -93,7 +99,6 @@ const LatinClub: React.FC<LatinClubProps> = () => {
         <div className="bg-latinClub">
           <Footer data={info} />
         </div>
-
       </LatinClubLayout>
     </div>
   );

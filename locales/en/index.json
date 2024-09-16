@@ -38,6 +38,10 @@
       "content_1": "Dance all night to the electrifying beats of our live DJ, playing the best of Latin party music.",
       "content_2": "Dive into the energy of Latin night!",
       "content_3": "Experience the energy and excitement of a true Latin party here at El Lounge."
+    },
+    "drinksMenuPage": {
+      "mocktailsTitle": "Lemonade Selection",
+      "mocktailsNote": "<li><b>Classic Lemonade:</b> Timeless and zesty.</li><li><b>Cucumber Lemonade:</b> Crisp with a cool cucumber twist.</li><li><b>Coco Lemonade:</b> Tropical fusion of coconut and lemon.</li><li><b>Berry Lemonade:</b> Bursting with mixed berry flavors.</li><li><b>Mango Lemonade:</b> Sweet, ripe mango in every sip.</li><li><b>Passion Fruit Lemonade:</b> An exotic and tangy delight.</li><li><b>Strawberry Lemonade:</b> Sweet strawberries meet zesty lemon.</li>"
     }
   },
   "productMenu": {

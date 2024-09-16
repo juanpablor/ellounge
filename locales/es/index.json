@@ -38,6 +38,10 @@
       "content_1": "Baila toda la noche al ritmo electrizante de nuestro DJ en vivo, que toca lo mejor de la música de fiesta latina.",
       "content_2": "¡Sumérgete en la energía de la noche latina!",
       "content_3": "Experimenta la energía y emoción de una verdadera fiesta latina aquí en El Lounge."
+    },
+    "drinksMenuPage": {
+      "mocktailsTitle": "Selección de Limonadas",
+      "mocktailsNote": "<li><b>Limonada Clásica:</b> Atemporal y refrescante.</li><li><b>Limonada de Pepino:</b> Fresca con un toque de pepino.</li><li><b>Limonada de Coco:</b> Fusión tropical de coco y limón.</li><li><b>Limonada de Frutas del Bosque:</b> Explosión de sabores de bayas mixtas.</li><li><b>Limonada de Mango:</b> Dulce mango maduro en cada sorbo.</li><li><b>Limonada de Maracuyá:</b> Un deleite exótico y ácido.</li><li><b>Limonada de Fresa:</b> Fresas dulces combinadas con limón refrescante.</li>"
     }
   },
   "productMenu": {

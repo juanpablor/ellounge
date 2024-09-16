@@ -38,6 +38,10 @@
       "content_1": "Danse toute la nuit au rythme électrisant de notre DJ en direct, qui joue le meilleur de la musique de fête latine.",
       "content_2": "Plonge dans l'énergie de la nuit latine!",
       "content_3": "Vis l'énergie et l'excitation d'une véritable fête latine ici à El Lounge."
+    },
+    "drinksMenuPage": {
+      "mocktailsTitle": "Sélection de Limonades",
+      "mocktailsNote": "<li><b>Limonade Classique :</b> Intemporelle et acidulée.</li><li><b>Limonade au Concombre :</b> Fraîche avec une touche de concombre rafraîchissante.</li><li><b>Limonade Coco :</b> Fusion tropicale de noix de coco et citron.</li><li><b>Limonade aux Baies :</b> Explosant de saveurs de baies mélangées.</li><li><b>Limonade à la Mangue :</b> Mangue mûre et sucrée dans chaque gorgée.</li><li><b>Limonade au Fruit de la Passion :</b> Un délice exotique et acidulé.</li><li><b>Limonade à la Fraise :</b> Fraises sucrées et citron acidulé se rencontrent.</li>"
     }
   },
   "productMenu": {

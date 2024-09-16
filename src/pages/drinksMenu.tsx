@@ -183,7 +183,7 @@ const DrinkMenuPage: React.FC = () => {
           <link rel="icon" href={favicon} />
         </Helmet>
 
-        <section>
+        <section className={selectedDrink ? "relative overflow-y-hidden" : ""}>
           <div className={styles.tabsWrapper}>
             {tabs.map((tab) => (
               <button
@@ -214,28 +214,27 @@ const DrinkMenuPage: React.FC = () => {
               <div className="bg-latinFucsia/[0.15] w-full flex flex-col overflow-hidden">
                 <div className="relative w-full h-1 bg-latinBlue opacity-25">
                   <img
-                    className="absolute w-48 rotate-[30deg] -left-12"
+                    className="absolute w-24 mt-[20%] left-6"
+                    src={images.shot}
+                    alt=""
+                  />
+                  <img
+                    className="absolute opacity-75 w-36 right-2"
                     src={images.cocktail_5}
-                    alt=""
-                  />
-                  <img
-                    className="absolute w-48 rotate-[-10deg] -right-12"
-                    src={images.planta_3}
-                    alt=""
-                  />
-                  <img
-                    className="absolute opacity-75 w-36 -right-12"
-                    src={images.limon_2}
                     alt=""
                   />
                 </div>
                 <div className="flex justify-center">
                   <div className="block mx-12">
-                    <h2 className="text-white text-2xl text-center my-8">{t("productMenu.shots")}</h2>
+                    <h2 className="text-white text-2xl text-center my-8">
+                      {t("productMenu.shots")}
+                    </h2>
                     {renderDrinkList(drinksMenu.shots, "w-full")}
                   </div>
                   <div className="block mx-12">
-                    <h2 className="text-white text-2xl text-center my-8">{t("productMenu.glass")}</h2>
+                    <h2 className="text-white text-2xl text-center my-8">
+                      {t("productMenu.glass")}
+                    </h2>
                     {renderDrinkList(drinksMenu.glass, "w-full")}
                   </div>
                 </div>
@@ -320,31 +319,15 @@ const DrinkMenuPage: React.FC = () => {
                     alt=""
                   />
                 </div>
-                <ul className="lex flex-row w-2/5 text-white mx-auto mt-1 list-disc my-4">
-                  <h2 className="font-bold text-lg">Lemonade Selection</h2>
-                  <li>
-                    <b>Classic Lemonade:</b> Timeless and zesty.
-                  </li>
-                  <li>
-                    <b>Cucumber Lemonade:</b> Crisp with a cool cucumber twist.
-                  </li>
-                  <li>
-                    <b>Coco Lemonade:</b> Tropical fusion of coconut and lemon.
-                  </li>
-                  <li>
-                    <b>Berry Lemonade:</b> Bursting with mixed berry flavors.
-                  </li>
-                  <li>
-                    <b>Mango Lemonade:</b> Sweet, ripe mango in every sip.
-                  </li>
-                  <li>
-                    <b>Passion Fruit Lemonade:</b> An exotic and tangy delight.
-                  </li>
-                  <li>
-                    <b>Strawberry Lemonade:</b> Sweet strawberries meet zesty
-                    lemon.
-                  </li>
-                </ul>
+                <h2 className="text-white mx-auto font-bold text-lg">
+                  {t("general.drinksMenuPage.mocktailsTitle")}
+                </h2>
+                <ul
+                  className="lex flex-row w-2/5 text-white mx-auto mt-1 list-disc my-4"
+                  dangerouslySetInnerHTML={{
+                    __html: t("general.drinksMenuPage.mocktailsNote") || "",
+                  }}
+                ></ul>
 
                 {renderDrinkList(drinksMenu.mocktails)}
               </div>
@@ -380,9 +363,11 @@ const DrinkMenuPage: React.FC = () => {
             </div>
           )}
 
-          {<div className="flex justify-center my-12">
-            <ClubNavigation data={info} />
-          </div>}
+          {
+            <div className="flex justify-center my-12">
+              <ClubNavigation data={info} />
+            </div>
+          }
         </section>
 
         {selectedDrink && (
@@ -390,7 +375,7 @@ const DrinkMenuPage: React.FC = () => {
             className="modal w-full h-full fixed z-50 top-0 bg-black/80 text-white"
             onClick={handleCloseModal}
           >
-            <div className="modal-content w-[80%] max-w-[75rem] mx-auto bg-latinFucsia/[.15] mt-40 p-12">
+            <div className="modal-content w-[80%] max-w-[75rem] mx-auto bg-latinFucsia/[.5] mt-20 p-12">
               <article className="flex justify-between">
                 <div className="flex items-start">
                   <div
