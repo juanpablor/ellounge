@@ -23,6 +23,10 @@ footer {
     box-shadow: -3px 3px 4px 0 rgba(var(--color-latinBlue-rgb), 0.2);
 }
 
+.box-shadow-latinClubFucsia {
+    box-shadow: -3px 3px 4px 0 rgba(var(--color-latinFucsia-rgb), 0.2);
+}
+
 .text-shadow-blue,
 .tab-button:hover {
     text-shadow: 1px 1px 8px var(--color-latinBlue);
@@ -35,3 +39,57 @@ footer {
 .mirror {
     transform: scale(-1, 1);
 }
+
+.cccc {
+    background-color: rgb(28, 28, 28);
+    background-color: rgb(3, 240, 255);
+    background-color: rgb(235, 17, 255);
+    background-color: rgb(72, 255, 0);
+    background-color: rgb(56, 42, 18);
+    background-color: rgb(38, 77, 76);
+    background-color: rgb(163, 175, 61);
+
+}
+
+.iframe .trix-content {
+    color: white !important;
+  }
+
+/* 
+latinClub: rgb(28, 28, 28),
+latinBlue: rgb(3, 240, 255),
+latinFucsia: rgb(235, 17, 255),
+latinGreen: rgb(72, 255, 0),
+latinBrown: rgb(56, 42, 18) 
+
+
+        secondary: rgb(38, 77, 76),
+        primary: rgb(163, 175, 61),
+*/
+
+
+
+
+.diagonal-split {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+  }
+  
+  .top-half, .bottom-half {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .top-half {
+    /* background-color: #3498db; Color for top half */
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.bottom-half {
+    /* background-color: #2ecc71; Color for bottom half */
+    clip-path: polygon(0 0, 0 100% , 100% 100%);
+  }

@@ -13,6 +13,6 @@
             "facebook": "http://facebook.com/pointbarloungemtl"
         },
         "menu": ["El_Lounge", "foodMenu", "latinClub", "eventsDay"],
-        "clubMenu": ["latinClub", "drinksMenu", "eventsNight", "visitUs"]
+        "clubMenu": ["latinClub", "drinksMenu", "eventsClub", "visitUs"]
     }
 ]

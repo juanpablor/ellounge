@@ -13,7 +13,7 @@
   "menuDrink": {
     "latinClub": "Club Latin",
     "drinksMenu": "Menu Boissons",
-    "eventsNight": "Événements",
+    "eventsClub": "Événements",
     "visitUs": "Visitez-nous"
   },
   "hours": {
@@ -42,6 +42,12 @@
     "drinksMenuPage": {
       "mocktailsTitle": "Sélection de Limonades",
       "mocktailsNote": "<li><b>Limonade Classique :</b> Intemporelle et acidulée.</li><li><b>Limonade au Concombre :</b> Fraîche avec une touche de concombre rafraîchissante.</li><li><b>Limonade Coco :</b> Fusion tropicale de noix de coco et citron.</li><li><b>Limonade aux Baies :</b> Explosant de saveurs de baies mélangées.</li><li><b>Limonade à la Mangue :</b> Mangue mûre et sucrée dans chaque gorgée.</li><li><b>Limonade au Fruit de la Passion :</b> Un délice exotique et acidulé.</li><li><b>Limonade à la Fraise :</b> Fraises sucrées et citron acidulé se rencontrent.</li>"
+    },
+    "eventsClubPage": {
+      "title": "Événements et Réunions",
+      "subtitle": "Vous cherchez l'endroit parfait pour votre prochain événement ou célébration?",
+      "content_1": "Ne cherchez pas plus loin que El Lounge. Que vous organisiez une réunion intime, un événement corporatif ou une fête d'anniversaire, notre espace polyvalent peut accueillir des groupes de toutes tailles.",
+      "content_2": "Permettez à notre équipe dévouée de travailler avec vous pour créer une expérience personnalisée qui dépassera vos attentes."
     }
   },
   "productMenu": {

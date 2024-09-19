@@ -13,7 +13,7 @@
   "menuDrink": {
     "latinClub": "Latin Club",
     "drinksMenu": "Menu Drinks",
-    "eventsNight": "Events",
+    "eventsClub": "Events",
     "visitUs": "Visit Us"
   },
   "hours": {
@@ -42,6 +42,12 @@
     "drinksMenuPage": {
       "mocktailsTitle": "Lemonade Selection",
       "mocktailsNote": "<li><b>Classic Lemonade:</b> Timeless and zesty.</li><li><b>Cucumber Lemonade:</b> Crisp with a cool cucumber twist.</li><li><b>Coco Lemonade:</b> Tropical fusion of coconut and lemon.</li><li><b>Berry Lemonade:</b> Bursting with mixed berry flavors.</li><li><b>Mango Lemonade:</b> Sweet, ripe mango in every sip.</li><li><b>Passion Fruit Lemonade:</b> An exotic and tangy delight.</li><li><b>Strawberry Lemonade:</b> Sweet strawberries meet zesty lemon.</li>"
+    },
+    "eventsClubPage": {
+      "title": "Events and Gatherings",
+      "subtitle": "Looking for the perfect place for your next event or celebration?",
+      "content_1": "Look no further than El Lounge. Whether you're hosting an intimate gathering, a corporate event, or a birthday party, our versatile space can accommodate groups of all sizes.",
+      "content_2": "Let our dedicated team work with you to create a personalized experience that exceeds your expectations."
     }
   },
   "productMenu": {

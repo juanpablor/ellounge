@@ -15,7 +15,8 @@ module.exports = {
         latinBlue: "#03f0ff",
         latinFucsia: "#eb11ff",
         latinGreen: "#48ff00",
-        latinBrown: "#382a12"
+        latinBrown: "#382a12",
+        latinFucsialight: "rgb(248,216,230)"
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
@@ -57,3 +58,5 @@ module.exports = {
     },    
   ],
 }
+
+

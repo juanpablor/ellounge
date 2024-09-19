@@ -13,7 +13,7 @@
   "menuDrink": {
     "latinClub": "Club Latino",
     "drinksMenu": "Menu Bebidas",
-    "eventsNight": "Eventos",
+    "eventsClub": "Eventos",
     "visitUs": "Visitanos"
   },
   "hours": {
@@ -42,6 +42,12 @@
     "drinksMenuPage": {
       "mocktailsTitle": "Selección de Limonadas",
       "mocktailsNote": "<li><b>Limonada Clásica:</b> Atemporal y refrescante.</li><li><b>Limonada de Pepino:</b> Fresca con un toque de pepino.</li><li><b>Limonada de Coco:</b> Fusión tropical de coco y limón.</li><li><b>Limonada de Frutas del Bosque:</b> Explosión de sabores de bayas mixtas.</li><li><b>Limonada de Mango:</b> Dulce mango maduro en cada sorbo.</li><li><b>Limonada de Maracuyá:</b> Un deleite exótico y ácido.</li><li><b>Limonada de Fresa:</b> Fresas dulces combinadas con limón refrescante.</li>"
+    },
+    "eventsClubPage": {
+      "title": "Eventos y Reuniones",
+      "subtitle": "¿Buscas el lugar perfecto para tu próximo evento o celebración?",
+      "content_1": "No busques más allá de El Lounge. Ya sea que estés organizando una reunión íntima, un evento corporativo o una fiesta de cumpleaños, nuestro espacio versátil puede acomodar grupos de todos los tamaños",
+      "content_2": "Permite que nuestro equipo dedicado trabaje contigo para crear una experienciapersonalizada que supere tus expectativas"
     }
   },
   "productMenu": {

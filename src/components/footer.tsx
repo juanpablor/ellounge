@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = ({ data }) => {
   return (
     <footer className={styles.container}>
       <div className="flex flex-row w-full justify-around">
-        <Link to="/" className="max-w-32">
+        <Link to="/" className="px-32">
           <MainLogo fillColour="#fff" />
         </Link>
         <ul className="px-16">

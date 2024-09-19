@@ -1,5 +1,6 @@
 import BackgroundClubImage from "./club_background.png";
 import BackgroundImage from "./leaves_background.png";
+import BackgroundTexture from "./club_background_texture.png";
 import beer from "./beer.png";
 import bellpepper from "./pimenton.png";
 import bottles from "./bottle.png";
@@ -13,6 +14,8 @@ import cocktail_5 from "./cocktail_5.png";
 import cocktail_wireframe from "./cocktail_wireframe.png";
 import cocktail_wireframe_2 from "./cocktail_wireframe_2.png";
 import coffee from "./coffee.png";
+import events_1 from "./events_1.jpg";
+import events_2 from "./events_2.jpg";
 import flower_1 from "./flower_1.png";
 import home_1 from "./home_1.jpg";
 import home_2 from "./home_2.jpg";
@@ -34,6 +37,8 @@ import planta_3 from "./planta_3.png";
 import planta_4 from "./planta_4.png";
 import planta_5 from "./planta_5.png";
 import planta_6 from "./planta_6.png";
+import planta_7 from "./planta_7.png";
+import plantasFlamingo from "./plantas_flamingo.png";
 import plate from "./plate.png";
 import shot from "./shot.png";
 import wine from "./wine.png";
@@ -41,6 +46,7 @@ import wine from "./wine.png";
 const images = {
   BackgroundClubImage,
   BackgroundImage,
+  BackgroundTexture,
   beer,
   bellpepper,
   bottles,
@@ -52,8 +58,10 @@ const images = {
   cocktail_5,
   cocktail_wireframe_2,
   cocktail_wireframe,
-  coffee,
   cocktail,
+  coffee,
+  events_1,
+  events_2,
   flower_1,
   home_1,
   home_2,
@@ -75,6 +83,8 @@ const images = {
   planta_4,
   planta_5,
   planta_6,
+  planta_7,
+  plantasFlamingo,
   plate,
   shot,
   wine

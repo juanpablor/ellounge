@@ -1,5 +1,5 @@
 import React, { ReactNode, useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
 import { CompanyData } from "../interfaces/interfaces";
 import LanguageSelector from "../components/languageSelector";
 import MainLogo from "../components/mainLogo";
@@ -7,7 +7,7 @@ import { RiInstagramLine } from "react-icons/ri";
 import { BsFacebook } from "react-icons/bs";
 import ClubNavigation from "../components/clubNav";
 import data from "../data/data.json";
-import { breakpoints } from "../constants";
+// import { breakpoints } from "../constants";
 import { HiArrowLongLeft } from "react-icons/hi2";
 
 interface LatinClubLayoutProps {
@@ -20,23 +20,23 @@ const info: CompanyData = data[0];
 
 const LatinClubLayout: React.FC<LatinClubLayoutProps> = ({
   children,
-  eventPage,
+  eventPage = false,
 }) => {
-  const isMobile = useMediaQuery({ query: breakpoints.mobile });
-  const [href, setHref] = useState("/drinksMenu/");
+  // const isMobile = useMediaQuery({ query: breakpoints.mobile });
+  const [href, setHref] = useState("/foodMenu/");
 
   useEffect(() => {
     const currentPath = window.location.pathname;
     const lang = currentPath.split("/")[1];
     if (lang === "fr" || lang === "es" || lang === "en") {
-      setHref(`/${lang}/drinksMenu/`);
+      setHref(`/${lang}/foodMenu/`);
     }
   }, []);
   return (
     <>
       <div className={styles.containerWrapper}>
         <a href={href}>
-          <div className="fixed top-[50%] w-24 h-16 bg-primary rounded-r-full flex justify-end">
+          <div className="fixed top-[50%] w-24 h-16 bg-primary rounded-r-full flex justify-end z-20">
             <div className="w-16 h-16 text-white rounded-full text-center relative flex items-center justify-center">
               <svg className="absolute w-full h-full" viewBox="0 0 100 100">
                 <defs>
@@ -80,13 +80,11 @@ const LatinClubLayout: React.FC<LatinClubLayoutProps> = ({
               </a>
             </div>
 
-            {!eventPage ||
-              (isMobile && (
+            {eventPage && (
                 <div className="flex justify-center my-12">
-                  <span className="text-white">suelto</span>
                   <ClubNavigation data={info} />
                 </div>
-              ))}
+               )}
 
             {!eventPage && (
               <div className="w-[10rem]">
