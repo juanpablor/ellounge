@@ -16,7 +16,7 @@ import MainLogo from "../components/mainLogo";
 const IndexPage: React.FC = () => {
   return (
     <>
-      <a href="/restaurant">
+      <a href="/elLounge">
         <div className="fixed top-[50%] w-48 h-32 rounded-r-full flex justify-end z-20">
           <div className="w-32 h-32 text-white rounded-full text-center relative flex items-center justify-center">
             <svg className="absolute w-full h-full" viewBox="0 0 100 100">

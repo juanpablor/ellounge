@@ -28,7 +28,7 @@ const ClubNavigation: React.FC<ClubNavProps> = ({ data }) => {
 
       <ul className={`${styles.buttonsWrapper} ${isMenuOpen ? styles.menuOpen : styles.menuClosed}`}>
         {data.clubMenu.map((item, index) => {
-          const itemPath = `/${item}`.replace(/\/$/, "");
+          const itemPath = item === "home" ? "/" : `/${item}`.replace(/\/$/, "");
           const isActive = currentPath === itemPath;
 
           return (

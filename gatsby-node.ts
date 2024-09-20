@@ -17,11 +17,10 @@ const urlUndefined = (validPath: string): boolean => {
 
 export const createPages: GatsbyNode['createPages'] = async ({ actions }) => {
   const { createPage } = actions;
-
   urls.forEach(url => {
     createPage({
-      path: `/${url === 'El_Lounge' ? 'index' : url}`,
-      component: path.resolve(`./src/pages/${url === 'El_Lounge' ? 'index' : url}.tsx`),
+      path: `/${url === 'home' ? '' : url}`,
+      component: path.resolve(`./src/pages/${url === 'home' ? 'index' : url}.tsx`),
     });
   });
 

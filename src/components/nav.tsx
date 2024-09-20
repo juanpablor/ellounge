@@ -41,7 +41,7 @@ const Navigation: React.FC<NavProps> = ({ data }) => {
           </a>
         </li>
         {data.menu.map((item: string, index: number) => {
-          const linkTo = item === "El_Lounge" ? "/" : `/${item}`;
+          const linkTo = item === "home" ? "/" : `/${item}`;
 
           return (
             <li key={index}>

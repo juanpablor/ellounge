@@ -5,12 +5,14 @@
   "portfolio": "Portfolio",
   "404 Page": "Page no found",
   "menu": {
-    "El_Lounge": "The Lounge",
+    "home": "Home",
+    "elLounge": "The Lounge",
     "foodMenu": "Menu",
     "latinClub": "Latin Club",
     "eventsDay": "Events"
   },
   "menuDrink": {
+    "home": "Home",
     "latinClub": "Latin Club",
     "drinksMenu": "Menu Drinks",
     "eventsClub": "Events",
