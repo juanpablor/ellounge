@@ -3,7 +3,8 @@ import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import { Link } from "gatsby"
 import { RiInstagramLine } from "react-icons/ri";
 import { BsFacebook } from "react-icons/bs";
-import { FiMenu, FiX } from "react-icons/fi"; // Iconos para el menú de burger
+import { FiMenu, FiX } from "react-icons/fi";
+import { useLocation } from "@reach/router";
 
 interface NavProps {
   data?: {
@@ -14,26 +15,27 @@ interface NavProps {
 
 const Navigation: React.FC<NavProps> = ({ data }) => {
   const { t } = useTranslation();
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado para controlar la apertura del menú
+  const { pathname } = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   if (!data || !data.menu || !data.companyDetails) {
     return null;
   }
 
+  const currentPath = pathname.replace(/^\/(es|en|fr)\//, "/").replace(/\/$/, "");
+
   const { instagram, facebook } = data.companyDetails;
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Alterna entre abrir y cerrar el menú
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <nav className={styles.container}>
-      {/* Botón de burger visible solo en pantallas pequeñas */}
       <button onClick={toggleMenu} className={styles.burgerButton}>
         {isMenuOpen ? <FiX className="text-white" size={24} /> : <FiMenu className="text-white" size={24} />}
       </button>
 
-      {/* Menú responsive */}
       <ul className={`${styles.buttonsWrapper} ${isMenuOpen ? styles.menuOpen : styles.menuClosed}`}>
         <li>
           <a href={instagram} target="_blank" rel="noopener noreferrer">
@@ -41,13 +43,14 @@ const Navigation: React.FC<NavProps> = ({ data }) => {
           </a>
         </li>
         {data.menu.map((item: string, index: number) => {
-          const linkTo = item === "home" ? "/" : `/${item}`;
+          const linkTo = item === "home" ? "/" : `/${item}`.replace(/\/$/, "");
+          const isActive = currentPath === linkTo;
 
           return (
             <li key={index}>
               <Link
                 to={linkTo}
-                className={styles.buttons}
+                className={`${styles.buttons} ${isActive ? "font-extrabold !text-secondary" : ""}`}
                 activeClassName="text-secondary">
                 <Trans i18nKey={`menu.${item}`}>
                   {t(`menu.${item}`)}
@@ -70,9 +73,10 @@ export default Navigation;
 
 const styles = {
   container: "inline-block justify-between items-center bg-primary px-4 py-2 rounded-full relative",
-  burgerButton: "md:hidden block text-white focus:outline-none", // Visible solo en móvil
-  buttonsWrapper: "flex flex-col md:flex-row justify-evenly items-center w-full md:w-auto", // Responsive
+  burgerButton: "md:hidden block text-white focus:outline-none",
+  buttonsWrapper: "flex flex-col md:flex-row justify-evenly items-center w-full md:w-auto",
   buttons: "text-white px-8 py-2 hover:underline hover:text-secondary",
-  menuOpen: "block md:flex", // Abierto en móviles o siempre en desktop
-  menuClosed: "hidden md:flex", // Cerrado en móviles pero visible en desktop
+  menuOpen: "block md:flex",
+  menuClosed: "hidden md:flex"
 };
+

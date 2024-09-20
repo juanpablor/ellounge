@@ -1,24 +1,22 @@
 import * as React from "react";
-// import Indexlayout from "./Indexlayout";
 import { graphql } from "gatsby";
-// import data from "../data/data.json";
-// import { Trans } from "gatsby-plugin-react-i18next";
-// import Head from "../components/head";
-// import { CompanyData, DataLayout } from "../interfaces/interfaces";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import images from "../images";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import MainLogo from "../components/mainLogo";
+import LanguageSelector from "../components/languageSelector";
+import { CompanyData } from "../interfaces/interfaces";
+import data from "../data/data.json";
 
-// const info: CompanyData = data[0];
-// const pageTitle: string = "welcome";
+const info: CompanyData = data[0];
 
-// const IndexPage: React.FC<DataLayout> = ({ data }) => {
 const IndexPage: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <a href="/elLounge">
-        <div className="fixed top-[50%] w-48 h-32 rounded-r-full flex justify-end z-20">
-          <div className="w-32 h-32 text-white rounded-full text-center relative flex items-center justify-center">
+        <div className="fixed top-[50%] w-48 h-40 rounded-r-full flex justify-end z-20">
+          <div className="w-40 h-40 text-white rounded-full text-center relative flex items-center justify-center">
             <svg className="absolute w-full h-full" viewBox="0 0 100 100">
               <defs>
                 <path
@@ -36,15 +34,15 @@ const IndexPage: React.FC = () => {
 
             <div className="absolute flex flex-col items-center justify-center">
               <HiArrowLongLeft className="mx-auto text-4xl" />
-              <span className="text-xl">Food</span>
+              <span className="text-xl uppercase font-extrabold">{t("general.food")}</span>
             </div>
           </div>
         </div>
       </a>
 
       <a href="/latinClub">
-        <div className="fixed top-[50%] z-50 right-0 w-48 h-32 rounded-l-full flex justify-start">
-          <div className="w-32 h-32 text-white rounded-full text-center relative flex items-center justify-center">
+        <div className="fixed top-[50%] z-50 right-0 w-48 h-40 rounded-l-full flex justify-start">
+          <div className="w-40 h-40 text-white rounded-full text-center relative flex items-center justify-center">
             <svg className="absolute w-full h-full" viewBox="0 0 100 100">
               <defs>
                 <path
@@ -62,7 +60,7 @@ const IndexPage: React.FC = () => {
 
             <div className="absolute flex flex-col items-center justify-center">
               <HiArrowLongRight className="mx-auto text-4xl" />
-              <span className="text-xl">Drinks</span>
+              <span className="text-xl uppercase font-extrabold">{t("general.drinks")}</span>
             </div>
           </div>
         </div>
@@ -74,17 +72,45 @@ const IndexPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="z-10">
-        <div className="bottom-half flex justify-center bg-secondary">
+      <section className="z-10"
+        style={{
+          backgroundImage: `url(${images.cocktail_wireframe_2})`,
+        }}
+      
+      >
+        <div
+          className="bottom-half flex justify-center bg-secondary bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${images.BackgroundImage})`,
+          }}
+        >
           <div className="content-center">
             <img className="w-96" src={images.plate} alt="" />
           </div>
         </div>
 
-        <div className="top-half flex justify-center bg-latinClub">
-          <div className="content-center">
+        <div
+          className="top-half flex justify-center bg-latinFucsia/90"
+          style={{
+            backgroundImage: `url(${images.BackgroundTexture})`,
+            backgroundSize: "cover",
+          }}
+        >
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: `url(${images.BackgroundTexture})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          <div className="content-center relative z-10">
             <img className="w-96" src={images.plate} alt="" />
           </div>
+        </div>
+        <div className="absolute right-20 top-12 z-40">
+          <LanguageSelector clubLayout={true} data={info} />
         </div>
       </section>
 

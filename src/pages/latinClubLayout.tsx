@@ -9,6 +9,7 @@ import ClubNavigation from "../components/clubNav";
 import data from "../data/data.json";
 // import { breakpoints } from "../constants";
 import { HiArrowLongLeft } from "react-icons/hi2";
+import { useTranslation } from "react-i18next";
 
 interface LatinClubLayoutProps {
   children: ReactNode;
@@ -24,7 +25,7 @@ const LatinClubLayout: React.FC<LatinClubLayoutProps> = ({
 }) => {
   // const isMobile = useMediaQuery({ query: breakpoints.mobile });
   const [href, setHref] = useState("/foodMenu/");
-
+  const { t } = useTranslation();
   useEffect(() => {
     const currentPath = window.location.pathname;
     const lang = currentPath.split("/")[1];
@@ -32,6 +33,7 @@ const LatinClubLayout: React.FC<LatinClubLayoutProps> = ({
       setHref(`/${lang}/foodMenu/`);
     }
   }, []);
+
   return (
     <>
       <div className={styles.containerWrapper}>
@@ -55,7 +57,7 @@ const LatinClubLayout: React.FC<LatinClubLayoutProps> = ({
 
               <div className="absolute flex flex-col items-center justify-center">
                 <HiArrowLongLeft className="mx-auto" />
-                <span className="text-xs">Food</span>
+                <span className="text-xs">{t("general.food")}</span>
               </div>
             </div>
           </div>

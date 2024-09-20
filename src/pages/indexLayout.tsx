@@ -41,7 +41,7 @@ const indexLayout: React.FC<IndexLayoutProps> = ({ data }) => {
 
               <div className="absolute flex flex-col items-center justify-center">
                 <HiArrowLongRight className="mx-auto" />
-                <span className="text-xs">Drinks</span>
+                <span className="text-xs">{t("general.drinks")}</span>
               </div>
             </div>
           </div>

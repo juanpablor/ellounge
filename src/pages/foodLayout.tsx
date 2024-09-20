@@ -4,6 +4,7 @@ import Navigation from "../components/nav";
 import { CompanyData } from "../interfaces/interfaces";
 import images from "../images/index";
 import { HiArrowLongRight } from "react-icons/hi2";
+import { useTranslation } from "react-i18next";
 
 
 interface FoodLayoutProps {
@@ -13,7 +14,7 @@ interface FoodLayoutProps {
 
 const FoodLayout: React.FC<FoodLayoutProps> = ({ children, data }) => {
   const [href, setHref] = useState("/drinksMenu/");
-
+  const { t } = useTranslation();
 
   useEffect(() => {
     const currentPath = window.location.pathname;
@@ -44,7 +45,7 @@ const FoodLayout: React.FC<FoodLayoutProps> = ({ children, data }) => {
 
               <div className="absolute flex flex-col items-center justify-center">
                 <HiArrowLongRight className="mx-auto" />
-                <span className="text-xs">Drinks</span>
+                <span className="text-xs">{t("general.drinks")}</span>
               </div>
             </div>
           </div>
