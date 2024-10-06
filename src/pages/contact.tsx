@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "./Indexlayout";
+import Layout from "./indexLayout";
 import { graphql } from "gatsby";
 import { CompanyData } from "../interfaces/interfaces";
 import { Trans } from "gatsby-plugin-react-i18next";

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Indexlayout from "./Indexlayout";
+import Indexlayout from "./indexLayout";
 import { graphql } from "gatsby";
 import data from "../data/data.json";
 import { Trans } from "gatsby-plugin-react-i18next";
