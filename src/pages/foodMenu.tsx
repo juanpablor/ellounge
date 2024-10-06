@@ -106,11 +106,11 @@ const FoodMenuPage: React.FC = () => {
         <title>{t("productMenu.dishes_title")} - {companyInfo.name}</title>
         <link rel="icon" href={favicon} />
       </Helmet>
-      <section>
+      {/* <section>
         <h2 className={styles.mainTitle}>{t("productMenu.dishes_title")}</h2>
-      </section>
+      </section> */}
 
-      <section className={styles.starringAreaWrapper}>
+      {/* <section className={styles.starringAreaWrapper}>
         <div className={`${styles.starringItem} ${styles.after}`}>
           <img className="p-4" src={foodImages.smoked_meat_arepa} alt="" />
           <span className={styles.srattingTitle}>
@@ -132,7 +132,7 @@ const FoodMenuPage: React.FC = () => {
           </span>
           <p className="p-4">{t("productMenu.special_dishes_3")}</p>
         </div>
-      </section>
+      </section> */}
 
       <section>
         <div className={styles.tabsWrapper}>
@@ -261,7 +261,7 @@ export const query = graphql`
 `;
 
 const styles = {
-  starringAreaWrapper: "flex mt-8 flex-row gap-6 justify-center text-white",
+  starringAreaWrapper: "flex mt-8 flex-row gap-6 justify-center text-white ",
   starringItem: "relative w-96 border-dashed border-white border text-center",
   srattingTitle:
     "bg-primary text-secondary text-lg flex justify-center p-3 font-bold",
