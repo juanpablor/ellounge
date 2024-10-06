@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkEl_Lounge_Latin_Club=self.webpackChunkEl_Lounge_Latin_Club||[]).push([[453],{731:function(e,u,l){l.r(u);var n=l(6540);u.default=()=>n.createElement("div",null,"ERROR PAGE 404")}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-6fc478dddb2a89407f5d.js.map
