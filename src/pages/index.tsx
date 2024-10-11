@@ -26,8 +26,7 @@ const IndexPage: React.FC = () => {
               </defs>
               <text fontSize="10" fill="white">
                 <textPath xlinkHref="#circlePath" startOffset="0">
-                  El Lounge &bull; El Lounge &bull; El Lounge &bull; El Lounge
-                  &bull; El Lounge &bull;
+                  El Lounge&nbsp;&nbsp;&bull;&nbsp;El Lounge&nbsp;&nbsp;&bull;&nbsp;&nbsp;El Lounge&nbsp;&nbsp;&bull;&nbsp;El Lounge&nbsp;&nbsp;&bull;&nbsp;
                 </textPath>
               </text>
             </svg>
@@ -52,8 +51,7 @@ const IndexPage: React.FC = () => {
               </defs>
               <text fontSize="10" fill="white">
                 <textPath xlinkHref="#circlePath" startOffset="0">
-                  El Lounge &bull; El Lounge &bull; El Lounge &bull; El Lounge
-                  &bull; El Lounge &bull;
+                  El Lounge&nbsp;&nbsp;&bull;&nbsp;El Lounge&nbsp;&nbsp;&bull;&nbsp;&nbsp;El Lounge&nbsp;&nbsp;&bull;&nbsp;El Lounge&nbsp;&nbsp;&bull;&nbsp;
                 </textPath>
               </text>
             </svg>
@@ -81,7 +79,8 @@ const IndexPage: React.FC = () => {
         <div
           className="bottom-half flex justify-center bg-secondary bg-cover bg-center"
           style={{
-            backgroundImage: `url(${images.BackgroundImage})`,
+            backgroundImage: `url(${images.elloungeBg})`,
+            backgroundPosition: "bottom left"
           }}
         >
           <div className="content-center">
@@ -92,19 +91,11 @@ const IndexPage: React.FC = () => {
         <div
           className="top-half flex justify-center bg-latinFucsia/90"
           style={{
-            backgroundImage: `url(${images.BackgroundTexture})`,
+            backgroundImage: `url(${images.latinClubBg})`,
             backgroundSize: "cover",
+            backgroundPosition: "top right"
           }}
         >
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: `url(${images.BackgroundTexture})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
           <div className="content-center relative z-10">
             <img className="w-96" src={images.plate} alt="" />
           </div>

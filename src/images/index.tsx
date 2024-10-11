@@ -14,6 +14,7 @@ import cocktail_5 from "./cocktail_5.png";
 import cocktail_wireframe from "./cocktail_wireframe.png";
 import cocktail_wireframe_2 from "./cocktail_wireframe_2.png";
 import coffee from "./coffee.png";
+import elloungeBg from "./elloungeBg.jpg";
 import events_1 from "./events_1.jpg";
 import events_2 from "./events_2.jpg";
 import flower_1 from "./flower_1.png";
@@ -24,6 +25,7 @@ import juice from "./juice.png";
 import latin_club_1 from "./latin_club_1.jpg";
 import latin_club_2 from "./latin_club_2.jpg";
 import latin_club_3 from "./latin_club_3.jpg";
+import latinClubBg from "./latinClubBg.jpg";
 import lemonade from "./lemonade.png";
 import limon_2 from "./limon_2.png";
 import limon_3 from "./limon_3.png";
@@ -60,6 +62,7 @@ const images = {
   cocktail_wireframe,
   cocktail,
   coffee,
+  elloungeBg,
   events_1,
   events_2,
   flower_1,
@@ -70,6 +73,7 @@ const images = {
   latin_club_1,
   latin_club_2,
   latin_club_3,
+  latinClubBg,
   lemonade,
   limon_2,
   limon_3,
