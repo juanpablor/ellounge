@@ -15,8 +15,8 @@ const IndexPage: React.FC = () => {
   return (
     <>
       <a href="/elLounge">
-        <div className="fixed top-[50%] w-48 h-40 rounded-r-full flex justify-end z-20">
-          <div className="w-40 h-40 text-white rounded-full text-center relative flex items-center justify-center">
+        <div className="fixed left-4 top-[60%] sm:top-[50%] w-20 sm:w-48 h-20 sm:h-40 rounded-r-full flex justify-end z-20">
+          <div className="w-20 sm:w-40 h-20 sm:h-40 text-white rounded-full text-center relative flex items-center justify-center bg-primary">
             <svg className="absolute w-full h-full" viewBox="0 0 100 100">
               <defs>
                 <path
@@ -32,16 +32,16 @@ const IndexPage: React.FC = () => {
             </svg>
 
             <div className="absolute flex flex-col items-center justify-center">
-              <HiArrowLongLeft className="mx-auto text-4xl" />
-              <span className="text-xl uppercase font-extrabold">{t("general.food")}</span>
+              <HiArrowLongLeft className="mx-auto text-xl sm:text-4xl" />
+              <span className="text-xs sm:text-xl uppercase font-extrabold">{t("general.food")}</span>
             </div>
           </div>
         </div>
       </a>
 
       <a href="/latinClub">
-        <div className="fixed top-[50%] z-50 right-0 w-48 h-40 rounded-l-full flex justify-start">
-          <div className="w-40 h-40 text-white rounded-full text-center relative flex items-center justify-center">
+        <div className="fixed right-4 top-[60%] sm:top-[50%] z-50 sm:right-0 w-20 sm:w-48 h-20 sm:h-40 rounded-l-full flex justify-start">
+          <div className="w-20 sm:w-40 h-20 sm:h-40 text-white rounded-full text-center relative flex items-center justify-center bg-latinFucsia">
             <svg className="absolute w-full h-full" viewBox="0 0 100 100">
               <defs>
                 <path
@@ -57,15 +57,15 @@ const IndexPage: React.FC = () => {
             </svg>
 
             <div className="absolute flex flex-col items-center justify-center">
-              <HiArrowLongRight className="mx-auto text-4xl" />
-              <span className="text-xl uppercase font-extrabold">{t("general.drinks")}</span>
+              <HiArrowLongRight className="mx-auto text-xl sm:text-4xl" />
+              <span className="text-xs sm:text-xl uppercase font-extrabold">{t("general.drinks")}</span>
             </div>
           </div>
         </div>
       </a>
 
       <section className="flex justify-center">
-        <div className="mt-12 w-96 absolute z-30">
+        <div className="mt-12 w-44 sm:w-96 absolute z-30">
           <MainLogo fillColour="#fff" />
         </div>
       </section>
@@ -84,7 +84,7 @@ const IndexPage: React.FC = () => {
           }}
         >
           <div className="content-center">
-            <img className="w-96" src={images.plate} alt="" />
+            <img className="w-40 sm:w-96" src={images.plate} alt="" />
           </div>
         </div>
 
@@ -97,18 +97,18 @@ const IndexPage: React.FC = () => {
           }}
         >
           <div className="content-center relative z-10">
-            <img className="w-96" src={images.plate} alt="" />
+            <img className="w-40 sm:w-96" src={images.plate} alt="" />
           </div>
         </div>
-        <div className="absolute right-20 top-12 z-40">
+        <div className="absolute right-4 sm:right-20 top-4 sm:top-12 z-40">
           <LanguageSelector clubLayout={true} data={info} />
         </div>
       </section>
 
       <section className="relative flex justify-center z-10 h-screen">
-        <div className="w-96 flex self-center">
+        <div className="w-48 sm:w-96 flex self-center">
           <img
-            className="w-48 h-96 relative left-8 bottom-20"
+            className="w-20 sm:w-48 h-40 sm:h-96 relative left-6 sm:left-8 bottom-8 sm:bottom-20"
             src={images.cocktail}
             alt=""
           />
@@ -116,7 +116,7 @@ const IndexPage: React.FC = () => {
 
         <div className="flex self-center">
           <img
-            className="ml-20 w-60 h-80 relative bottom-4 left-8"
+            className="ml-20 w-32 sm:w-60 h-32 sm:h-80 relative bottom-0 sm:bottom-4 left-0 sm:left-8"
             src={images.beer}
             alt=""
           />
