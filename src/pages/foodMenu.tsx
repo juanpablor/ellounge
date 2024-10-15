@@ -106,33 +106,6 @@ const FoodMenuPage: React.FC = () => {
         <title>{t("productMenu.dishes_title")} - {companyInfo.name}</title>
         <link rel="icon" href={favicon} />
       </Helmet>
-      {/* <section>
-        <h2 className={styles.mainTitle}>{t("productMenu.dishes_title")}</h2>
-      </section> */}
-
-      {/* <section className={styles.starringAreaWrapper}>
-        <div className={`${styles.starringItem} ${styles.after}`}>
-          <img className="p-4" src={foodImages.smoked_meat_arepa} alt="" />
-          <span className={styles.srattingTitle}>
-            {t("productMenu.special_dishes_title_1")}
-          </span>
-          <p className="p-4">{t("productMenu.special_dishes_1")}</p>
-        </div>
-        <div className={`${styles.starringItem} ${styles.after}`}>
-          <img className="p-4" src={foodImages.chili} alt="" />
-          <span className={styles.srattingTitle}>
-            {t("productMenu.special_dishes_title_2")}
-          </span>
-          <p className="p-4">{t("productMenu.special_dishes_2")}</p>
-        </div>
-        <div className={styles.starringItem}>
-          <img className="p-4" src={foodImages.ceviche_de_camaron} alt="" />
-          <span className={styles.srattingTitle}>
-            {t("productMenu.special_dishes_title_3")}
-          </span>
-          <p className="p-4">{t("productMenu.special_dishes_3")}</p>
-        </div>
-      </section> */}
 
       <section>
         <div className={styles.tabsWrapper}>
@@ -197,10 +170,10 @@ const FoodMenuPage: React.FC = () => {
 
       {selectedFood && (
         <div
-          className="modal w-full h-full fixed z-50 top-0 bg-black/80 text-white"
+          className="modal w-full h-full fixed z-[80] top-0 bg-black/80 text-white"
           onClick={handleCloseModal}
         >
-          <div className="modal-content w-[80%] max-w-[75rem] mx-auto bg-secondary/75 mt-40 p-12">
+          <div className="modal-content w-[90%] sm:w-[80%] max-w-[75rem] mx-auto bg-secondary/75 mt-6 sm:mt-40 p-2 sm:p-12 overflow-y-auto">
             <article className="flex justify-between">
               <div className="flex items-start">
                 <div
@@ -209,7 +182,7 @@ const FoodMenuPage: React.FC = () => {
                 >
                   <FaWindowClose className="w-full h-full " />
                 </div>
-                <div className="ml-16 w-36">
+                <div className="ml-0 sm:ml-16 w-24 sm:w-36">
                   <MainLogo fillColour={"#fff"} />
                 </div>
               </div>
@@ -217,20 +190,20 @@ const FoodMenuPage: React.FC = () => {
                 <div className="text-2xl font-thin">
                   {t(`productMenu.${activeTab}`)}
                 </div>
-                <div className="text-terciary text-6xl text-center">
+                <div className="text-terciary text-sm sm:text-6xl text-center">
                   {selectedFood.price}
                 </div>
               </div>
             </article>
 
-            <article className="flex flex-row">
+            <article className="flex flex-col sm:flex-row mt-4 sm:mt-0">
               <img
-                className="w-[28rem]"
+                className="w-full sm:w-[28rem]"
                 src={getImageSrc(selectedFood.image)}
                 alt={selectedFood.name}
               />
-              <div className="flex flex-col self-center p-8">
-                <div className="w-full text-4xl font-bold uppercase">
+              <div className="flex flex-col self-center p-2 sm:p-8">
+                <div className="w-full text-sm sm:text-4xl font-bold uppercase">
                   {selectedFood.name}
                 </div>
                 <p className="py-4">{t(`food.${selectedFood.image}`)}</p>
@@ -265,15 +238,15 @@ const styles = {
   starringItem: "relative w-96 border-dashed border-white border text-center",
   srattingTitle:
     "bg-primary text-secondary text-lg flex justify-center p-3 font-bold",
-  tabButton: "hover:text-terciary hover:underline",
-  productTile: "flex flex-col w-[160px] h-[260px] bg-primary/35 box-shadow p-4",
+  tabButton: "hover:text-terciary hover:underline py-2 sm:py-0",
+  productTile: "flex flex-col w-[160px] h-[260px] bg-primary/35 box-shadow p-4 relative z-20",
   productTileInfoWrapper: "flex flex-row grow pt-4",
   productTileTitle:
     "text-white uppercase font-extrabold text-md leading-[1rem]",
   productTilePrice: "text-terciary self-end text-2xl font-extrabold",
   productTileShowMore: "text-white text-xs text-center font-extralight",
   mainTitle: "text-primary text-6xl text-center tracking-wide m-0 p-0",
-  tabsWrapper: "tabs text-white flex justify-around max-w-[750px] mx-auto my-8",
+  tabsWrapper: "text-white flex flex-col sm:flex-row justify-around max-w-[750px] mx-auto my-2 sm:my-8",
   after:
     "after:'' after:w-[2rem] after:h-[3.25rem] after:bg-primary after:block after:absolute after:right-[-1.8rem] after:top-[23.85rem] after:z-50",
 };

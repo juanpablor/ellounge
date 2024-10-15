@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import LanguageSelector from "./languageSelector";
 import { CompanyData } from "../interfaces/interfaces";
 import MainLogo from "../components/mainLogo";
+import Navigation from "./nav";
 
 interface HeaderProps {
   data?: CompanyData;
@@ -13,10 +14,13 @@ const Header: React.FC<HeaderProps> = ({ data, logoPosition }) => {
   return (
     <header className={styles.container}>
       <Link to="/" className={`w-full ${logoPosition || ""}`}>
-      <MainLogo fillColour="#fff" />
+        <MainLogo fillColour="#fff" />
       </Link>
-      <div className="absolute top-16 right-32">
-        <LanguageSelector  clubLayout={false} data={data} />
+      <div className="relative sm:absolute top-2 sm:top-16 right-0 sm:right-32">
+        <LanguageSelector clubLayout={false} data={data} />
+        <div className="flex sm:hidden absolute right-4">
+          <Navigation data={data} />
+        </div>
       </div>
     </header>
   );

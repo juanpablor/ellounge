@@ -79,25 +79,25 @@ const IndexPage: React.FC = () => {
         <div
           className="bottom-half flex justify-center bg-secondary bg-cover bg-center"
           style={{
-            backgroundImage: `url(${images.elloungeBg})`,
+            backgroundImage: `url(${images.elloungeBg.src})`,
             backgroundPosition: "bottom left"
           }}
         >
           <div className="content-center">
-            <img className="w-40 sm:w-96" src={images.plate} alt="" />
+            <img className="w-40 sm:w-96" src={images.plate.src} alt={images.plate.alt} />
           </div>
         </div>
 
         <div
           className="top-half flex justify-center bg-latinFucsia/90"
           style={{
-            backgroundImage: `url(${images.latinClubBg})`,
+            backgroundImage: `url(${images.latinClubBg.src})`,
             backgroundSize: "cover",
             backgroundPosition: "top right"
           }}
         >
           <div className="content-center relative z-10">
-            <img className="w-40 sm:w-96" src={images.plate} alt="" />
+            <img className="w-40 sm:w-96" src={images.plate.src} alt={images.plate.alt} />
           </div>
         </div>
         <div className="absolute right-4 sm:right-20 top-4 sm:top-12 z-40">
@@ -109,16 +109,16 @@ const IndexPage: React.FC = () => {
         <div className="w-48 sm:w-96 flex self-center">
           <img
             className="w-20 sm:w-48 h-40 sm:h-96 relative left-6 sm:left-8 bottom-8 sm:bottom-20"
-            src={images.cocktail}
-            alt=""
+            src={images.cocktail.src}
+            alt={images.cocktail.alt}
           />
         </div>
 
         <div className="flex self-center">
           <img
             className="ml-20 w-32 sm:w-60 h-32 sm:h-80 relative bottom-0 sm:bottom-4 left-0 sm:left-8"
-            src={images.beer}
-            alt=""
+            src={images.beer.src}
+            alt={images.beer.alt}
           />
         </div>
       </section>

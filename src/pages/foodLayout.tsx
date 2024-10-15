@@ -54,30 +54,30 @@ const FoodLayout: React.FC<FoodLayoutProps> = ({ children, data }) => {
         <div
           className="relative bg-contain bg-center overflow-hidden"
           style={{
-            backgroundImage: `url(${images.BackgroundImage})`,
+            backgroundImage: `url(${images.BackgroundImage.src})`,
+            backgroundSize: 'cover'
           }}
         >
-          <div className="absolute right-[-6rem] top-[-2rem]">
-            <img src={images.planta_3} className="w-56" alt="" />
-            <img src={images.planta_4} className="absolute w-32 right-[3rem] top-[12rem] z-30 rotate-[10deg]" alt="" />
+          <div className="absolute right-[-3rem] sm:right-[-6rem] top-[-1rem] sm:top-[-2rem]">
+            <img src={images.planta_3.src} className="w-28 sm:w-56" alt={images.planta_3.alt} />
+            <img src={images.planta_4.src} className="absolute w-16 sm:w-32 right-2 sm:right-[3rem] top-16 sm:top-[12rem] z-30 rotate-[10deg]" alt={images.planta_4.alt} />
           </div>
           <div className="w-[20rem] mx-auto">
-
             <Header logoPosition={styles.logoPosition} data={data} />
           </div>
 
-          <div className="flex justify-center my-10">
+          <div className="hidden sm:flex justify-center my-10">
             <Navigation data={data} />
           </div>
 
           <main>{children}</main>
-          <div className="absolute w-48 h-56 bottom-0 overflow-hidden">
-            <img className="absolute -bottom-8 w-36 rotate-[60deg]" src={images.planta_5} alt="" />
-            <img className="absolute -bottom-4 w-36 -left-10" src={images.cocktail_3} alt="" />
+          <div className="absolute w-24 sm:w-48 h-28 sm:h-56 bottom-0 overflow-hidden z-10">
+            <img className="absolute -bottom-8 w-22 sm:w-36 rotate-[60deg]" src={images.planta_5.src} alt={images.planta_5.alt} />
+            <img className="absolute -bottom-4 w-22 sm:w-36 -left-10" src={images.cocktail_3.src} alt={images.cocktail_3.alt} />
           </div>
-          <div className="absolute w-48 h-56 bottom-0 right-0 overflow-hidden">
-            <img className="absolute -bottom-12 w-44 -right-12" src={images.limon_3} alt="" />
-            <img className="absolute -bottom-12 w-44 -right-20" src={images.cocktail_2} alt="" />
+          <div className="absolute w-24 sm:w-48 h-28 sm:h-56 bottom-0 right-0 overflow-hidden">
+            <img className="absolute -bottom-12 w-22 sm:w-44 -right-12" src={images.limon_3.src} alt={images.limon_3.alt} />
+            <img className="absolute -bottom-12 w-22 sm:w-44 -right-20" src={images.cocktail_2.src} alt={images.cocktail_2.alt} />
           </div>
         </div>
       </div>

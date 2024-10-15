@@ -41,7 +41,7 @@ export default LanguageSelector;
 
 const styles = {
   container: "flex flex-row justify-center self-center",
-  buttonsWrapper: "flex justify-evenly flex-col sm:flex-row",
+  buttonsWrapper: "flex justify-evenly flex-row",
   buttons: "flex w-10 h-10 shrink-0 grow-0 rounded-full justify-center text-white cursor-pointer mx-1",
   text: "self-center capitalize",
   hover: "bg-primary hover:bg-secondary hover:border-primary hover:border-2 hover:text-white",

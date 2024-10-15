@@ -56,13 +56,13 @@ const visitUs: React.FC<visitUsProps> = ({ data }) => {
           <div className="flex flex-row w-full overflow-hidden relative h-[240px] -mt-24">
             <img
               className="w-96  object-cover rotate-180 aspect-[4/3] absolute -bottom-20 -left-20"
-              src={images.cocktail_wireframe_2}
-              alt=""
+              src={images.cocktail_wireframe_2.src}
+              alt={images.cocktail_wireframe_2.alt}
             />
             <img
               className="w-96 object-cover aspect-[4/3] absolute -bottom-12 -right-24"
-              src={images.cocktail_wireframe}
-              alt=""
+              src={images.cocktail_wireframe.src}
+              alt={images.cocktail_wireframe.alt}
             />
           </div>
         </div>

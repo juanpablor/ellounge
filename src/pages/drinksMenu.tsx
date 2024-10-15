@@ -215,13 +215,13 @@ const DrinkMenuPage: React.FC = () => {
                 <div className="relative w-full h-1 bg-latinBlue opacity-25">
                   <img
                     className="absolute w-24 mt-[20%] left-6"
-                    src={images.shot}
-                    alt=""
+                    src={images.shot.src}
+                    alt={images.shot.alt}
                   />
                   <img
                     className="absolute opacity-75 w-36 right-2"
-                    src={images.cocktail_5}
-                    alt=""
+                    src={images.cocktail_5.src}
+                    alt={images.cocktail_5.alt}
                   />
                 </div>
                 <div className="flex justify-center">
@@ -246,18 +246,18 @@ const DrinkMenuPage: React.FC = () => {
                 <div className="relative w-full h-1 bg-latinFucsia opacity-25">
                   <img
                     className="absolute w-48 rotate-[30deg] -left-12"
-                    src={images.cocktail_4}
-                    alt=""
+                    src={images.cocktail_4.src}
+                    alt={images.cocktail_4.alt}
                   />
                   <img
                     className="absolute w-48 rotate-[-10deg] -right-12"
-                    src={images.planta_2}
-                    alt=""
+                    src={images.planta_2.src}
+                    alt={images.planta_2.alt}
                   />
                   <img
                     className="absolute w-36 top-8 -right-12"
-                    src={images.mango}
-                    alt=""
+                    src={images.mango.src}
+                    alt={images.mango.alt}
                   />
                 </div>
                 {renderDrinkList(drinksMenu.houseShots)}
@@ -269,18 +269,18 @@ const DrinkMenuPage: React.FC = () => {
                 <div className="relative w-full h-1 bg-latinGreen opacity-25">
                   <img
                     className="absolute w-48 rotate-[30deg] -left-12"
-                    src={images.bottles}
-                    alt=""
+                    src={images.bottles.src}
+                    alt={images.bottles.alt}
                   />
                   <img
                     className="absolute w-32 rotate-[-10deg] -right-12"
-                    src={images.planta_4}
-                    alt=""
+                    src={images.planta_4.src}
+                    alt={images.planta_4.alt}
                   />
                   <img
                     className="absolute w-64 -top-6 -right-12"
-                    src={images.maracuya_2}
-                    alt=""
+                    src={images.maracuya_2.src}
+                    alt={images.maracuya_2.alt}
                   />
                 </div>
                 {renderDrinkList(drinksMenu.bottles)}
@@ -292,13 +292,13 @@ const DrinkMenuPage: React.FC = () => {
                 <div className="relative w-full h-1 bg-latinBlue opacity-25">
                   <img
                     className="absolute w-48 -left-12"
-                    src={images.wine}
-                    alt=""
+                    src={images.wine.src}
+                    alt={images.wine.alt}
                   />
                   <img
                     className="absolute w-64 -right-12"
-                    src={images.beer}
-                    alt=""
+                    src={images.beer.src}
+                    alt={images.beer.alt}
                   />
                 </div>
                 {renderDrinkList(drinksMenu.wineBeer)}
@@ -310,13 +310,13 @@ const DrinkMenuPage: React.FC = () => {
                 <div className="relative w-full h-1 bg-latinFucsia opacity-25">
                   <img
                     className="absolute w-48 rotate-[30deg] -left-12"
-                    src={images.flower_1}
-                    alt=""
+                    src={images.flower_1.src}
+                    alt={images.flower_1.alt}
                   />
                   <img
                     className="absolute w-48 right-4"
-                    src={images.lemonade}
-                    alt=""
+                    src={images.lemonade.src}
+                    alt={images.lemonade.alt}
                   />
                 </div>
                 <h2 className="text-white mx-auto font-bold text-lg">
@@ -338,13 +338,13 @@ const DrinkMenuPage: React.FC = () => {
                 <div className="relative w-full h-1 bg-latinGreen opacity-25">
                   <img
                     className="absolute w-48 -left-12"
-                    src={images.coffee}
-                    alt=""
+                    src={images.coffee.src}
+                    alt={images.coffee.alt}
                   />
                   <img
                     className="absolute w-64 -right-12"
-                    src={images.juice}
-                    alt=""
+                    src={images.juice.src}
+                    alt={images.juice.alt}
                   />
                 </div>
                 {renderDrinkList(drinksMenu.non_alcoholic)}

@@ -33,7 +33,7 @@ const Navigation: React.FC<NavProps> = ({ data }) => {
   return (
     <nav className={styles.container}>
       <button onClick={toggleMenu} className={styles.burgerButton}>
-        {isMenuOpen ? <FiX className="text-white" size={24} /> : <FiMenu className="text-white" size={24} />}
+        {isMenuOpen ? <FiX className="text-white fixed right-4 z-[70] top-4" size={24} /> : <FiMenu className="text-white" size={24} />}
       </button>
 
       <ul className={`${styles.buttonsWrapper} ${isMenuOpen ? styles.menuOpen : styles.menuClosed}`}>
@@ -47,7 +47,7 @@ const Navigation: React.FC<NavProps> = ({ data }) => {
           const isActive = currentPath === linkTo;
 
           return (
-            <li key={index}>
+            <li key={index} className={styles.buttonsContainer}>
               <Link
                 to={linkTo}
                 className={`${styles.buttons} ${isActive ? "font-extrabold !text-secondary" : ""}`}
@@ -72,10 +72,11 @@ const Navigation: React.FC<NavProps> = ({ data }) => {
 export default Navigation;
 
 const styles = {
-  container: "inline-block justify-between items-center bg-primary px-4 py-2 rounded-full relative",
+  container: "inline-block justify-between items-center bg-primary px-4 py-2 rounded-none sm:rounded-full relative left-0 sm:left-auto z-50 w-full sm:w-auto",
   burgerButton: "md:hidden block text-white focus:outline-none",
-  buttonsWrapper: "flex flex-col md:flex-row justify-evenly items-center w-full md:w-auto",
-  buttons: "text-white px-8 py-2 hover:underline hover:text-secondary",
+  buttonsWrapper: "flex flex-col md:flex-row justify-evenly items-center w-full md:w-auto fixed sm:relative left-0 bg-primary top-0 py-8 sm:py-0",
+  buttonsContainer: "my-4 sm:my-0",
+  buttons: "text-white px-8 py-2  hover:underline hover:text-secondary",
   menuOpen: "block md:flex",
   menuClosed: "hidden md:flex"
 };

@@ -38,9 +38,9 @@ const eventsClub: React.FC<eventsClubProps> = ({ data }) => {
         <div className="flex flex-row max-w-[920px] mx-auto ">
           <div className="flex w-1/2 p-16 relative">
             <img
-              src={images.planta_7}
+              src={images.planta_7.src}
               className="absolute w-44 right-0 top-0"
-              alt=""
+              alt={images.planta_7.alt}
             />
 
             <div
@@ -48,14 +48,14 @@ const eventsClub: React.FC<eventsClubProps> = ({ data }) => {
             >
               <img
                 className="w-[332px] h-[470px]"
-                src={images.events_1}
-                alt=""
+                src={images.events_1.src}
+                alt={images.events_1.alt}
               />
             </div>
             <img
-              src={images.planta_7}
+              src={images.planta_7.src}
               className="absolute w-44 rotate-180 left-0 bottom-0"
-              alt=""
+              alt={images.planta_7.alt}
             />
           </div>
           <div className="flex flex-col w-1/2 pl-8 pt-24">
@@ -80,15 +80,15 @@ const eventsClub: React.FC<eventsClubProps> = ({ data }) => {
             >
               <img
                 className="qw-[366px] qh-[284px]"
-                src={images.events_2}
-                alt=""
+                src={images.events_2.src}
+                alt={images.events_2.alt}
               />
             </div>
           </div>
           <img
-            src={images.planta_7}
+            src={images.planta_7.src}
             className="absolute w-44 rotate-45 -right-12 -bottom-24 z-10"
-            alt=""
+            alt={images.planta_7.alt}
           />
         </div>
 
@@ -96,13 +96,13 @@ const eventsClub: React.FC<eventsClubProps> = ({ data }) => {
           <div className="flex flex-row w-full overflow-hidden relative">
             <img
               className="w-1/2 -scale-x-100 object-cover aspect-[4/3] absolute top-0"
-              src={images.plantasFlamingo}
-              alt=""
+              src={images.plantasFlamingo.src}
+              alt={images.plantasFlamingo.alt}
             />
             <img
               className="w-1/2 object-cover aspect-[4/3] absolute top-0 right-0"
-              src={images.plantasFlamingo}
-              alt=""
+              src={images.plantasFlamingo.src}
+              alt={images.plantasFlamingo.alt}
             />
           </div>
         </div>

@@ -52,103 +52,105 @@ const indexLayout: React.FC<IndexLayoutProps> = ({ data }) => {
             backgroundImage: `url(${images.BackgroundImage})`,
           }}
         >
-          <div className="absolute -mt-10 -ml-10 w-56">
+          <div className="absolute -inset-0 -mt-4 sm:-mt-10 -ml-16 sm:-ml-10 w-28 sm:w-56">
             <img
-              src={images.bellpepper}
-              alt=""
-              className="absolute -left-4 -top-4"
+              src={images.bellpepper.src}
+              alt={images.bellpepper.alt}
+              className="absolute left-4 sm:-left-4 top-0 sm:-top-4"
             />
             <img
-              src={images.planta_2}
-              alt=""
-              className="absolute left-[8rem] top-[-2rem]"
+              src={images.planta_2.src}
+              alt={images.planta_2.alt}
+              className="absolute -left-4 sm:left-[8rem] top:0 sm:top-[-2rem]"
             />
             <img
-              src={images.planta_2}
-              alt=""
-              className="absolute left-[-3rem] top-[4rem]"
+              src={images.planta_2.src}
+              alt={images.planta_2.alt}
+              className="absolute -left-4 sm:left-[-3rem] top-0 sm:top-[4rem]"
             />
             <img
-              src={images.planta_6}
-              alt=""
-              className="absolute left-[-6rem] top-[10rem] rotate-45"
+              src={images.planta_6.src}
+              alt={images.planta_6.alt}
+              className="absolute left-0 sm:left-[-6rem] top-0 sm:top-[10rem] rotate-45"
             />
           </div>
           <Indexheader data={data} />
 
-          <div className="flex flex-row justify-center">
+          <div className="flex flex-row justify-center mt-20 sm:mt-0">
             <div className="">
-              <img src={images.cocktail} alt="" className="h-80" />
+              <img src={images.cocktail.src} alt={images.cocktail.alt} className="h-52 sm:h-80" />
             </div>
             <div className="h-36">
-              <MainLogo fillColour="#fff" />
-              <img src={images.plate} alt="" className="h-56 -mt-10 -ml-10" />
+              <div className="z-20 relative -mt-4">
+                <MainLogo fillColour="#fff" />
+              </div>
+              <img src={images.plate.src} alt={images.plate.alt} className="h-36 sm:h-56 mt-0 sm:-mt-4 -ml-10" />
             </div>
           </div>
 
-          <div className="flex justify-center my-20">
+          <div className="hidden sm:flex justify-center my-20">
             <Navigation data={data} />
           </div>
 
-          <div className="absolute inline-block h-48 w-96 bottom-[-2rem]">
+          <div className="relative sm:absolute inline-block h-48 w-32 sm:w-96 -bottom-36 sm:bottom-[-2rem]">
             <img
-              src={images.maracuya}
-              alt=""
+              src={images.maracuya.src}
+              alt={images.maracuya.alt}
               className="absolute -left-4 -top-4"
             />
             <img
-              src={images.cherries}
-              alt=""
+              src={images.cherries.src}
+              alt={images.cherries.alt}
               className="absolute -left-4 -top-4"
             />
           </div>
 
-          <div className="absolute right-[-4rem] bottom-[8rem] w-[16rem] h-[4rem]">
+          <div className="absolute -right-16 sm:right-[-4rem] bottom-4 sm:bottom-[8rem] w-32 sm:w-[16rem] h-[4rem]">
             <img
-              src={images.mango}
-              alt=""
+              src={images.mango.src}
+              alt={images.mango.alt}
               className="absolute -left-4 -top-4"
             />
           </div>
         </div>
 
         <div className="relative w-full bg-primary py-10">
-          <img src={images.maracuya} alt="" className="mx-auto h-24" />
-          <p className="mx-auto w-1/2 text-center text-white">
+          <img src={images.maracuya.src} alt={images.maracuya.alt} className="mx-auto h-12 sm:h-24 absolute sm:relative -top-8 sm:top-0 left-[40%] sm:left-0" />
+          <p className="mx-auto w-full sm:w-1/2 text-center text-white text-sm sm:text-base px-4 sm:px-0">
             {t("content.intro_paragraph")}
           </p>
-          <div className="absolute h-48 w-56 bottom-0 left-[-2rem] overflow-hidden">
+          <div className="absolute h-24 sm:h-48 w-28 sm:w-56 bottom-0 left-[-2rem] overflow-hidden">
             <img
-              src={images.planta_4}
+              src={images.planta_4.src}
               className="absolute w-32 left-[5rem] z-10 rotate-[180deg] bottom-[2rem]"
-              alt=""
+              alt={images.planta_4.alt}
             />
             <img
-              src={images.limon_2}
+              src={images.limon_2.src}
               className="absolute w-48 z-20 bottom-[-4rem]"
-              alt=""
+              alt={images.limon_2.alt}
             />
           </div>
-          <div className="absolute overflow-hidden h-64 w-48 bottom-[-3rem] right-0">
+          <div className="absolute overflow-hidden h-64 w-24 sm:w-48 bottom-[-6rem] sm:bottom-[-3rem] right-0">
             <img
-              src={images.limon_2}
+              src={images.limon_2.src}
               className="absolute w-48 z-10 right-[-7rem] bottom-[3rem]"
-              alt=""
+              alt={images.limon_2.alt}
             />
             <img
-              src={images.planta_3}
+              src={images.planta_3.src}
               className="absolute w-32 right-[-2rem] z-20 bottom-1"
-              alt=""
+              alt={images.planta_3.alt}
             />
             <img
-              src={images.limon_3}
+              src={images.limon_3.src}
               className="absolute w-36 z-40 right-[-2rem] bottom-[3rem]"
-              alt=""
+              alt={images.limon_3.alt}
             />
             <img
-              src={images.planta_4}
+              src={images.planta_4.src}
               className="absolute w-32 right-[-4rem] bottom-[-1rem] z-30 rotate-[10deg]"
-              alt=""
+              alt={images.planta_4.alt}
             />
           </div>
         </div>
@@ -156,44 +158,43 @@ const indexLayout: React.FC<IndexLayoutProps> = ({ data }) => {
         <div className="relative bg-secondary py-10">
           <div className="absolute flex flex-col left-[-2rem] top-[-3rem] z-20">
             <img
-              src={images.planta_1}
-              className="w-48 rotate-[180deg] -ml-4 mt-4"
-              alt=""
+              src={images.planta_1.src}
+              className="w-24 sm:w-48 rotate-[180deg] -ml-4 mt-4"
+              alt={images.planta_1.alt}
             />
-            <img src={images.planta_5} className="w-24 -mt-12" alt="" />
-            <img src={images.cocktail_3} className="w-24 mt-4" alt="" />
+            <img src={images.planta_5.src} className="w-12 sm:w-24 mt-4 sm:-mt-12" alt={images.planta_5.alt} />
+            <img src={images.cocktail_3.src} className="w-24 mt-4" alt={images.cocktail_3.alt} />
           </div>
 
-          <h4 className="text-center text-primary mx-auto w-1/2 font-bold">
+          <h4 className="text-center text-primary px-4 sm:px-0 mx-auto w-full sm:w-1/2 font-bold">
             {t("content.index_title_second_block")}
           </h4>
-          <p className="text-center text-white mx-auto w-1/2">
+          <p className="text-center text-white px-4 sm:px-0 mx-auto text-sm sm:text-base w-full sm:w-1/2">
             {t("content.content_title_second_block")}
           </p>
 
-          <div className="flex flex-row justify-center gap-5">
-            <img src={images.home_1} className="w-48" alt="" />
-            <img src={images.home_2} className="w-48" alt="" />
-            <img src={images.home_3} className="w-48" alt="" />
+          <div className="flex flex-col sm:flex-row justify-center gap-5">
+            <img src={images.home_1.src} className="w-48 mx-auto" alt={images.home_1.alt} />
+            <img src={images.home_2.src} className="w-48 mx-auto" alt={images.home_2.alt} />
+            <img src={images.home_3.src} className="w-48 mx-auto" alt={images.home_3.alt} />
           </div>
 
-          <div className="absolute w-28 h-64 right-0 top-12 overflow-hidden">
+          <div className="absolute w-28 h-96 sm:h-64 right-0 top-12 overflow-hidden">
             <img
-              src={images.cocktail_2}
-              className="relative w-32 right-[-2rem] top-16"
-              alt=""
+              src={images.cocktail_2.src}
+              className="relative w-32 -right-16 sw:right-[-2rem] top-60 sm:top-16"
+              alt={images.cocktail_2.alt}
             />
           </div>
         </div>
 
         <div className="w-full relative overflow-hidden bg-primary ">
           <div className="absolute top-[-3rem] left-[30%]">
-            <img src={images.peach} className="w-32" alt="" />
+            <img src={images.peach.src} className="w-32" alt={images.peach.alt} />
           </div>
           <Footer data={data} />
           <div className="absolute min-w-[50rem] h-16 z-40 -mt-16">
-            <img src={images.cocktail_4} alt="" className="absolute w-28" />
-            <img src={images.maracuya_2} alt="" className="absolute right-0 w-36 " />
+            <img src={images.maracuya_2.src} alt={images.maracuya_2.alt} className="absolute right-0 w-36 " />
           </div>
         </div>
       </div>

@@ -17,11 +17,11 @@ const Footer: React.FC<FooterProps> = ({ data }) => {
 
   return (
     <footer className={styles.container}>
-      <div className="flex flex-row w-full justify-around">
-        <Link to="/" className="px-32">
+      <div className="flex flex-col sm:flex-row w-full justify-around">
+        <Link to="/" className="px-8 sm:px-32 py-8 sm:py-0">
           <MainLogo fillColour="#fff" />
         </Link>
-        <ul className="px-16">
+        <ul className="px-4 sm:px-16 py-8 sm:py-0">
           {data && data.companyDetails ? (
             <>
               <li>{data.companyDetails.address}</li>
@@ -35,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({ data }) => {
             <li>{t("loading")}</li>
           )}
         </ul>
-        <div className="border-l-white border-l-2 border-r-white border-r-2 px-16">
+        <div className="border-l-white border-l-0 sm:border-l-2 border-r-0 sm:border-r-white sm:border-r-2 px-4 sm:px-16">
           <h3 className="font-semibold">{t("hours.title")}</h3>
           <ul>
             <li>{t("hours.sunday_to_tuesday")}</li>
@@ -46,7 +46,7 @@ const Footer: React.FC<FooterProps> = ({ data }) => {
         </div>
 
         {data && data.companyDetails ? (
-          <div className="flex flex-col mx-12 gap-4 self-center ">
+          <div className="flex flex-row sm:flex-col mx-12 pt-8 gap-4 self-center ">
             <a
               href={data.companyDetails.whatsApp}
               target="_blank"
@@ -82,9 +82,9 @@ const Footer: React.FC<FooterProps> = ({ data }) => {
 
       <div className="absolute w-[18rem] h-[26rem]">
         <img
-          className="absolute z-50 top-48 rotate-[-5deg] left-4"
-          src={images.cocktail_4}
-          alt=""
+          className="hidden sm:flex absolute z-50 top-48 rotate-[-5deg] left-4"
+          src={images.cocktail_4.src}
+          alt={images.cocktail_4.alt}
         />
       </div>
     </footer>

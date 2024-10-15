@@ -28,7 +28,7 @@ const LatinClub: React.FC<LatinClubProps> = () => {
       <LatinClubLayout data={info}>
         <div className="flex flex-row w-[40rem] mx-auto mt-16">
           <div className="w-[72rem]">
-            <img src={images.beer} alt="" />
+            <img src={images.beer.src} alt={images.beer.alt} />
           </div>
           <div className="flex flex-col ml-4">
             <div className="w-72 mt-12">
@@ -48,8 +48,8 @@ const LatinClub: React.FC<LatinClubProps> = () => {
         <div className="absolute bottom-0 h-[24rem] w-[36rem] right-0 overflow-hidden">
           <img
             className="absolute -right-32"
-            src={images.cocktail_wireframe}
-            alt=""
+            src={images.cocktail_wireframe.src}
+            alt={images.cocktail_wireframe.alt}
           />
         </div>
 
@@ -63,17 +63,17 @@ const LatinClub: React.FC<LatinClubProps> = () => {
           <div className="relative flex w-[60rem] bg-white/30 h-44 mx-auto overflow-hidden p-4">
             <img
               className="absolute w-[16rem] -right-14 -top-16"
-              src={images.cocktail_wireframe_2}
-              alt=""
+              src={images.cocktail_wireframe_2.src}
+              alt={images.cocktail_wireframe_2.alt}
             />
             <img
               className="absolute w-[16rem] -left-14 -bottom-16 rotate-180"
-              src={images.cocktail_wireframe_2}
-              alt=""
+              src={images.cocktail_wireframe_2.src}
+              alt={images.cocktail_wireframe_2.alt}
             />
 
             <div className="text-white flex px-20 items-center">
-              <img className="w-20 " src={images.cocktail_5} alt="" />
+              <img className="w-20 " src={images.cocktail_5.src} alt={images.cocktail_5.alt} />
               <p className="px-6 text-xl">
                 {t("general.latinClubPage.content_1")}
               </p>
@@ -91,9 +91,9 @@ const LatinClub: React.FC<LatinClubProps> = () => {
         </div>
 
         <div className="flex w-[70rem] gap-8 mx-auto mb-24">
-          <img className="w-96" src={images.latin_club_1} alt="" />
-          <img className="w-96" src={images.latin_club_2} alt="" />
-          <img className="w-96" src={images.latin_club_3} alt="" />
+          <img className="w-96" src={images.latin_club_1.src} alt={images.latin_club_1.alt} />
+          <img className="w-96" src={images.latin_club_2.src} alt={images.latin_club_2.alt} />
+          <img className="w-96" src={images.latin_club_3.src} alt={images.latin_club_3.alt} />
         </div>
 
         <div className="bg-latinClub">
