@@ -62,7 +62,7 @@ const FoodLayout: React.FC<FoodLayoutProps> = ({ children, data }) => {
             <img src={images.planta_3.src} className="w-28 sm:w-56" alt={images.planta_3.alt} />
             <img src={images.planta_4.src} className="absolute w-16 sm:w-32 right-2 sm:right-[3rem] top-16 sm:top-[12rem] z-30 rotate-[10deg]" alt={images.planta_4.alt} />
           </div>
-          <div className="w-[20rem] mx-auto">
+          <div className="w-full max-w-[1200px] mx-auto">
             <Header logoPosition={styles.logoPosition} data={data} />
           </div>
 
@@ -89,5 +89,5 @@ export default FoodLayout;
 
 const styles = {
   containerWrapper: "flex flex-col w-full bg-secondary",
-  logoPosition: "mx-auto",
+  logoPosition: "mx-auto max-h-32",
 };

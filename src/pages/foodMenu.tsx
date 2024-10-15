@@ -90,9 +90,9 @@ const FoodMenuPage: React.FC = () => {
         </div>
         <div className={styles.productTileInfoWrapper}>
           <h3 className={styles.productTileTitle}>{item.name}</h3>
-          <p className={styles.productTilePrice}>{item.price}</p>
         </div>
         <div className={styles.productTileShowMore}>
+          <p className={styles.productTilePrice}>{item.price}</p>
           {t("general.see_more")}
         </div>
       </div>
@@ -110,31 +110,31 @@ const FoodMenuPage: React.FC = () => {
       <section>
         <div className={styles.tabsWrapper}>
           <button
-            className={`${styles.tabButton} ${activeTab === "entrees" ? "text-terciary" : ""}`}
+            className={`${styles.tabButton} ${activeTab === "entrees" ? "text-terciary bg-secondary border-terciary border-[1px]" : ""}`}
             onClick={() => setActiveTab("entrees")}
           >
             {t("productMenu.entrees")}
           </button>
           <button
-            className={`${styles.tabButton} ${activeTab === "mainDishes" ? "text-terciary" : ""}`}
+            className={`${styles.tabButton} ${activeTab === "mainDishes" ? "text-terciary bg-secondary border-terciary border-[1px]" : ""}`}
             onClick={() => setActiveTab("mainDishes")}
           >
             {t("productMenu.mainDishes")}
           </button>
           <button
-            className={`${styles.tabButton} ${activeTab === "sideDishes" ? "text-terciary" : ""}`}
+            className={`${styles.tabButton} ${activeTab === "sideDishes" ? "text-terciary bg-secondary border-terciary border-[1px]" : ""}`}
             onClick={() => setActiveTab("sideDishes")}
           >
             {t("productMenu.sideDishes")}
           </button>
           <button
-            className={`${styles.tabButton} ${activeTab === "extras" ? "text-terciary" : ""}`}
+            className={`${styles.tabButton} ${activeTab === "extras" ? "text-terciary bg-secondary border-terciary border-[1px]" : ""}`}
             onClick={() => setActiveTab("extras")}
           >
             {t("productMenu.extras")}
           </button>
           <button
-            className={`${styles.tabButton} ${activeTab === "desserts" ? "text-terciary" : ""}`}
+            className={`${styles.tabButton} ${activeTab === "desserts" ? "text-terciary bg-secondary border-terciary border-[1px]" : ""}`}
             onClick={() => setActiveTab("desserts")}
           >
             {t("productMenu.desserts")}
@@ -174,23 +174,23 @@ const FoodMenuPage: React.FC = () => {
           onClick={handleCloseModal}
         >
           <div className="modal-content w-[90%] sm:w-[80%] max-w-[75rem] mx-auto bg-secondary/75 mt-6 sm:mt-40 p-2 sm:p-12 overflow-y-auto">
-            <article className="flex justify-between">
-              <div className="flex items-start">
+            <article className="flex flex-col sm:flex-row justify-between">
+              <div className="flex items-start w-full sm:w-auto">
                 <div
                   className="flex text-terciary w-8 cursor-pointer"
                   onClick={handleCloseModal}
                 >
                   <FaWindowClose className="w-full h-full " />
                 </div>
-                <div className="ml-0 sm:ml-16 w-24 sm:w-36">
+                <div className="ml-16 w-24 sm:w-36">
                   <MainLogo fillColour={"#fff"} />
                 </div>
               </div>
-              <div className="section">
-                <div className="text-2xl font-thin">
+              <div className="section w-full sm:w-auto">
+                <div className="text-2xl font-thin text-center bg-terciary sm:bg-transparent max-w-max mx-auto px-8 py-1 rounded mt-4">
                   {t(`productMenu.${activeTab}`)}
                 </div>
-                <div className="text-terciary text-sm sm:text-6xl text-center">
+                <div className="text-terciary text-sm sm:text-6xl text-center hidden sm:flex">
                   {selectedFood.price}
                 </div>
               </div>
@@ -202,9 +202,14 @@ const FoodMenuPage: React.FC = () => {
                 src={getImageSrc(selectedFood.image)}
                 alt={selectedFood.name}
               />
+
               <div className="flex flex-col self-center p-2 sm:p-8">
-                <div className="w-full text-sm sm:text-4xl font-bold uppercase">
+                <div className="w-full text-2xl sm:text-4xl font-bold uppercase flex justify-between">
                   {selectedFood.name}
+                  <div className="text-terciary text-2xl sm:text-6xl flex sm:hidden self-center">
+                    {selectedFood.price}
+                  </div>
+
                 </div>
                 <p className="py-4">{t(`food.${selectedFood.image}`)}</p>
                 {}
@@ -238,15 +243,15 @@ const styles = {
   starringItem: "relative w-96 border-dashed border-white border text-center",
   srattingTitle:
     "bg-primary text-secondary text-lg flex justify-center p-3 font-bold",
-  tabButton: "hover:text-terciary hover:underline py-2 sm:py-0",
+  tabButton: "hover:text-terciary hover:underline py-2 sm:py-0 text-xl underline underline-offset-4 sm:underline-offset-8 bg-primary sm:bg-transparent my-1 px-6 max-w-max sm:max-w-none rounded mx-auto whitespace-nowrap",
   productTile: "flex flex-col w-[160px] h-[260px] bg-primary/35 box-shadow p-4 relative z-20",
   productTileInfoWrapper: "flex flex-row grow pt-4",
   productTileTitle:
-    "text-white uppercase font-extrabold text-md leading-[1rem]",
-  productTilePrice: "text-terciary self-end text-2xl font-extrabold",
+    "text-white uppercase font-extrabold text-md leading-[1rem] h-[48px] text-ellipsis overflow-hidden",
+  productTilePrice: "text-terciary self-end text-2xl font-extrabold flex justify-end leading-none",
   productTileShowMore: "text-white text-xs text-center font-extralight",
   mainTitle: "text-primary text-6xl text-center tracking-wide m-0 p-0",
-  tabsWrapper: "text-white flex flex-col sm:flex-row justify-around max-w-[750px] mx-auto my-2 sm:my-8",
+  tabsWrapper: "text-white flex flex-col sm:flex-row justify-center px-6 max-w-[750px] mx-auto my-2 sm:my-8",
   after:
     "after:'' after:w-[2rem] after:h-[3.25rem] after:bg-primary after:block after:absolute after:right-[-1.8rem] after:top-[23.85rem] after:z-50",
 };

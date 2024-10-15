@@ -49,7 +49,8 @@ const indexLayout: React.FC<IndexLayoutProps> = ({ data }) => {
         <div
           className="relative bg-cover bg-center overflow-hidden"
           style={{
-            backgroundImage: `url(${images.BackgroundImage})`,
+            backgroundImage: `url(${images.BackgroundImage.src})`,
+            backgroundSize: "cover"
           }}
         >
           <div className="absolute -inset-0 -mt-4 sm:-mt-10 -ml-16 sm:-ml-10 w-28 sm:w-56">
