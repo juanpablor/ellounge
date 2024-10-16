@@ -51,7 +51,7 @@ export default ClubNavigation;
 const styles = {
   container: "inline-block justify-between items-center px-4 py-2 rounded-full relative",
   burgerButton: "md:hidden block text-white focus:outline-none",
-  buttonsWrapper: "flex flex-col md:flex-row justify-evenly items-center w-full md:w-auto fixed sm:relative left-0 bg-latinClub top-0 py-8 sm:py-0 z-30",
+  buttonsWrapper: "flex flex-col md:flex-row justify-evenly items-center w-full md:w-auto fixed sm:relative left-0 top-0 py-8 sm:py-0 z-30",
   buttonsContainer: "my-4 sm:my-0",
   buttons: "text-white px-8 py-2 hover:underline",
   menuOpen: "block md:flex",
