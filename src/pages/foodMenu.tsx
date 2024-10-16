@@ -170,10 +170,10 @@ const FoodMenuPage: React.FC = () => {
 
       {selectedFood && (
         <div
-          className="modal w-full h-full fixed z-[80] top-0 bg-black/80 text-white"
+          className="modal w-full h-full fixed z-[80] top-0 bg-black/80 text-white overflow-y-auto"
           onClick={handleCloseModal}
         >
-          <div className="modal-content w-[90%] sm:w-[80%] max-w-[75rem] mx-auto bg-secondary/75 mt-6 sm:mt-40 p-2 sm:p-12 overflow-y-auto">
+          <div className="modal-content w-[90%] sm:w-[80%] max-w-[75rem] mx-auto bg-secondary/75 mt-6 sm:mt-40 p-2 sm:p-12">
             <article className="flex flex-col sm:flex-row justify-between">
               <div className="flex items-start w-full sm:w-auto">
                 <div
@@ -212,7 +212,6 @@ const FoodMenuPage: React.FC = () => {
 
                 </div>
                 <p className="py-4">{t(`food.${selectedFood.image}`)}</p>
-                {}
               </div>
             </article>
           </div>

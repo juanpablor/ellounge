@@ -23,7 +23,7 @@ const ClubNavigation: React.FC<ClubNavProps> = ({ data }) => {
   return (
     <nav className={styles.container}>
       <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={styles.burgerButton}>
-        {isMenuOpen ? <FiX className="text-white" size={24} /> : <FiMenu className="text-white" size={24} />}
+        {isMenuOpen ? <FiX className="text-white fixed right-4 z-[70] top-4" size={24} /> : <FiMenu className="text-white" size={24} />}
       </button>
 
       <ul className={`${styles.buttonsWrapper} ${isMenuOpen ? styles.menuOpen : styles.menuClosed}`}>
@@ -32,7 +32,7 @@ const ClubNavigation: React.FC<ClubNavProps> = ({ data }) => {
           const isActive = currentPath === itemPath;
 
           return (
-            <li key={index}>
+            <li key={index} className={styles.buttonsContainer}>
               <Link to={itemPath} className={`${styles.buttons} ${isActive ? "text-shadow-fucsia !text-latinFucsia" : ""}`}>
                 <Trans i18nKey={`menuDrink.${item}`}>
                   {t(`menuDrink.${item}`)}
@@ -51,7 +51,8 @@ export default ClubNavigation;
 const styles = {
   container: "inline-block justify-between items-center px-4 py-2 rounded-full relative",
   burgerButton: "md:hidden block text-white focus:outline-none",
-  buttonsWrapper: "flex flex-col md:flex-row justify-evenly items-center w-full md:w-auto",
+  buttonsWrapper: "flex flex-col md:flex-row justify-evenly items-center w-full md:w-auto fixed sm:relative left-0 bg-latinClub top-0 py-8 sm:py-0 z-30",
+  buttonsContainer: "my-4 sm:my-0",
   buttons: "text-white px-8 py-2 hover:underline",
   menuOpen: "block md:flex",
   menuClosed: "hidden md:flex",

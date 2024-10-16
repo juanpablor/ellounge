@@ -40,7 +40,6 @@ const visitUs: React.FC<visitUsProps> = ({ data }) => {
             <iframe
               className="w-full iframe"
               style={{ color: "rgb(255, 255, 255) !important" }}
-              // src={`https://widgets.libroreserve.com/WEB/QC016493475991/book?bg-color=${primary}&bg-color-2=${secondary}&btn-color=${secondary}&btn-text-color=${primary}&text-color-2=${white}&text-color-3=${white}`}
               src={`https://widgets.libroreserve.com/WEB/QC016493475991/book?bg-color=${fucsia}&bg-color-2=${black}&btn-color=${secondary}&btn-text-color=${primary}&text-color-2=${white}&text-color-3=${white}`}
             ></iframe>
           </div>

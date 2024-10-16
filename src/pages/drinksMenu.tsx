@@ -14,13 +14,10 @@ import favicon from "../images/icon.png";
 import images from "../images";
 import ClubNavigation from "../components/clubNav";
 import data from "../data/data.json";
-// import { useMediaQuery } from "react-responsive";
-// import { breakpoints } from "../constants";
 
 const info: CompanyData = data[0];
 
 const DrinkMenuPage: React.FC = () => {
-  // const isMobile = useMediaQuery({ query: breakpoints.mobile });
   const { t } = useTranslation();
   const [selectedDrink, setSelectedDrink] = useState<null | {
     name: string;
@@ -117,9 +114,9 @@ const DrinkMenuPage: React.FC = () => {
                 {t(`drinks.subtitle.${item.image}`)}
               </span>
             )}
-            <p className={styles.productTilePrice}>{item.price}</p>
           </div>
           <div className={styles.productTileShowMore}>
+            <p className={styles.productTilePrice}>{item.price}</p>
             {t("general.see_more")}
           </div>
         </div>
@@ -188,7 +185,7 @@ const DrinkMenuPage: React.FC = () => {
             {tabs.map((tab) => (
               <button
                 key={tab.key}
-                className={`${styles.tabButton} ${activeTab === tab.key ? "font-bold underline text-shadow-blue" : ""}`}
+                className={`${styles.tabButton} ${activeTab === tab.key ? "font-bold underline text-shadow-blue py-2" : ""}`}
                 onClick={() => setActiveTab(tab.key)}
               >
                 {tab.label}
@@ -208,8 +205,31 @@ const DrinkMenuPage: React.FC = () => {
               renderDrinkItems(drinksMenu.cocktailsSignature)}
             {activeTab === "houseCocktails" &&
               renderDrinkItems(drinksMenu.houseCocktails)}
-            {activeTab === "classicCocktails" &&
-              renderDrinkItems(drinksMenu.classicCocktails)}
+            {activeTab === "classicCocktails" && (
+                <div className="bg-latinFucsia/[0.15] w-full flex flex-col overflow-hidden">
+                <div className="relative w-full h-1 bg-latinBlue opacity-25">
+                  <img
+                    className="absolute w-24 mt-[20%] left-6"
+                    src={images.shot.src}
+                    alt={images.shot.alt}
+                  />
+                  <img
+                    className="absolute opacity-75 w-36 right-2"
+                    src={images.cocktail_5.src}
+                    alt={images.cocktail_5.alt}
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <div className="block mx-12">
+                    <h2 className="text-white text-2xl text-center my-8">
+                      {t("productMenu.shots")}
+                    </h2>
+                    {renderDrinkList(drinksMenu.classicCocktails, "w-full")}
+                  </div>
+                </div>
+              </div>
+              )}
+
             {activeTab === "shots" && (
               <div className="bg-latinFucsia/[0.15] w-full flex flex-col overflow-hidden">
                 <div className="relative w-full h-1 bg-latinBlue opacity-25">
@@ -224,7 +244,7 @@ const DrinkMenuPage: React.FC = () => {
                     alt={images.cocktail_5.alt}
                   />
                 </div>
-                <div className="flex justify-center">
+                <div className="flex flex-col sm:flex-row justify-center">
                   <div className="block mx-12">
                     <h2 className="text-white text-2xl text-center my-8">
                       {t("productMenu.shots")}
@@ -260,7 +280,9 @@ const DrinkMenuPage: React.FC = () => {
                     alt={images.mango.alt}
                   />
                 </div>
-                {renderDrinkList(drinksMenu.houseShots)}
+                <div className="mx-12">
+                  {renderDrinkList(drinksMenu.houseShots, "w-full")}
+                </div>
               </div>
             )}
 
@@ -283,7 +305,9 @@ const DrinkMenuPage: React.FC = () => {
                     alt={images.maracuya_2.alt}
                   />
                 </div>
-                {renderDrinkList(drinksMenu.bottles)}
+                <div className="mx-12">
+                  {renderDrinkList(drinksMenu.bottles, "w-full")}
+                </div>
               </div>
             )}
 
@@ -301,7 +325,9 @@ const DrinkMenuPage: React.FC = () => {
                     alt={images.beer.alt}
                   />
                 </div>
-                {renderDrinkList(drinksMenu.wineBeer)}
+                <div className="mx-12">
+                  {renderDrinkList(drinksMenu.wineBeer, "w-full")}
+                </div>
               </div>
             )}
 
@@ -323,13 +349,14 @@ const DrinkMenuPage: React.FC = () => {
                   {t("general.drinksMenuPage.mocktailsTitle")}
                 </h2>
                 <ul
-                  className="lex flex-row w-2/5 text-white mx-auto mt-1 list-disc my-4"
+                  className="lex flex-row text-white mx-12 mt-1 list-disc my-4"
                   dangerouslySetInnerHTML={{
                     __html: t("general.drinksMenuPage.mocktailsNote") || "",
                   }}
                 ></ul>
-
-                {renderDrinkList(drinksMenu.mocktails)}
+                <div className="mx-12">
+                  {renderDrinkList(drinksMenu.mocktails, "w-full")}
+                </div>
               </div>
             )}
 
@@ -347,7 +374,9 @@ const DrinkMenuPage: React.FC = () => {
                     alt={images.juice.alt}
                   />
                 </div>
-                {renderDrinkList(drinksMenu.non_alcoholic)}
+                <div className="mx-12">
+                  {renderDrinkList(drinksMenu.non_alcoholic, "w-full")}
+                </div>
               </div>
             )}
           </div>
@@ -364,7 +393,7 @@ const DrinkMenuPage: React.FC = () => {
           )}
 
           {
-            <div className="flex justify-center my-12">
+            <div className="hidden sm:flex justify-center my-12">
               <ClubNavigation data={info} />
             </div>
           }
@@ -372,11 +401,11 @@ const DrinkMenuPage: React.FC = () => {
 
         {selectedDrink && (
           <div
-            className="modal w-full h-full fixed z-50 top-0 bg-black/80 text-white"
+            className="modal w-full h-full fixed z-50 top-0 bg-black/90 text-white overflow-y-auto"
             onClick={handleCloseModal}
           >
-            <div className="modal-content w-[80%] max-w-[75rem] mx-auto bg-latinFucsia/[.5] mt-20 p-12">
-              <article className="flex justify-between">
+            <div className="modal-content w-[90%] sm:w-[80%] max-w-[75rem] mx-auto bg-latinFucsia/[.5] my-4 sm:mt-20  p-2 sm:p-12">
+              <article className="flex flex-col sm:flex-row justify-between">
                 <div className="flex items-start">
                   <div
                     className="flex text-latinFucsia w-8 cursor-pointer"
@@ -384,37 +413,39 @@ const DrinkMenuPage: React.FC = () => {
                   >
                     <FaWindowClose className="w-full h-full " />
                   </div>
-                  <div className="ml-16 w-36">
+                  <div className="ml-16 w-24 sm:w-36">
                     <MainLogo fillColour={"#fff"} />
                   </div>
                 </div>
-                <div className="section">
-                  <div className="text-2xl font-thin">
+                <div className="section w-full sm:w-auto">
+                  <div className="text-2xl font-thin text-center bg-latinFucsia sm:bg-transparent max-w-max mx-auto px-8 py-1 rounded mt-4">
                     {t(`productMenu.${activeTab}`)}
                   </div>
-                  <div className="text-latinBlue text-6xl text-center">
+                  <div className="text-latinBlue text-sm sm:text-6xl text-center hidden sm:flex">
                     {selectedDrink.price}
                   </div>
                 </div>
               </article>
 
-              <article className="flex flex-row">
+              <article className="flex flex-col sm:flex-row mt-4 sm:mt-0">
                 <img
-                  className="w-[28rem]"
+                  className="w-full sm:w-[28rem]"
                   src={getImageSrc(selectedDrink.image)}
                   alt={selectedDrink.name}
                 />
                 <div className="flex flex-col self-center p-8">
-                  <div className="w-full text-4xl font-bold uppercase">
+                  <div className="w-full text-2xl sm:text-4xl font-bold uppercase flex justify-between">
                     {selectedDrink.name}
+                    <div className="text-latinBlue text-2xl sm:text-6xl text-center flex sm:hidden">
+                      {selectedDrink.price}
+                    </div>
                   </div>
                   <p
-                    className="py-4"
+                    className="pt-4 text-sm"
                     dangerouslySetInnerHTML={{
                       __html: t(`drinks.${selectedDrink.image}`) || "",
                     }}
                   />
-                  {}
                 </div>
               </article>
             </div>
@@ -447,9 +478,9 @@ const styles = {
   productTileInfoWrapper: "flex flex-col grow pt-4",
   productTileTitle: "text-white font-extrabold text-md leading-[1rem]",
   productTilePrice:
-    "text-latinBlue self-end text-2xl font-extrabold absolute bottom-6",
+    "text-latinBlue self-end text-2xl font-extrabold flex justify-end leading-none mr-4",
   productTileShowMore:
-    "text-latinFucsia text-xs text-center font-extralight w-full absolute bottom-2 left-0",
+    "text-white text-xs text-center font-extralight w-full absolute bottom-2 left-0",
   mainTitle: "text-primary text-6xl text-center tracking-wide m-0 p-0",
   tabsWrapper:
     "tabs text-white flex justify-around max-w-[1200px] mx-auto my-8 flex-col sm:flex-row",
